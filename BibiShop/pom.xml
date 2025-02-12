@@ -10,7 +10,6 @@
     </parent>
     <groupId>com.poly</groupId>
     <artifactId>Bibishop</artifactId>
->>>>>>> 85ae3779b3013da3ed8d393546caeca90c2bbfab
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>PolyStore</name>
