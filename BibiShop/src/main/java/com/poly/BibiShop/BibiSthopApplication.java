@@ -1,4 +1,4 @@
-package com.poly.BibiStore;
+package com.poly.BibiShop;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
 @SpringBootApplication()
-public class BibiStoreApplication {
+public class BibiSthopApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BibiStoreApplication.class, args);
+        SpringApplication.run(com.poly.BibiShop.BibiSthopApplication.class, args);
     }
     @Component
     @RequiredArgsConstructor

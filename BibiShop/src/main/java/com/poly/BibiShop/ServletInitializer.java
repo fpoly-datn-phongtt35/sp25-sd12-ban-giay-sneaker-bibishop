@@ -1,4 +1,4 @@
-//package com.poly.BibiStore;
+//package com.poly.BibiShop;
 //
 //import org.springframework.boot.builder.SpringApplicationBuilder;
 //import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@
 //
 //    @Override
 //    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-//        return application.sources(BibiStoreApplication.class);
+//        return application.sources(BibiShopApplication.class);
 //    }
 //
 //}
