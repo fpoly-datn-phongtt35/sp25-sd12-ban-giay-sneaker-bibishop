@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout_admin :: main-fragment(
+                                                ~{:: title},
+                                                'header',
+                                                'sidebar',
+                                                ~{:: #css-resources},
+                                                ~{:: #js-resources},
+                                                ~{:: #main-content}
+                                               )}">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách khách hàng</title>
+    <style>
+        .promotion-box {
+            border: 1px solid #cccccc;
+        }
+    </style>
+</head>
+<body>
+<section role="main" class="content-body" id="main-content">
+<!--    <header class="page-header">-->
+<!--        &lt;!&ndash;        <h2>Editable Tables</h2>&ndash;&gt;-->
+<!--        <div class="right-wrapper text-right">-->
+<!--            <ol class="breadcrumbs">-->
+<!--                <li>-->
+<!--                    <a href="index.html">-->
+<!--                        <i class="bx bx-home-alt"></i>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li><span>Danh sách nhân viên</span></li>-->
+<!--            </ol>-->
+<!--            <a class="sidebar-right-toggle" data-open="sidebar-right"><i-->
+<!--                    class="fas fa-chevron-left"></i></a>-->
+<!--        </div>-->
+<!--    </header>-->
+
+    <section class="card">
+        <header class="card-header">
+            <div class="card-actions">
+                <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+                <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+            </div>
+            <h2 class="card-title">Danh sách khách hàng</h2>
+        </header>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <a href="/admin/khachhang/create" id="addToTable" class="btn btn-primary">Thêm mới nhân viên <i
+                                class="fas fa-plus"></i></a>
+                        <a href="/admin/khachhang/list" class="btn btn-primary">Refresh <i
+                                class="fas fa-redo-alt"></i></a>
+                        <button id="btn-search" class="btn btn-primary">Tìm kiếm <i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered table-striped mb-0" id="datatable-editable">
+                <thead>
+                <tr>
+                    <th width="15%">ID</th>
+                    <th>Tải khoản</th>
+                    <th>Email</th>
+                    <th>Họ Tên</th>
+                    <th>Tên đệm</th>
+                    <th>Role</th>
+                    <th>Số điện thoại</th>
+                    <th>Giới tính</th>
+                    <th>Trạng thái</th>
+                </tr>
+                <tr>
+                    <form method="GET" id="search-form">
+                        <th></th>
+                        <th><input type="text" name="fullName" id="fullName" class="form-control search-input"></th>
+                        <th><input type="text" name="email" id="email" class="form-control search-input"></th>
+                        <th><input type="text" name="phone" id="phone" class="form-control search-input"></th>
+                        <th></th>
+                        <th></th>
+                        <!--                        <th></th>-->
+                        <input type="hidden" name="page" id="page">
+                    </form>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <th:block th:each="khachhang : ${list}">
+                    <tr>
+                        <td>
+                            <a th:href="@{/admin/khachhang/{id}(id=${khachhang.id})}"
+                               th:text="${khachhang.id}"></a>
+                        </td>
+                        <td th:text="${khachhang.taiKhoan}"></td>
+                        <td th:text="${khachhang.email}"></td>
+                        <td th:text="${khachhang.ten}"></td>
+                        <td th:text="${khachhang.tenDem}"></td>
+                        <td th:text="${khachhang.vaiTro==3?'Khách Hàng': ''}">
+                        <td th:text="${khachhang.sdt}">
+                        </td>
+                        <td th:text="${khachhang.gioiTinh}">
+                        </td>
+                        <td th:text="${khachhang.trangThai==1?'Hoạt động':'Không hoạt động'}">
+                        </td>
+                    </tr>
+                </th:block>
+            </table>
+            <br>
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="pagination">
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+</section>
+
+<th:block id="js-resources">
+    <script type="text/javascript" th:src="@{/adminlte/pagination/jquery.simplePagination.js}"></script>
+    <script type="text/javascript" th:src="@{/adminlte/js/table.js}"></script>
+    <script th:inline="javascript">
+        let fullName, email, phone, address, page;
+
+        $(function () {
+            let vars = parseUrl();
+            fullName = vars["fullName"] || null
+            email = vars["email"] || null
+            phone = vars["phone"] || null
+            address = vars["address"] || null
+            page = vars["page"] || "1"
+
+            $('#fullName').val(fullName)
+            $('#email').val(email)
+            $('#phone').val(phone)
+            $('#address').val(address)
+            $('#page').val(page)
+
+            pagination([[${totalPages}]], [[${currentPage}]]);
+        });
+    </script>
+</th:block>
+</body>
+</html>
