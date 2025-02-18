@@ -38,6 +38,15 @@ public class HoaDon {
   @Column(name = "trang_thai", nullable = false)
   private String trangThai;
 
+  @Column(name = "ten_khachhang")
+  private String tenKhachhang;
+
+  @Column(name = "sdt_khachhang")
+  private String sdtKhachhang;
+
+  @Column(name = "dia_chi")
+  private String diaChi;
+
   @OneToMany(mappedBy = "hoaDon", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<HoaDonChiTiet> chiTietHoaDon;
 }

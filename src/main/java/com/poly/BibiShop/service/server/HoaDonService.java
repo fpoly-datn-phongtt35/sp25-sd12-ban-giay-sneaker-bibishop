@@ -27,8 +27,9 @@ public class HoaDonService {
     return hoaDonRepository.findById(id).orElse(null);
   }
 
-  public void themHoaDon(HoaDon hoaDon) {
+  public HoaDon themHoaDon(HoaDon hoaDon) {
     hoaDonRepository.save(hoaDon);
+    return hoaDon;
   }
 
   public void capNhatHoaDon(Long id, HoaDon hoaDon) {
