@@ -248,14 +248,12 @@
     <script th:inline="javascript">
 
         $('.btn-create-promotion').click(function () {
-            debugger
             let email = $('#email').val();
             let sdt = $('#sdt').val();
             let name = $('#name').val();
             let midName = $('#midName').val();
             let dob = $('#dob').val();
             let loginName = $('#login-name').val();
-            let position = $('#position').val();
             let password = $('#password').val();
             let status = $('#status').val();
             let gender = $('#gender').val();
@@ -284,11 +282,6 @@
 
             if (loginName.length === 0) {
                 $('#invalid-feedback-login-name').show();
-                isValid = false;
-            }
-
-            if (position.length === 0) {
-                $('#invalid-feedback-position').show();
                 isValid = false;
             }
 
