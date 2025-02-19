@@ -42,6 +42,6 @@ public class CreateNhanVienRequest {
     private Integer status;
     private Integer address;
 //    private String email;
-    private String role;
+    private int role;
 //    private Integer id;
 }

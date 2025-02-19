@@ -91,12 +91,13 @@ public class NhanVienServiceImpl implements NhanVienService {
         nhanVienRepository.deleteById(id);
     }
     @Override
-    public Page<NhanVien> adminListUserPages(String fullName, String phone, String email, Integer page) {
+    public Page<NhanVien> adminListUserPages(String account, String fullName, String phone, String email, Integer page) {
         page--;
         if (page < 0) {
             page = 0;
         }
         Pageable pageable = PageRequest.of(page, Constant.LIMIT_SIZE, Sort.by("ngay_tao").descending());
-        return nhanVienRepository.adminListUserPages(fullName, phone, email, pageable);
+        return nhanVienRepository.adminListUserPages(account!=null? account.trim():null , fullName!=null?fullName.trim():null,
+                phone!=null?phone.trim():null, email!=null?email.trim():null, pageable);
     }
 }

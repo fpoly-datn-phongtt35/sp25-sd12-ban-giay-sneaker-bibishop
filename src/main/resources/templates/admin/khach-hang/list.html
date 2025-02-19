@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="mb-3">
-                        <a href="/admin/khachhang/create" id="addToTable" class="btn btn-primary">Thêm mới nhân viên <i
+                        <a href="/admin/khachhang/create" id="addToTable" class="btn btn-primary">Thêm mới khách hàng <i
                                 class="fas fa-plus"></i></a>
                         <a href="/admin/khachhang/list" class="btn btn-primary">Refresh <i
                                 class="fas fa-redo-alt"></i></a>
@@ -72,8 +72,11 @@
                 <tr>
                     <form method="GET" id="search-form">
                         <th></th>
-                        <th><input type="text" name="fullName" id="fullName" class="form-control search-input"></th>
+                        <th><input type="text" name="account" id="account" class="form-control search-input"></th>
                         <th><input type="text" name="email" id="email" class="form-control search-input"></th>
+                        <th><input type="text" name="fullName" id="fullName" class="form-control search-input"></th>
+                        <th></th>
+                        <th></th>
                         <th><input type="text" name="phone" id="phone" class="form-control search-input"></th>
                         <th></th>
                         <th></th>
@@ -93,6 +96,7 @@
                         <td th:text="${khachhang.taiKhoan}"></td>
                         <td th:text="${khachhang.email}"></td>
                         <td th:text="${khachhang.ten}"></td>
+                        <td th:text="${khachhang.tenDem}"></td>
                         <td th:text="${khachhang.tenDem}"></td>
                         <td th:text="${khachhang.vaiTro==3?'Khách Hàng': ''}">
                         <td th:text="${khachhang.sdt}">
@@ -119,19 +123,21 @@
     <script type="text/javascript" th:src="@{/adminlte/pagination/jquery.simplePagination.js}"></script>
     <script type="text/javascript" th:src="@{/adminlte/js/table.js}"></script>
     <script th:inline="javascript">
-        let fullName, email, phone, address, page;
+        let account, fullName, email, phone, address, page;
 
         $(function () {
             let vars = parseUrl();
             fullName = vars["fullName"] || null
             email = vars["email"] || null
             phone = vars["phone"] || null
+            account = vars["account"] || null
             address = vars["address"] || null
             page = vars["page"] || "1"
 
             $('#fullName').val(fullName)
             $('#email').val(email)
             $('#phone').val(phone)
+            $('#account').val(account)
             $('#address').val(address)
             $('#page').val(page)
 

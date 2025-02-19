@@ -10,8 +10,9 @@ import org.springframework.data.jpa.repository.Query;
 public interface KhachHangRepository extends JpaRepository<KhachHang, Long> {
   Page<KhachHang> findAll(Pageable pageable);
   @Query(value = "SELECT * " +
-          "FROM khach_hang u WHERE (?1 is null or u.ten LIKE CONCAT('%',?1,'%')) " +
-          "AND (?2 is null or  u.sdt LIKE CONCAT('%',?2,'%') )" +
-          "AND (?3 is null or u.email LIKE CONCAT('%',?3,'%') ) ",nativeQuery = true)
-  Page<KhachHang> adminListUserPages(String fullName, String phone, String email, Pageable pageable);
+          "FROM khach_hang u WHERE (?1 is null or u.tai_khoan LIKE CONCAT('%',?1,'%')) " +
+          "AND (?2 is null or  u.ten LIKE CONCAT('%',?2,'%') )" +
+          "AND (?3 is null or  u.sdt LIKE CONCAT('%',?3,'%') )" +
+          "AND (?4 is null or u.email LIKE CONCAT('%',?4,'%') ) ",nativeQuery = true)
+  Page<KhachHang> adminListUserPages(String account, String fullName, String phone, String email, Pageable pageable);
 }

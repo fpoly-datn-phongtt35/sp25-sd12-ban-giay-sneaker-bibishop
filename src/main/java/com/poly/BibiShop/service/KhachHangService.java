@@ -19,5 +19,5 @@ public interface KhachHangService {
     void updateCustomer(CreateKhachHangRequest khachHang);
 
     void deleteCustomer(Long id);
-    Page<KhachHang> adminListUserPages(String fullName, String phone, String email, Integer page);
+    Page<KhachHang> adminListUserPages(String account, String fullName, String phone, String email, Integer page);
 }

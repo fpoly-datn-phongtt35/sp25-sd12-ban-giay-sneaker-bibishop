@@ -22,12 +22,13 @@ public class NhanVienController {
 
     @GetMapping("list")
     public String listEmployee(Model model,
-                            @RequestParam(defaultValue = "", required = false) String fullName,
-                            @RequestParam(defaultValue = "", required = false) String phone,
-                            @RequestParam(defaultValue = "", required = false) String email,
-                            @RequestParam(defaultValue = "", required = false) String address,
+                            @RequestParam(required = false) String fullName,
+                            @RequestParam(required = false) String phone,
+                            @RequestParam(required = false) String email,
+                            @RequestParam(required = false) String account,
+                            @RequestParam(required = false) String address,
                             @RequestParam(defaultValue = "1", required = false) Integer page) {
-        Page<NhanVien> users = nhanVienService.adminListUserPages(fullName, phone, email, page);
+        Page<NhanVien> users = nhanVienService.adminListUserPages(account,fullName, phone, email, page);
         model.addAttribute("list", users.getContent());
         model.addAttribute("totalPages", users.getTotalPages());
         model.addAttribute("currentPage", users.getPageable().getPageNumber() + 1);

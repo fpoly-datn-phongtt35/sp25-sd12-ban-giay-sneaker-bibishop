@@ -143,8 +143,11 @@
                                     <label class="required-label" for="position">Vị trí công việc</label>
                                     <span class="invalid-feedback"
                                           id="invalid-feedback-position">Trường này không được phép để trống</span>
+                                    <select class="form-control" id="position">
+                                        <option value="1" th:selected="${nhanVien.vaiTro == '1'}">Admin</option>
+                                        <option value="2" th:selected="${nhanVien.vaiTro == '2'}">Nhân viên</option>
+                                    </select>
                                 </div>
-                                <input type="text" class="form-control" id="position" th:value="${nhanVien.vaiTro}">
                             </div>
                             <div class="form-group">
                                 <div>
@@ -322,7 +325,6 @@
                     contentType: 'application/json',
                     data: myJSON,
                     success: function (data) {
-                        debugger
                         toastr.success("Cập nhật thành côngggg");
                         location.href = "/admin/nhanvien/list";
                     },

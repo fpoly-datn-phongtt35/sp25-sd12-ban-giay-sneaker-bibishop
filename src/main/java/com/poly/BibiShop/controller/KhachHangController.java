@@ -27,8 +27,9 @@ public class KhachHangController {
                                @RequestParam( required = false) String phone,
                                @RequestParam( required = false) String email,
                                @RequestParam( required = false) String address,
+                               @RequestParam( required = false) String account,
                                @RequestParam(defaultValue = "1", required = false) Integer page) {
-        Page<KhachHang> users = khachHangService.adminListUserPages(fullName, phone, email, page);
+        Page<KhachHang> users = khachHangService.adminListUserPages(account, fullName, phone, email, page);
         model.addAttribute("list", users.getContent());
         model.addAttribute("totalPages", users.getTotalPages());
         model.addAttribute("currentPage", users.getPageable().getPageNumber() + 1);

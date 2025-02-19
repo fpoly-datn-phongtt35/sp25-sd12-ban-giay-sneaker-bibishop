@@ -63,5 +63,5 @@ public class NhanVien {
 //  private DiaChi diaChi;
 
   @Column(name = "vai_tro")
-  private String vaiTro;
+  private int vaiTro;
 }
