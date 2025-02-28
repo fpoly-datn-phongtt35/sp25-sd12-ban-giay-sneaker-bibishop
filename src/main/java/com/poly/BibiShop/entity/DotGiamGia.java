@@ -1,24 +1,25 @@
 package com.poly.BibiShop.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
+import java.sql.Date;
 import java.time.LocalDateTime;
-
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Table(name = "dot_giam_gia")
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Table(name = "dot_giam_gia")
 public class DotGiamGia {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   @Column(name = "don_toi_thieu", precision = 38, scale = 2)
   private BigDecimal donToiThieu;
@@ -42,10 +43,10 @@ public class DotGiamGia {
   private Integer soLanSuDung;
 
   @Column(name = "ngay_bat_dau")
-  private LocalDateTime ngayBatDau;
+  private Date ngayBatDau;
 
   @Column(name = "ngay_ket_thuc")
-  private LocalDateTime ngayKetThuc;
+  private Date ngayKetThuc;
 
   @Column(name = "ngay_sua")
   private LocalDateTime ngaySua;
@@ -59,7 +60,8 @@ public class DotGiamGia {
   @Column(name = "trang_thai")
   private Integer trangThai;
 
-  @ManyToOne
-  @JoinColumn(name = "phuong_thuc_thanh_toan_id")
-  private PhuongThucThanhToan phuongThucThanhToan;
+  @Column(name = "hinh_thuc_giam_gia_id")
+  private Integer hinhThucGiamGiaId;
+
+  // Getters and Setters
 }

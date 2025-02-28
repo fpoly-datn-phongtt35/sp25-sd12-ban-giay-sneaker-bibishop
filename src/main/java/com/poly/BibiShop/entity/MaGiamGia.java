@@ -1,24 +1,26 @@
 package com.poly.BibiShop.entity;
 
+import com.azure.core.annotation.Get;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
+import java.sql.Date;
 import java.time.LocalDateTime;
-
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "ma_giam_gia")
-@Data
-@NoArgsConstructor
+@Setter
+@Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class MaGiamGia {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   @Column(name = "don_toi_thieu", precision = 38, scale = 2)
   private BigDecimal donToiThieu;
@@ -42,16 +44,16 @@ public class MaGiamGia {
   private Integer soLanSuDung;
 
   @Column(name = "ngay_bat_dau")
-  private LocalDateTime ngayBatDau;
+  private Date ngayBatDau;
 
   @Column(name = "ngay_ket_thuc")
-  private LocalDateTime ngayKetThuc;
+  private Date ngayKetThuc;
 
   @Column(name = "ngay_sua")
-  private LocalDateTime ngaySua;
+  private Date ngaySua;
 
   @Column(name = "ngay_tao")
-  private LocalDateTime ngayTao;
+  private Date ngayTao;
 
   @Column(name = "ten", length = 255)
   private String ten;
@@ -59,7 +61,8 @@ public class MaGiamGia {
   @Column(name = "trang_thai")
   private Integer trangThai;
 
-  @ManyToOne
-  @JoinColumn(name = "phuong_thuc_thanh_toan_id")
-  private PhuongThucThanhToan phuongThucThanhToan;
+  @Column(name = "hinh_thuc_giam_gia_id")
+  private Long hinhThucGiamGiaId;
+
+  // Getters and Setters
 }

@@ -5,20 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="dung refactor code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDonChitiet/hoaDonChiTietController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDonChiTietService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/them-hoaDon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_12_2025_8_34_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_12_2025_8_34_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Dot_giam_gia/Dot_giam_gia_controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Ma_giam_gia/Ma_giam_gia_controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Ma_giam_gia/dto/CreatMaGiamGia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/dto/admin/CreatMaGiamGia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/DotGiamGiaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/MaGiamGiaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/Dot_giam_gia/ViewAndUpdate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/Dot_giam_gia/createDotGiamGia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/Dot_giam_gia/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/ma-giam-gia/createMagiamgia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/ma-giam-gia/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/ma-giam-gia/viewAndUpdate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/BibiShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/BibiShopApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/HoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/HoaDon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/KhachHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/layout-dashboard/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/layout-dashboard/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/sidebar_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/sidebar_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/DotGiamGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/DotGiamGia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/MaGiamGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/MaGiamGia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/MaGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/MaGiamGiaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +39,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="HoaDon_hoaDonChitiet" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Dung0123"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dung0123&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -72,12 +75,12 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/fpoly-datn-phongtt35/sp25-sd12-ban-giay-sneaker-bibishop",
-    "accountId": "cbbb57f2-878b-43c3-b411-de8b1b3346a7"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/fpoly-datn-phongtt35/sp25-sd12-ban-giay-sneaker-bibishop&quot;,
+    &quot;accountId&quot;: &quot;cbbb57f2-878b-43c3-b411-de8b1b3346a7&quot;
   }
-}]]></component>
+}</component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
   </component>
@@ -97,10 +100,13 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BibiShopApplication.executor": "Run",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "#1 on HoaDon__hoaDonChitiet",
-    "last_opened_file_path": "E:/Duan_ngoai/Duan_anh Quang/fa24-sd95-ban-ao-phong-gelato",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/DuAn_TN/sp25-sd12-ban-giay-sneaker-bibishop/src/main/java/com/poly/BibiShop/repository/impl",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,7 +115,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -122,13 +129,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop\repository\impl" />
+      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop\entity" />
+      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop\controller" />
+      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\resources\templates\admin" />
       <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\resources\templates\admin\hoadon" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.poly.BibiShop.dto.admin" />
       <recent name="com.poly.BibiShop.controller" />
     </key>
   </component>
@@ -166,6 +174,14 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739797957895</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="dung refactor code" />
+      <created>1740763884970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740763884970</updated>
+      <workItem from="1740763886631" duration="1352000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
