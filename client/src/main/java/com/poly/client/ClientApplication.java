@@ -19,17 +19,17 @@ public class ClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(ClientApplication.class, args);
     }
-//    @PostConstruct
-//    public void createUser(){
-//        String hash = BCrypt.hashpw("123456aA@", BCrypt.gensalt(12));
-//        KhachHang createUserRequest = new KhachHang();
-//        createUserRequest.setTen("vinh");
-//        createUserRequest.setEmail("vinhtq26@gmail.com");
-//        createUserRequest.setSdt("0866965002");
-//        createUserRequest.setPassword("123456aA@");
-//        createUserRequest.setMatKhau(hash);
-//        userRepo.save(createUserRequest);
-//        System.out.println(hash);
-//
-//    }
+    @PostConstruct
+    public void createUser(){
+        String hash = BCrypt.hashpw("123456aA@", BCrypt.gensalt(12));
+        KhachHang createUserRequest = new KhachHang();
+        createUserRequest.setTen("vinh");
+        createUserRequest.setEmail("vinhtq26@gmail.com");
+        createUserRequest.setSdt("0866965502");
+        createUserRequest.setPassword("123456aA@");
+        createUserRequest.setMatKhau(hash);
+        userRepo.save(createUserRequest);
+        System.out.println(hash);
+
+    }
 }
