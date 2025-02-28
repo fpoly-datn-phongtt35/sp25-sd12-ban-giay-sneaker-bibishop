@@ -16,11 +16,11 @@ public class JwtUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        KhachHang user = userRepository.findKhachHangByEmail(s);
+        KhachHang user = userRepository.findKhachHangByTaiKhoan(s);
         if (user != null) {
             return new CustomUserDetails(user);
         } else {
-            throw new UsernameNotFoundException("User get email " + s + " does not exist!");
+            throw new UsernameNotFoundException("User get account " + s + " does not exist!");
         }
     }
 }

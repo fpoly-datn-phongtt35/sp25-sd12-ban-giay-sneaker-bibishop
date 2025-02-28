@@ -16,6 +16,7 @@ import java.sql.Timestamp;
 public class CreateKhachHangRequest {
     private Long id;
     private String email;
+    private String firstName;
     private String phone;
     private String fullName;
     private String loginName;

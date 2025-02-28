@@ -14,7 +14,6 @@ import java.util.Date;
 
 @SpringBootApplication
 public class ClientApplication {
-
     @Autowired
     private KhachHangRepository userRepo;
     public static void main(String[] args) {

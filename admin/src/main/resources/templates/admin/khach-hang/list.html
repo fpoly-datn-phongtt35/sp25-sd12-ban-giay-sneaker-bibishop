@@ -52,7 +52,6 @@
                     <th>Tải khoản</th>
                     <th>Email</th>
                     <th>Tên</th>
-                    <th>Tên đệm</th>
                     <th>Role</th>
                     <th>Số điện thoại</th>
                     <th>Giới tính</th>
@@ -76,15 +75,15 @@
                 </thead>
                 <tbody>
                 </tbody>
-                <th:block th:each="khachhang : ${list}">
+                <th:block th:each="khachhang, start : ${list}">
                     <tr>
                         <td>
                             <a th:href="@{/admin/khachhang/{id}(id=${khachhang.id})}"
-                               th:text="${khachhang.id}" style="color: #0a0a0a"></a>
+                               th:text="${start.index +1}" style="color: #0a0a0a"></a>
                         </td>
                         <td th:text="${khachhang.taiKhoan}"></td>
                         <td th:text="${khachhang.email}"></td>
-                        <td th:text="${khachhang.ten}"></td>
+                        <td th:text="${khachhang.ho + ' ' + khachhang.tenDem + ' ' + khachhang.ten}"></td>
                         <td th:text="${khachhang.tenDem}"></td>
                         <td th:text="${khachhang.vaiTro==3?'Khách Hàng': ''}">
                         <td th:text="${khachhang.sdt}">

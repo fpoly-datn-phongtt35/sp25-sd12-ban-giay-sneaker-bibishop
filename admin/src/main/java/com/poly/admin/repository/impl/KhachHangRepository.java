@@ -10,11 +10,11 @@ public interface KhachHangRepository extends JpaRepository<KhachHang, Long> {
   Page<KhachHang> findAll(Pageable pageable);
   @Query(value = "SELECT * " +
           "FROM khach_hang u WHERE (?1 is null or u.tai_khoan LIKE CONCAT('%',?1,'%')) " +
-          "AND (?2 is null or  u.ten LIKE CONCAT('%',?2,'%') )" +
+          "AND ((?2 is null or  u.ten LIKE CONCAT('%',?2,'%') or u.ho LIKE CONCAT('%',?2,'%') or  u.ten_dem LIKE CONCAT('%',?2,'%') ))" +
           "AND (?3 is null or  u.sdt LIKE CONCAT('%',?3,'%') )" +
           "AND (?4 is null or u.email LIKE CONCAT('%',?4,'%') ) ",nativeQuery = true)
   Page<KhachHang> adminListUserPages(String account, String fullName, String phone, String email, Pageable pageable);
-  boolean existsByTaiKhoanAndIdIsNot(String taiKhoan, Long id);
+  boolean existsByTaiKhoanAndIdNot(String taiKhoan, Long id);
   boolean existsByEmailAndIdNot(String email, Long id);
   boolean existsBySdtAndIdNot(String sdt, Long id);
   boolean existsByTaiKhoan(String taiKhoan);

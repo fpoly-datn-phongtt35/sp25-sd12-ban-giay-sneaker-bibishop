@@ -19,6 +19,7 @@ public class CreateKhachHangRequest {
     private String phone;
     private String fullName;
     private String loginName;
+    private String firstName;
     private String gender;
     @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
     @JsonProperty("dob")

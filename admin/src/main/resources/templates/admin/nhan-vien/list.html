@@ -81,11 +81,11 @@
                 </thead>
                 <tbody>
                 </tbody>
-                <th:block th:each="nhanvien : ${list}">
+                <th:block th:each="nhanvien, start : ${list}">
                     <tr>
                         <td>
                             <a th:href="@{/admin/nhanvien/{id}(id=${nhanvien.id})}"
-                               th:text="${nhanvien.id}" style="color: #0a0a0a"></a>
+                               th:text="${start.index+1}" style="color: #0a0a0a"></a>
                         </td>
                         <td th:text="${nhanvien.taiKhoan}"></td>
                         <td th:text="${nhanvien.email}"></td>

@@ -79,13 +79,15 @@ public class KhachHangServiceImpl implements KhachHangService {
         KhachHang khachHang = new KhachHang();
         khachHang.setEmail(request.getEmail());
         khachHang.setTen(request.getFullName());
+        khachHang.setHo(request.getFirstName());
         khachHang.setTenDem(request.getMidName());
         khachHang.setSdt(request.getPhone());
         khachHang.setPassword(request.getPassword());
         khachHang.setTrangThai(1);
         khachHang.setGioiTinh(request.getGender());
         khachHang.setNgayTao(LocalDateTime.now());
-        khachHang.setNgayTao(LocalDateTime.now());
+        khachHang.setNgaySua(LocalDateTime.now());
+        khachHang.setNgaySinh(request.getDob().toInstant());
         khachHang.setTaiKhoan(request.getAccount());
         khachHang.setVaiTro(3);
         khachHangRepository.save(khachHang);
@@ -94,25 +96,25 @@ public class KhachHangServiceImpl implements KhachHangService {
     @Override
     public void updateCustomer(CreateKhachHangRequest request) {
         validateCustomer(request);
-        KhachHang khachHang = new KhachHang();
+        KhachHang khachHang = khachHangRepository.findById(request.getId()).orElse(new KhachHang());
         khachHang.setId(request.getId());
         khachHang.setEmail(request.getEmail());
-        khachHang.setTaiKhoan(request.getLoginName());
+        khachHang.setTaiKhoan(request.getAccount());
         khachHang.setNgaySinh(request.getDob().toInstant());
         khachHang.setSdt(request.getPhone());
         khachHang.setTen(request.getFullName());
+        khachHang.setHo(request.getFirstName());
         khachHang.setTenDem(request.getMidName());
         khachHang.setTrangThai(request.getStatus());
         // 3: KHACH HANG
-        khachHang.setVaiTro(3);
         khachHang.setGioiTinh(request.getGender());
-        khachHang.setNgayTao(LocalDateTime.now());
+        khachHang.setNgaySua(LocalDateTime.now());
         khachHangRepository.save(khachHang);
     }
     private void validateCustomer(CreateKhachHangRequest request) {
         if (request.getId() != null) {
             // validate update
-            if (khachHangRepository.existsByTaiKhoanAndIdIsNot(request.getAccount(), request.getId())) {
+            if (khachHangRepository.existsByTaiKhoanAndIdNot(request.getAccount(), request.getId())) {
                 throw new RuntimeException("Tài khoản đã tồn tại!");
             }
             if (khachHangRepository.existsByEmailAndIdNot(request.getEmail(), request.getId())) {

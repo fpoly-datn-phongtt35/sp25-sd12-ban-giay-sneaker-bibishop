@@ -42,9 +42,23 @@
                     <div class="tab-pane fade show active" id="profile-setting" role="tabpanel" aria-labelledby="profile-setting-tab">
                         <form class="setting-box">
                             <div class="full-name item-row col-md-10">
-                                <div class="text required-label">Họ tên</div>
+                                <div class="text required-label">Tên</div>
                                 <div>
                                     <input class="form-control" th:value="${khachhang.ten}" id="in-user-fullname"/>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <div class="full-name item-row col-md-10">
+                                <div class="text required-label">Họ</div>
+                                <div>
+                                    <input class="form-control" th:value="${khachhang.ho}" id="in-user-firstName"/>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <div class="full-name item-row col-md-10">
+                                <div class="text required-label">Họ tên</div>
+                                <div>
+                                    <input class="form-control" th:value="${khachhang.tenDem}" id="in-user-midName"/>
                                     <div class="invalid-feedback"></div>
                                 </div>
                             </div>
@@ -196,6 +210,8 @@
             let phoneValue = $("#in-user-phone").val();
             let fullNameValue = $("#in-user-fullname").val();
             let addressValue = $('#in-user-address').val();
+            let firstName = $('#in-user-firstName').val();
+            let midName = $('#in-user-midName').val();
             let isValid = true;
             let idKhachHang = [[${khachhang.id}]]
 
@@ -224,6 +240,8 @@
                     phone: phoneValue,
                     fullName: fullNameValue,
                     address: addressValue,
+                    firstName: firstName,
+                    midName: midName,
                     id: idKhachHang
                 }
                 var myJSON = JSON.stringify(req);

@@ -108,8 +108,15 @@
                             </div>
                             <div class="form-group discount-exactly">
                                 <div>
+                                    <label class="required-label" for="name">Họ</label>
+                                    <span class="invalid-feedback" id="invalid-feedback-firstName">Họ không được để trống</span>
+                                </div>
+                                <input type="text" min="1" class="form-control" id="firstName" th:value="${khachHang.ho}">
+                            </div>
+                            <div class="form-group discount-exactly">
+                                <div>
                                     <label class="required-label" for="name">Tên</label>
-                                    <span class="invalid-feedback" id="invalid-feedback-name">Họ tên không được để trống</span>
+                                    <span class="invalid-feedback" id="invalid-feedback-name">Tên không được để trống</span>
                                 </div>
                                 <input type="text" min="1" class="form-control" id="name" th:value="${khachHang.ten}">
                             </div>
@@ -137,11 +144,11 @@
                             </div>
                             <div class="form-group">
                                 <div>
-                                    <label class="required-label" for="status">Trạng thái</label>
+                                    <label class="required-label" for="trangThai">Trạng thái</label>
                                     <span class="invalid-feedback"
-                                          id="invalid-feedback-department">Trường này không được phép để trống</span>
+                                          id="invalid-feedback-trangThai">Trường này không được phép để trống</span>
                                 </div>
-                                <select class="form-control" id="status">
+                                <select class="form-control" id="trangThai">
                                     <option value="1" th:selected="${khachHang.trangThai == 1}">Hoạt động</option>
                                     <option value="0" th:selected="${khachHang.trangThai == 0}">Không hoạt động</option>
                                 </select>
@@ -247,8 +254,9 @@
             let midName = $('#midName').val();
             let dob = $('#dob').val();
             let loginName = $('#login-name').val();
-            let status = $('#status').val();
+            let status = $('#trangThai').val();
             let gender = $('#gender').val();
+            let firstName = $('#firstName').val();
             let isValid = true;
 
             let regex = new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
@@ -278,12 +286,16 @@
             }
 
             if(status.length === 0){
-                $('#invalid-feedback-department').show();
+                $('#invalid-feedback-trangThai').show();
                 isValid = false;
             }
 
             if(gender.length === 0){
                 $('#invalid-feedback-gender').show();
+                isValid = false;
+            }
+            if(firstName.length === 0){
+                $('#invalid-feedback-firstName').show();
                 isValid = false;
             }
 
@@ -295,9 +307,10 @@
                     fullName: name,
                     midName: midName,
                     dob: dob,
-                    loginName: loginName,
+                    account: loginName,
                     status: status,
-                    gender: gender
+                    gender: gender,
+                    firstName: firstName
                 }
                 const myJSON = JSON.stringify(req);
                 $.ajax({

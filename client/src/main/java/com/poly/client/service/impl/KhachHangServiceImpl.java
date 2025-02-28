@@ -1,8 +1,10 @@
 package com.poly.client.service.impl;
 
+import com.poly.client.dto.ChangePasswordRequest;
 import com.poly.client.dto.admin.CreateKhachHangRequest;
 import com.poly.client.entity.KhachHang;
 import com.poly.client.entity.NhanVien;
+import com.poly.client.exception.BadRequestException;
 import com.poly.client.repository.impl.KhachHangRepository;
 import com.poly.client.service.KhachHangService;
 import org.springframework.data.domain.Page;
@@ -11,6 +13,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import com.poly.client.entity.KhachHang;
 import org.springframework.util.ObjectUtils;
@@ -39,24 +42,33 @@ public class KhachHangServiceImpl implements KhachHangService {
     }
 
     @Override
-    public void register(CreateKhachHangRequest request) {
+    public KhachHang register(CreateKhachHangRequest request) {
         validateCustomer(request);
         KhachHang khachHang = new KhachHang();
         khachHang.setEmail(request.getEmail());
+        khachHang.setTaiKhoan(request.getLoginName());
+        khachHang.setHo(request.getFirstName());
+        khachHang.setEmail(request.getEmail());
         khachHang.setTen(request.getFullName());
         khachHang.setSdt(request.getPhone());
-        khachHang.setPassword(request.getPassword());
+        khachHang.setMatKhau(BCrypt.hashpw(request.getPassword(), BCrypt.gensalt(12)));
         khachHang.setTrangThai(1);
-        khachHangRepository.save(khachHang);
+        khachHang.setVaiTro(3);
+        khachHang.setNgaySua(LocalDateTime.now());
+        khachHang.setNgayTao(LocalDateTime.now());
+        return khachHangRepository.save(khachHang);
     }
     @Override
     public void updateProfile(CreateKhachHangRequest request) {
         validateCustomer(request);
-        KhachHang khachHang = new KhachHang();
-        khachHang.setId(request.getId());
+        KhachHang khachHang = khachHangRepository.findById(request.getId()).orElse(new KhachHang());
         khachHang.setTen(request.getFullName());
+        khachHang.setHo(request.getFirstName());
+        khachHang.setTenDem(request.getMidName());
         khachHang.setSdt(request.getPhone());
         khachHang.setAddress(request.getAddress());
+        khachHang.setVaiTro(3);
+        khachHang.setNgaySua(LocalDateTime.now());
         khachHangRepository.save(khachHang);
     }
     @Override
@@ -85,7 +97,7 @@ public class KhachHangServiceImpl implements KhachHangService {
         khachHang.setGioiTinh(request.getGender());
         khachHang.setNgayTao(LocalDateTime.now());
         khachHang.setNgayTao(LocalDateTime.now());
-        khachHang.setTaiKhoan(request.getAccount());
+        khachHang.setTaiKhoan(request.getLoginName());
         khachHang.setVaiTro(3);
         khachHangRepository.save(khachHang);
     }
@@ -120,7 +132,21 @@ public class KhachHangServiceImpl implements KhachHangService {
             if(khachHangRepository.existsBySdt(request.getPhone())){
                 throw new RuntimeException("Số điện thoại đã tồn tại!");
             }
+            if(khachHangRepository.existsByTaiKhoan(request.getLoginName())){
+                throw new RuntimeException("Tài khoản đã tồn tại!");
+            }
         }
+    }
+
+    @Override
+    public void changePassword(KhachHang user, ChangePasswordRequest changePasswordRequest) {
+        if (!BCrypt.checkpw(changePasswordRequest.getOldPassword(), user.getMatKhau())) {
+            throw new BadRequestException("Mật khẩu cũ không chính xác");
+        }
+
+        String hash = BCrypt.hashpw(changePasswordRequest.getNewPassword(), BCrypt.gensalt(12));
+        user.setMatKhau(hash);
+        khachHangRepository.save(user);
     }
 }
 

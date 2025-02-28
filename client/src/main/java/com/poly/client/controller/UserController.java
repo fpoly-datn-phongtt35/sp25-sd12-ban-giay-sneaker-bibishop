@@ -1,6 +1,7 @@
 package com.poly.client.controller;
 
 import com.poly.client.config.Contant;
+import com.poly.client.dto.ChangePasswordRequest;
 import com.poly.client.dto.LoginRequest;
 import com.poly.client.dto.admin.CreateKhachHangRequest;
 import com.poly.client.entity.KhachHang;
@@ -39,30 +40,22 @@ public class UserController {
     @Autowired
     private AuthenticationManager authenticationManager;
     @PostMapping("/api/register")
-//    public ResponseEntity<Object> register(@Valid @RequestBody CreateUserRequest createUserRequest, HttpServletResponse response) {
-//        //Create user
-//        User user = userService.createUser(createUserRequest);
-//
-//        //Gen token
-//        UserDetails principal = new CustomUserDetails(user);
-//        String token = jwtTokenUtil.generateToken(principal);
-//
-//        //Add token on cookie to login
-//        Cookie cookie = new Cookie("JWT_TOKEN", token);
-//        cookie.setMaxAge(Contant.MAX_AGE_COOKIE);
-//        cookie.setPath("/");
-//        response.addCookie(cookie);
-//
-//        return ResponseEntity.ok(UserMapper.toUserDTO(user));
-//    }
-    public ResponseEntity<String> register(Model model, @RequestBody CreateKhachHangRequest request) {
-        userService.register(request);
+    public ResponseEntity<Object> register(@Valid @RequestBody CreateKhachHangRequest request, HttpServletResponse response) {
+        //Create user
+        KhachHang user = userService.register(request);
+
+        //Gen token
+        UserDetails principal = new CustomUserDetails(user);
+        String token = jwtTokenUtil.generateToken(principal);
+
+        //Add token on cookie to login
+        Cookie cookie = new Cookie("JWT_TOKEN", token);
+        cookie.setMaxAge(Contant.MAX_AGE_COOKIE);
+        cookie.setPath("/");
+        response.addCookie(cookie);
+
         return ResponseEntity.ok("Đăng ký thành công");
     }
-//    @GetMapping("login")
-//    public String getLogin(){
-//        return "login";
-//    }
     @PostMapping("/api/login")
     public ResponseEntity<Object> login(@Valid @RequestBody LoginRequest loginRequest, HttpServletResponse response) {
         //Authenticate
@@ -82,24 +75,27 @@ public class UserController {
 
             return ResponseEntity.ok(((CustomUserDetails) authentication.getPrincipal()).getUser());
         } catch (Exception ex) {
-            throw new BadRequestException("Email hoặc mật khẩu không chính xác!");
+            throw new BadRequestException("Tài khoản hoặc mật khẩu không chính xác!");
 
         }
     }
 
     @GetMapping("/tai-khoan")
     public String getProfilePage(Model model) {
-        KhachHang khachHang = userService.getAllCustomers().get(0);
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        CustomUserDetails principal = (CustomUserDetails) authentication.getPrincipal();
+        Long id = principal.getUser().getId();
+        KhachHang khachHang = userService.getCustomerById(id);
         model.addAttribute("khachhang", khachHang);
         return "shop/account";
     }
 
-//    @PostMapping("/api/change-password")
-//    public ResponseEntity<Object> changePassword(@Valid @RequestBody ChangePasswordRequest passwordReq) {
-//        User user = ((CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
-//        userService.changePassword(user, passwordReq);
-//        return ResponseEntity.ok("Đổi mật khẩu thành công");
-//    }
+    @PostMapping("/api/change-password")
+    public ResponseEntity<Object> changePassword(@Valid @RequestBody ChangePasswordRequest passwordReq) {
+        KhachHang user = ((CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
+        userService.changePassword(user, passwordReq);
+        return ResponseEntity.ok("Đổi mật khẩu thành công");
+    }
 
     @PutMapping("/api/update-profile")
 //    public ResponseEntity<Object> updateProfile(@Valid @RequestBody UpdateProfileRequest profileReq) {
