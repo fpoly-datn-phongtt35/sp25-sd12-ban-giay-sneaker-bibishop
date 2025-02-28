@@ -1,8 +1,8 @@
 package com.poly.BibiShop.repository.impl.hoadon.Server;
 
-import com.poly.BibiShop.entity.SanPhamChiTiet;
+import com.poly.BibiShop.entity.SanPhamChiTietEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SanPhamChitietRepository  extends JpaRepository<SanPhamChiTiet, Long> {
+public interface SanPhamChitietRepository  extends JpaRepository<SanPhamChiTietEntity, Long> {
 
 }

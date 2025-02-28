@@ -26,11 +26,11 @@ public class HoaDonChiTiet {
 
   @ManyToOne
   @JoinColumn(name = "id_sanpham", nullable = false)
-  private SanPham sanPham; // đổi lại tên cho đúng chuẩn Java
+  private SanPhamEntity sanPham; // đổi lại tên cho đúng chuẩn Java
 
   @ManyToOne
   @JoinColumn(name = "id_sanpham_chitiet", nullable = false)
-  private SanPhamChiTiet sanPhamChiTiet;
+  private SanPhamChiTietEntity sanPhamChiTiet;
 
   @Column(name = "so_luong", nullable = false)
   private Integer soLuong;
