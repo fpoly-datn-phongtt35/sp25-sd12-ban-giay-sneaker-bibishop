@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<html xmlns:th="http://www.thymeleaf.org" lang="vi"
+      th:replace="~{/layout/layout_admin :: main-fragment(
+~{:: title},
+'header',
+'sidebar',
+~{:: #css-resources},
+~{:: #js-resources},
+~{:: #main-content}
+)}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +16,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <th:block th:replace="~{cssImport.html :: layout_import_css}"/>
+<!--  <th:block th:replace="~{cssImport.html :: layout_import_css}"/>-->
   <style>
     .modal-lg4 {
       max-width: 40%;
@@ -134,8 +142,10 @@
   </section>
 </div>
 <!-- footer -->
+<!-- footer -->
 <div th:replace="~{admin/common/foodter.html}"></div>
-<th:block th:replace="jsImport.html :: layout_import_js"/>
+<!--<th:block th:replace="jsImport.html :: layout_import_js"/>-->
+<div th:insert="~{jsImport.html :: layout_import_js}"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
