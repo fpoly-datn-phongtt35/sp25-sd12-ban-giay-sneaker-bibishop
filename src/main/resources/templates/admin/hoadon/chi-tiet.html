@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Chi Tiết Hóa Đơn</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h2>Chi Tiết Hóa Đơn</h2>
+  <p><strong>Mã Hóa Đơn:</strong> <span th:text="${hoaDon.maHoaDon}"></span></p>
+  <p><strong>Khách Hàng:</strong> <span th:text="${hoaDon.khachHang.ten}"></span></p>
+  <p><strong>Địa Chỉ:</strong> <span th:text="${hoaDon.khachHang.diaChi}"></span></p>
+  <p><strong>Ngày Tạo:</strong> <span th:text="${hoaDon.ngayTao}"></span></p>
+  <p><strong>Tổng Tiền:</strong> <span th:text="${hoaDon.tongTien}"></span></p>
+<!--  <p><strong>Khuyến Mãi:</strong> <span th:text="${hoaDon.khuyenMai != null ? hoaDon.khuyenMai : 'Không có'}"></span></p>-->
+  <p><strong>Trạng Thái:</strong> <span th:text="${hoaDon.trangThai}"></span></p>
+
+<!--  <h3>Danh Sách Sản Phẩm</h3>-->
+<!--  <table class="table table-bordered">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>STT</th>-->
+<!--      <th>Mã SP</th>-->
+<!--      <th>Hình Ảnh</th>-->
+<!--      <th>Tên SP</th>-->
+<!--      <th>Màu Sắc</th>-->
+<!--      <th>Kích Thước</th>-->
+<!--      <th>Đơn Giá</th>-->
+<!--      <th>Số Lượng</th>-->
+<!--      <th>Thành Tiền</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="chiTiet, iterStat : ${danhSachChiTiet}">-->
+<!--      <td th:text="${iterStat.index + 1}"></td>-->
+<!--      <td th:text="${chiTiet.sanPham.id}"></td>-->
+<!--      <td>-->
+<!--        <img th:src="@{${chiTiet.hinhAnh}}" alt="Hình sản phẩm" style="width: 50px; height: 50px;">-->
+<!--      </td>-->
+<!--      <td th:text="${chiTiet.sanPham.ten}"></td>-->
+<!--      <td th:text="${chiTiet.mauSac}"></td>-->
+<!--      <td th:text="${chiTiet.kichThuoc}"></td>-->
+<!--      <td th:text="${#numbers.formatDecimal(chiTiet.gia, 0, 'COMMA', 0, 'POINT') + ' VND'}"></td>-->
+<!--      <td th:text="${chiTiet.soLuong}"></td>-->
+<!--      <td th:text="${#numbers.formatDecimal(chiTiet.soLuong * chiTiet.gia, 0, 'COMMA', 0, 'POINT') + ' VND'}"></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+
+<!--  <a href="/admin/hoadon" class="btn btn-secondary">Quay lại</a>-->
+</div>
+</body>
+</html>
