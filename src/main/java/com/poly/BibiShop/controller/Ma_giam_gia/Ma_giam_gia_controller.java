@@ -7,6 +7,7 @@ import com.poly.BibiShop.repository.impl.hoadon.Server.MaGiamGiaRepository;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Optional;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -18,18 +19,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-@Controller
+@RestController
 @RequestMapping("/admin/")
+@RequiredArgsConstructor
 public class Ma_giam_gia_controller {
 
   private final MaGiamGiaRepository maGiamGiaRepository;
 
-
-  public Ma_giam_gia_controller(MaGiamGiaRepository maGiamGiaRepository) {
-    this.maGiamGiaRepository = maGiamGiaRepository;
-  }
 
   @GetMapping("MaGiamGia/list")
   public String getAllvoucher(Model model,

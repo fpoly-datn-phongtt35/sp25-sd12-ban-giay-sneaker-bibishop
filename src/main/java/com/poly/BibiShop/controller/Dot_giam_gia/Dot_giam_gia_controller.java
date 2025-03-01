@@ -5,6 +5,7 @@ import com.poly.BibiShop.entity.DotGiamGia;
 import com.poly.BibiShop.repository.impl.hoadon.Server.DotGiamGiaRepository;
 import java.time.LocalDate;
 import java.util.Optional;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -17,18 +18,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-@Controller
+@RestController
 @RequestMapping("/admin/")
+@RequiredArgsConstructor
 public class Dot_giam_gia_controller {
 
-  @Autowired
-  private DotGiamGiaRepository dotGiamGiaRepository;
-
-  public Dot_giam_gia_controller(DotGiamGiaRepository dotGiamGiaRepository) {
-    this.dotGiamGiaRepository = dotGiamGiaRepository;
-  }
+  private final DotGiamGiaRepository dotGiamGiaRepository;
 
   @GetMapping("dotgiamgia/list")
   public String listDotGiamGia(
