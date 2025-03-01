@@ -1,8 +1,8 @@
-package com.poly.BibiShop.service;
+package com.poly.admin.service;
 
 
 
-import com.poly.BibiShop.dto.KichCoDTO;
+import com.poly.admin.dto.KichCoDTO;
 import java.util.List;
 
 public interface KichCoService {

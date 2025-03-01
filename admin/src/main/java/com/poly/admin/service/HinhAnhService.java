@@ -1,5 +1,5 @@
-package com.poly.BibiShop.service;
-import com.poly.BibiShop.dto.HinhAnhDTO;
+package com.poly.admin.service;
+import com.poly.admin.dto.HinhAnhDTO;
 
 
 import java.util.List;

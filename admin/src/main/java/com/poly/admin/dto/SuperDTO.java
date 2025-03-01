@@ -1,9 +1,9 @@
-package com.poly.BibiShop.dto;
+package com.poly.admin.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.UUIDDeserializer;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,6 @@
-package com.poly.BibiShop.repository.impl;
+package com.poly.admin.repository.impl;
 
-import com.poly.BibiShop.entity.SanPhamChiTietEntity;
-import jakarta.transaction.Transactional;
+import com.poly.admin.entity.SanPhamChiTietEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;

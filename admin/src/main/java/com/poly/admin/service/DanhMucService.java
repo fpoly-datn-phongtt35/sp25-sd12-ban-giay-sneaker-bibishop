@@ -1,6 +1,6 @@
-package com.poly.BibiShop.service;
+package com.poly.admin.service;
 
-import com.poly.BibiShop.dto.DanhMucDTO;
+import com.poly.admin.dto.DanhMucDTO;
 import java.util.List;
 
 public interface DanhMucService {

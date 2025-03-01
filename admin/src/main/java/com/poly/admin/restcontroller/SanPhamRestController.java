@@ -1,11 +1,11 @@
-package com.poly.BibiShop.restcontroller;
+package com.poly.admin.restcontroller;
 
 
-import com.poly.BibiShop.common.Appcontants;
-import com.poly.BibiShop.dto.SanPhamDTO;
-import com.poly.BibiShop.dto.SanPhamFiterDTO;
-import com.poly.BibiShop.service.SanPhamService;
-import jakarta.validation.Valid;
+import com.poly.admin.common.Appcontants;
+import com.poly.admin.dto.SanPhamDTO;
+import com.poly.admin.dto.SanPhamFiterDTO;
+import com.poly.admin.service.SanPhamService;
+import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

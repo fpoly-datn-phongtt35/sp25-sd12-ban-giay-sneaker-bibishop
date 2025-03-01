@@ -1,12 +1,12 @@
-package com.poly.BibiShop.service.impl;
+package com.poly.admin.service.impl;
 
 
-import com.poly.BibiShop.dto.SanPhamCtFiterDTO;
-import com.poly.BibiShop.entity.SanPhamChiTietEntity;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Predicate;
-import jakarta.persistence.criteria.Root;
+import com.poly.admin.dto.SanPhamCtFiterDTO;
+import com.poly.admin.entity.SanPhamChiTietEntity;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;

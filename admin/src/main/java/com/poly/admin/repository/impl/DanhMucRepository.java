@@ -1,7 +1,7 @@
-package com.poly.BibiShop.repository.impl;
+package com.poly.admin.repository.impl;
 
 
-import com.poly.BibiShop.entity.DanhMucEntity;
+import com.poly.admin.entity.DanhMucEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

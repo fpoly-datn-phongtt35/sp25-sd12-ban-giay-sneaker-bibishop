@@ -1,4 +1,4 @@
-package com.poly.BibiShop.controller.HoaDonChitiet;
+package com.poly.admin.controller.HoaDonChitiet;
 
 public class hoaDonChiTietController {
 

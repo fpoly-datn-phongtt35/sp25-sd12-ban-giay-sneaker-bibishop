@@ -1,4 +1,4 @@
-package com.poly.BibiShop;
+package com.poly.admin;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

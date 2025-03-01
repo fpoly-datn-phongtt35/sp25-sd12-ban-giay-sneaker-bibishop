@@ -1,7 +1,7 @@
-package com.poly.BibiShop.repository.impl;
+package com.poly.admin.repository.impl;
 
 
-import com.poly.BibiShop.entity.ChatLieuEntity;
+import com.poly.admin.entity.ChatLieuEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

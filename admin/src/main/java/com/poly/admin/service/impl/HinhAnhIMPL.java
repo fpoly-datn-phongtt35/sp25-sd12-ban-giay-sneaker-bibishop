@@ -1,11 +1,11 @@
-package com.poly.BibiShop.service.impl;
+package com.poly.admin.service.impl;
 
 
-import com.poly.BibiShop.dto.HinhAnhDTO;
-import com.poly.BibiShop.entity.HinhAnhEntity;
-import com.poly.BibiShop.repository.impl.HinhAnhRepository;
-import com.poly.BibiShop.service.HinhAnhService;
-import jakarta.persistence.EntityNotFoundException;
+import com.poly.admin.dto.HinhAnhDTO;
+import com.poly.admin.entity.HinhAnhEntity;
+import com.poly.admin.repository.impl.HinhAnhRepository;
+import com.poly.admin.service.HinhAnhService;
+import javax.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

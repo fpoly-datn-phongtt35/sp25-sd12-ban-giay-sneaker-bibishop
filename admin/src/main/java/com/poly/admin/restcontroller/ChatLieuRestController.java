@@ -1,8 +1,8 @@
-package com.poly.BibiShop.restcontroller;
+package com.poly.admin.restcontroller;
 
 
-import com.poly.BibiShop.dto.ChatLieuDTO;
-import com.poly.BibiShop.service.ChatLieuService;
+import com.poly.admin.dto.ChatLieuDTO;
+import com.poly.admin.service.ChatLieuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;

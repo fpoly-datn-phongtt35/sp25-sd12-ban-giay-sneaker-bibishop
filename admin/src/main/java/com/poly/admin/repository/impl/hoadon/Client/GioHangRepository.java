@@ -1,6 +1,6 @@
-package com.poly.BibiShop.repository.impl.hoadon.Client;
+package com.poly.admin.repository.impl.hoadon.Client;
 
-import com.poly.BibiShop.entity.GioHang;
+import com.poly.admin.entity.GioHang;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,10 @@
-package com.poly.BibiShop.service.impl;
+package com.poly.admin.service.impl;
 
 
-import com.poly.BibiShop.dto.MauSacDTO;
-import com.poly.BibiShop.entity.MauSacEntity;
-import com.poly.BibiShop.repository.impl.MauSacRepository;
-import com.poly.BibiShop.service.MauSacService;
+import com.poly.admin.dto.MauSacDTO;
+import com.poly.admin.entity.MauSacEntity;
+import com.poly.admin.repository.impl.MauSacRepository;
+import com.poly.admin.service.MauSacService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

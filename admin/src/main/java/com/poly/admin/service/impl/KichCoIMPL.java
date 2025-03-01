@@ -1,10 +1,10 @@
-package com.poly.BibiShop.service.impl;
+package com.poly.admin.service.impl;
 
 
-import com.poly.BibiShop.dto.KichCoDTO;
-import com.poly.BibiShop.entity.KichCoEntity;
-import com.poly.BibiShop.repository.impl.KichCoRepository;
-import com.poly.BibiShop.service.KichCoService;
+import com.poly.admin.dto.KichCoDTO;
+import com.poly.admin.entity.KichCoEntity;
+import com.poly.admin.repository.impl.KichCoRepository;
+import com.poly.admin.service.KichCoService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

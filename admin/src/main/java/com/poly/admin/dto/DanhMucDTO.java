@@ -1,6 +1,6 @@
-package com.poly.BibiShop.dto;
+package com.poly.admin.dto;
 
-import jakarta.persistence.Column;
+import javax.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.poly.BibiShop.dto;
+package com.poly.admin.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

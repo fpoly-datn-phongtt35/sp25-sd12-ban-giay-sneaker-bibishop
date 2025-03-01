@@ -1,6 +1,6 @@
-package com.poly.BibiShop.entity;
+package com.poly.admin.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

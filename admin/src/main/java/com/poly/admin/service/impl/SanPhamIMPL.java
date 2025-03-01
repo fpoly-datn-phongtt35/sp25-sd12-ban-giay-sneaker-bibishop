@@ -1,11 +1,11 @@
-package com.poly.BibiShop.service.impl;
+package com.poly.admin.service.impl;
 
-import com.poly.BibiShop.dto.SanPhamDTO;
-import com.poly.BibiShop.dto.SanPhamFiterDTO;
-import com.poly.BibiShop.entity.SanPhamEntity;
-import com.poly.BibiShop.repository.impl.SanPhamRepository;
-import com.poly.BibiShop.service.SanPhamService;
-import jakarta.persistence.EntityNotFoundException;
+import com.poly.admin.dto.SanPhamDTO;
+import com.poly.admin.dto.SanPhamFiterDTO;
+import com.poly.admin.entity.SanPhamEntity;
+import com.poly.admin.repository.impl.SanPhamRepository;
+import com.poly.admin.service.SanPhamService;
+import javax.persistence.EntityNotFoundException;
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

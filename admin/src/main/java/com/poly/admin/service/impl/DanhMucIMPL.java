@@ -1,9 +1,9 @@
-package com.poly.BibiShop.service.impl;
+package com.poly.admin.service.impl;
 
-import com.poly.BibiShop.dto.DanhMucDTO;
-import com.poly.BibiShop.entity.DanhMucEntity;
-import com.poly.BibiShop.repository.impl.DanhMucRepository;
-import com.poly.BibiShop.service.DanhMucService;
+import com.poly.admin.dto.DanhMucDTO;
+import com.poly.admin.entity.DanhMucEntity;
+import com.poly.admin.repository.impl.DanhMucRepository;
+import com.poly.admin.service.DanhMucService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

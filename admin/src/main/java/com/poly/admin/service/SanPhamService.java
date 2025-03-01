@@ -1,8 +1,8 @@
-package com.poly.BibiShop.service;
+package com.poly.admin.service;
 
 
-import com.poly.BibiShop.dto.SanPhamDTO;
-import com.poly.BibiShop.dto.SanPhamFiterDTO;
+import com.poly.admin.dto.SanPhamDTO;
+import com.poly.admin.dto.SanPhamFiterDTO;
 import org.springframework.data.domain.Page;
 
 public interface SanPhamService {

@@ -1,10 +1,10 @@
-package com.poly.BibiShop.service.impl;
+package com.poly.admin.service.impl;
 
 
-import com.poly.BibiShop.dto.ChatLieuDTO;
-import com.poly.BibiShop.entity.ChatLieuEntity;
-import com.poly.BibiShop.repository.impl.ChatLieuRepository;
-import com.poly.BibiShop.service.ChatLieuService;
+import com.poly.admin.dto.ChatLieuDTO;
+import com.poly.admin.entity.ChatLieuEntity;
+import com.poly.admin.repository.impl.ChatLieuRepository;
+import com.poly.admin.service.ChatLieuService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

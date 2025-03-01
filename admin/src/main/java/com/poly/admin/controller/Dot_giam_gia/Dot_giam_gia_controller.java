@@ -1,8 +1,8 @@
-package com.poly.BibiShop.controller.Dot_giam_gia;
+package com.poly.admin.controller.Dot_giam_gia;
 
 
-import com.poly.BibiShop.entity.DotGiamGia;
-import com.poly.BibiShop.repository.impl.hoadon.Server.DotGiamGiaRepository;
+import com.poly.admin.entity.DotGiamGia;
+import com.poly.admin.repository.impl.hoadon.Server.DotGiamGiaRepository;
 import java.time.LocalDate;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

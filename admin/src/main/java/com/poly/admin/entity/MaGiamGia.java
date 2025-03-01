@@ -1,7 +1,6 @@
-package com.poly.BibiShop.entity;
+package com.poly.admin.entity;
 
-import com.azure.core.annotation.Get;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.time.LocalDateTime;

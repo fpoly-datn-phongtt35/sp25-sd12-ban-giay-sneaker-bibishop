@@ -1,8 +1,8 @@
-package com.poly.BibiShop.service;
+package com.poly.admin.service;
 
 
 
-import com.poly.BibiShop.dto.MauSacDTO;
+import com.poly.admin.dto.MauSacDTO;
 import java.util.List;
 
 public interface MauSacService {

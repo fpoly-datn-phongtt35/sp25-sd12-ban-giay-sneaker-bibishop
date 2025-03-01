@@ -1,9 +1,9 @@
-package com.poly.BibiShop.service.server;
+package com.poly.admin.service.server;
 
-import com.poly.BibiShop.entity.GiamGiaSanPham;
-import com.poly.BibiShop.entity.GioHangChiTiet;
-import com.poly.BibiShop.repository.impl.hoadon.Client.GioHangChiTietRepository;
-import com.poly.BibiShop.repository.impl.hoadon.Server.GiamGiaSanPhamRepository;
+import com.poly.admin.entity.GiamGiaSanPham;
+import com.poly.admin.entity.GioHangChiTiet;
+import com.poly.admin.repository.impl.hoadon.Client.GioHangChiTietRepository;
+import com.poly.admin.repository.impl.hoadon.Server.GiamGiaSanPhamRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

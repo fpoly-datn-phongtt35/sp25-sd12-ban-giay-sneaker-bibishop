@@ -1,6 +1,6 @@
-package com.poly.BibiShop.repository.impl.hoadon.Server;
+package com.poly.admin.repository.impl.hoadon.Server;
 
-import com.poly.BibiShop.entity.MaGiamGia;
+import com.poly.admin.entity.MaGiamGia;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

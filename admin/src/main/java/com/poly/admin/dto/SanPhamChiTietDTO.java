@@ -1,4 +1,4 @@
-package com.poly.BibiShop.dto;
+package com.poly.admin.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

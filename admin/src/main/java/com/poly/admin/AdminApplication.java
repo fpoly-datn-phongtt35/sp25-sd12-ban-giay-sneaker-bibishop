@@ -29,6 +29,7 @@ public class AdminApplication {
 
         @PostConstruct
     public void createUser(){
+        if(userRepo.existsByEmail("vinhtq26@gmail.com")) return;
         String hash = passwordEncoder.encode("123123");
         NhanVien createUserRequest = new NhanVien();
         createUserRequest.setTen("vinh");

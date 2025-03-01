@@ -1,4 +1,4 @@
-package com.poly.BibiShop.common;
+package com.poly.admin.common;
 
 public class Appcontants {
     public static final String DEFAULT_PAGE_NUMBER ="0";

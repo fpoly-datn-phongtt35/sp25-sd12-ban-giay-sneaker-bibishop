@@ -1,6 +1,6 @@
-package com.poly.BibiShop.repository.impl;
+package com.poly.admin.repository.impl;
 
-import com.poly.BibiShop.entity.SanPhamEntity;
+import com.poly.admin.entity.SanPhamEntity;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

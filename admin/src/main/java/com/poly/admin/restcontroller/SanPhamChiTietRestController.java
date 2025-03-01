@@ -1,15 +1,15 @@
-package com.poly.BibiShop.restcontroller;
+package com.poly.admin.restcontroller;
 
 
 
-import com.poly.BibiShop.common.Appcontants;
-import com.poly.BibiShop.dto.SanPhamChiTietCrud;
-import com.poly.BibiShop.dto.SanPhamChiTietDTO;
-import com.poly.BibiShop.dto.SanPhamChiTietFiterDTO;
-import com.poly.BibiShop.dto.SanPhamCtFiterDTO;
-import com.poly.BibiShop.entity.SanPhamChiTietEntity;
-import com.poly.BibiShop.service.SanPhamChiTietService;
-import jakarta.validation.Valid;
+import com.poly.admin.common.Appcontants;
+import com.poly.admin.dto.SanPhamChiTietCrud;
+import com.poly.admin.dto.SanPhamChiTietDTO;
+import com.poly.admin.dto.SanPhamChiTietFiterDTO;
+import com.poly.admin.dto.SanPhamCtFiterDTO;
+import com.poly.admin.entity.SanPhamChiTietEntity;
+import com.poly.admin.service.SanPhamChiTietService;
+import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

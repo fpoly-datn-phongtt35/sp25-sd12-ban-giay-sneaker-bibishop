@@ -1,6 +1,6 @@
-package com.poly.BibiShop.dto;
+package com.poly.admin.dto;
 
-import com.poly.BibiShop.entity.DotGiamGia;
+import com.poly.admin.entity.DotGiamGia;
 import lombok.*;
 
 import java.math.BigDecimal;

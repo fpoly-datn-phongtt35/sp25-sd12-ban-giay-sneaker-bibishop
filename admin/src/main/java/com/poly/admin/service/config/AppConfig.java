@@ -1,9 +1,9 @@
-package com.poly.BibiShop.service.config;
-import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
+package com.poly.admin.service.config;
+//import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import com.fasterxml.jackson.databind.Module;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
+//import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,12 +23,12 @@ public class AppConfig {
         return restTemplate;
     }
 
-    @Bean
-    public Module hibernate5Module() {
-        Hibernate5Module module = new Hibernate5Module();
-        // Tùy chọn: bạn có thể tắt việc force lazy loading nếu không muốn nạp dữ liệu lazy
-        module.disable(Hibernate5Module.Feature.FORCE_LAZY_LOADING);
-        return module;
-    }
+//    @Bean
+//    public Module hibernate5Module() {
+//        Hibernate5Module module = new Hibernate5Module();
+//        // Tùy chọn: bạn có thể tắt việc force lazy loading nếu không muốn nạp dữ liệu lazy
+//        module.disable(Hibernate5Module.Feature.FORCE_LAZY_LOADING);
+//        return module;
+//    }
 
 }

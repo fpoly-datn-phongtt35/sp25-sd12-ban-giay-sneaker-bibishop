@@ -1,11 +1,11 @@
-package com.poly.BibiShop.service;
+package com.poly.admin.service;
 
 
-import com.poly.BibiShop.dto.SanPhamChiTietCrud;
-import com.poly.BibiShop.dto.SanPhamChiTietDTO;
-import com.poly.BibiShop.dto.SanPhamChiTietFiterDTO;
-import com.poly.BibiShop.dto.SanPhamCtFiterDTO;
-import com.poly.BibiShop.entity.SanPhamChiTietEntity;
+import com.poly.admin.dto.SanPhamChiTietCrud;
+import com.poly.admin.dto.SanPhamChiTietDTO;
+import com.poly.admin.dto.SanPhamChiTietFiterDTO;
+import com.poly.admin.dto.SanPhamCtFiterDTO;
+import com.poly.admin.entity.SanPhamChiTietEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

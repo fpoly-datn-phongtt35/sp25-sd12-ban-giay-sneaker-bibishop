@@ -1,8 +1,8 @@
-package com.poly.BibiShop.restcontroller;
+package com.poly.admin.restcontroller;
 
 
-import com.poly.BibiShop.dto.DanhMucDTO;
-import com.poly.BibiShop.service.DanhMucService;
+import com.poly.admin.dto.DanhMucDTO;
+import com.poly.admin.service.DanhMucService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
