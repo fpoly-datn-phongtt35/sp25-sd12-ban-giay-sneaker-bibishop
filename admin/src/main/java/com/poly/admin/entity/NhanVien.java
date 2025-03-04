@@ -52,8 +52,6 @@ public class NhanVien{
   @Column(name = "email")
   private String email;
 
-  @Column(name = "tai_khoan")
-  private String taiKhoan;
 
   @Column(name = "ten")
   private String ten;

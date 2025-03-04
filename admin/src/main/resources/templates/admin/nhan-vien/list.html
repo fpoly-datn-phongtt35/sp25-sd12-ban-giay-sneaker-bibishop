@@ -56,18 +56,16 @@
                 <thead>
                 <tr>
                     <th width="15%">ID</th>
-                    <th>Tải khoản</th>
                     <th>Email</th>
                     <th>Tên</th>
                     <th>Role</th>
                     <th>Số điện thoại</th>
-                    <th>Giới tính</th>
                     <th>Trạng thái</th>
                 </tr>
                 <tr>
                     <form method="GET" id="search-form">
                         <th></th>
-                        <th><input type="text" name="account" id="account" class="form-control search-input"></th>
+<!--                        <th><input type="text" name="account" id="account" class="form-control search-input"></th>-->
                         <th><input type="text" name="email" id="email" class="form-control search-input"></th>
                         <th><input type="text" name="fullName" id="fullName" class="form-control search-input"></th>
                         <th></th>
@@ -87,13 +85,10 @@
                             <a th:href="@{/admin/nhanvien/{id}(id=${nhanvien.id})}"
                                th:text="${start.index+1}" style="color: #0a0a0a"></a>
                         </td>
-                        <td th:text="${nhanvien.taiKhoan}"></td>
                         <td th:text="${nhanvien.email}"></td>
                         <td th:text="${nhanvien.ho +  ' '+ nhanvien.tenDem + ' ' + nhanvien.ten}"></td>
                         <td th:text="${nhanvien.vaiTro==1?'Admin' : 'Nhân viên'}">
                         <td th:text="${nhanvien.sdt}">
-                        </td>
-                        <td th:text="${nhanvien.gioiTinh}">
                         </td>
                         <td>
     <span th:text="${nhanvien.trangThai == 1 ? 'Hoạt động' : 'Không hoạt động'}"
@@ -128,14 +123,12 @@
             email = vars["email"] || ""
             phone = vars["phone"] || ""
             address = vars["address"] || ""
-            account = vars["account"] || ""
             page = vars["page"] || "1"
 
             $('#fullName').val(fullName)
             $('#email').val(email)
             $('#phone').val(phone)
             $('#address').val(address)
-            $('#account').val(account)
             $('#page').val(page)
 
             pagination([[${totalPages}]], [[${currentPage}]]);

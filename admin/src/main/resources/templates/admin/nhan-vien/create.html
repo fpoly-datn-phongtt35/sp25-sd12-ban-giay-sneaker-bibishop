@@ -137,14 +137,14 @@
                                 </div>
                                 <input type="date" class="form-control" id="dob">
                             </div>
-                            <div class="form-group">
-                                <div>
-                                    <label class="required-label" for="login-name">Tên đăng nhập</label>
-                                    <span class="invalid-feedback"
-                                          id="invalid-feedback-login-name">Trường này không được phép để trống</span>
-                                </div>
-                                <input type="text" class="form-control" id="login-name">
-                            </div>
+<!--                            <div class="form-group">-->
+<!--                                <div>-->
+<!--                                    <label class="required-label" for="login-name">Tên đăng nhập</label>-->
+<!--                                    <span class="invalid-feedback"-->
+<!--                                          id="invalid-feedback-login-name">Trường này không được phép để trống</span>-->
+<!--                                </div>-->
+<!--                                <input type="text" class="form-control" id="login-name">-->
+<!--                            </div>-->
                             <div class="form-group">
                                 <div>
                                     <label class="required-label" for="position">Vị trí công việc</label>
@@ -275,7 +275,7 @@
             let name = $('#name').val();
             let midName = $('#midName').val();
             let dob = $('#dob').val();
-            let loginName = $('#login-name').val();
+            // let loginName = $('#login-name').val();
             let position = $('#position').val();
             let password = $('#password').val();
             let status = $('#trangThai').val();
@@ -304,10 +304,10 @@ debugger
                 isValid = false;
             }
 
-            if (loginName.length === 0) {
-                $('#invalid-feedback-login-name').show();
-                isValid = false;
-            }
+            // if (loginName.length === 0) {
+            //     $('#invalid-feedback-login-name').show();
+            //     isValid = false;
+            // }
 
             if (position.length === 0) {
                 $('#invalid-feedback-position').show();
@@ -341,7 +341,7 @@ debugger
                     name: name,
                     midName: midName,
                     dob: dob,
-                    account: loginName,
+                    // account: loginName,
                     role: position,
                     password: password,
                     status: status,

@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout_admin :: main-fragment(
+                                                ~{:: title},
+                                                'header',
+                                                'sidebar',
+                                                ~{:: #css-resources},
+                                                ~{:: #js-resources},
+                                                ~{:: #main-content}
+                                               )}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,11 +75,7 @@
 </head>
 <body class="no-skin">
 <!-- header -->
-<div th:replace="~{admin/common/Header.html}"></div>
-<div th:replace="~{admin/common/menu.html}"></div>
-<!-- header -->
-<div class="content-wrapper">
-  <section class="content">
+<section role="main" class="content-body" id="main-content">
     <div class="main-content">
       <div class="main-content-inner">
         <div class="page-content">
@@ -136,10 +140,6 @@
     </nav>
 
   </section>
-</div>
-<!-- footer -->
-<div th:replace="~{admin/common/foodter.html}"></div>
-<th:block th:replace="jsImport.html :: layout_import_js"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

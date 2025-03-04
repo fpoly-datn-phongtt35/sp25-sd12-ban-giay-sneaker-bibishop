@@ -18,6 +18,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.poly.admin.entity.NhanVien;
+import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -46,8 +47,8 @@ public class NhanVienServiceImpl implements NhanVienService {
         if (nhanVienRepository.findNhanVienByEmail(request.getEmail()) != null) {
             throw new RuntimeException("Email đã tồn tại");
         }
-        if (nhanVienRepository.findNhanVienByTaiKhoan(request.getLoginName()) != null) {
-            throw new RuntimeException("Tên đăng nhập đã tồn tại");
+        if (ObjectUtils.isEmpty(request.getSdt()!=null) && nhanVienRepository.existsBySdt(request.getSdt())) {
+            throw new RuntimeException("Số điện thoại đã tồn tại");
         }
         NhanVien nhanVien = new NhanVien();
         nhanVien.setId(request.getId());
@@ -64,7 +65,6 @@ public class NhanVienServiceImpl implements NhanVienService {
     private NhanVien getNhanVien(CreateNhanVienRequest request, NhanVien nhanVien) {
         nhanVien.setNgaySinh(request.getDob().toInstant());
         nhanVien.setSdt(request.getSdt());
-        nhanVien.setTaiKhoan(request.getAccount());
         nhanVien.setTen(request.getName());
         nhanVien.setHo(request.getFirstName());
         nhanVien.setTenDem(request.getMidName());
@@ -76,11 +76,11 @@ public class NhanVienServiceImpl implements NhanVienService {
 
     @Override
     public NhanVien updateNhanVien(CreateNhanVienRequest request) {
-        if (nhanVienRepository.findNhanVienByIdAndTaiKhoan(request.getId(), request.getEmail()) != null) {
-            throw new RuntimeException("Email đã tồn tại");
-        }
         if (nhanVienRepository.findNhanVienByIdAndEmail(request.getId(),request.getLoginName()) != null) {
             throw new RuntimeException("Tên đăng nhập đã tồn tại");
+        }
+        if (ObjectUtils.isEmpty(request.getSdt()!=null) && nhanVienRepository.existsBySdtAndIdNot(request.getSdt(), request.getId())) {
+            throw new RuntimeException("Số điên thoại đã tồn tại");
         }
         NhanVien nhanVien = nhanVienRepository.findById(request.getId()).orElseThrow();
         nhanVien.setMaNhanVien(UUID.randomUUID().toString());
@@ -95,38 +95,14 @@ public class NhanVienServiceImpl implements NhanVienService {
         nhanVienRepository.deleteById(id);
     }
     @Override
-    public Page<NhanVien> adminListUserPages(String account, String fullName, String phone, String email, Integer page) {
+    public Page<NhanVien> adminListUserPages(String fullName, String phone, String email, Integer page) {
         page--;
         if (page < 0) {
             page = 0;
         }
         Pageable pageable = PageRequest.of(page, Constant.LIMIT_SIZE, Sort.by("ngay_tao").descending());
-        return nhanVienRepository.adminListUserPages(account!=null? account.trim():null , fullName!=null?fullName.trim():null,
+        return nhanVienRepository.adminListUserPages(fullName!=null?fullName.trim():null,
                 phone!=null?phone.trim():null, email!=null?email.trim():null, pageable);
-    }
-    private void validateCustomer(CreateNhanVienRequest request) {
-        if (request.getId() != null) {
-            // validate update
-            if (nhanVienRepository.existsByTaiKhoanAndIdIsNot(request.getAccount(), request.getId())) {
-                throw new RuntimeException("Tài khoản đã tồn tại!");
-            }
-            if (nhanVienRepository.existsByEmailAndIdNot(request.getEmail(), request.getId())) {
-                throw new RuntimeException("Email đã tồn tại!");
-            }
-            if (nhanVienRepository.existsBySdtAndIdNot(request.getSdt(), request.getId()))
-                throw new RuntimeException("Số điện thoại đã tồn tại!");
-        }else{
-            // validate create
-            if(nhanVienRepository.existsByTaiKhoan(request.getAccount())){
-                throw new RuntimeException("Tài khoản đã tồn tại!");
-            }
-            if(nhanVienRepository.existsByEmail(request.getEmail())){
-                throw new RuntimeException("Email đã tồn tại!");
-            }
-            if(nhanVienRepository.existsBySdt(request.getSdt())){
-                throw new RuntimeException("Số điện thoại đã tồn tại!");
-            }
-        }
     }
 
 //    @Override

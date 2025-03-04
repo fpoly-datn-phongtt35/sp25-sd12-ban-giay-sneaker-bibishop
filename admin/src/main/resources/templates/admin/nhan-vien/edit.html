@@ -140,14 +140,14 @@
                                 </div>
                                 <input type="date" class="form-control" id="dob" th:value="${#dates.format(nhanVien.ngaySinh, 'yyyy-MM-dd')}">
                             </div>
-                            <div class="form-group">
-                                <div>
-                                    <label class="required-label" for="login-name">Tên đăng nhập</label>
-                                    <span class="invalid-feedback"
-                                          id="invalid-feedback-login-name">Trường này không được phép để trống</span>
-                                </div>
-                                <input type="text" class="form-control" id="login-name" th:value="${nhanVien.taiKhoan}">
-                            </div>
+<!--                            <div class="form-group">-->
+<!--                                <div>-->
+<!--                                    <label class="required-label" for="login-name">Tên đăng nhập</label>-->
+<!--                                    <span class="invalid-feedback"-->
+<!--                                          id="invalid-feedback-login-name">Trường này không được phép để trống</span>-->
+<!--                                </div>-->
+<!--                                <input type="text" class="form-control" id="login-name" th:value="${nhanVien.taiKhoan}">-->
+<!--                            </div>-->
                             <div class="form-group">
                                 <div>
                                     <label class="required-label" for="position">Vị trí công việc</label>
@@ -271,7 +271,7 @@
             let name = $('#name').val();
             let midName = $('#midName').val();
             let dob = $('#dob').val();
-            let loginName = $('#login-name').val();
+            // let loginName = $('#login-name').val();
             let position = $('#position').val();
             let status = $('#trangThai').val();
             let gender = $('#gender').val();
@@ -299,10 +299,10 @@
                 isValid = false;
             }
 
-            if (loginName.length === 0) {
-                $('#invalid-feedback-dob').show();
-                isValid = false;
-            }
+            // if (loginName.length === 0) {
+            //     $('#invalid-feedback-dob').show();
+            //     isValid = false;
+            // }
 
             if (position.length === 0) {
                 $('#invalid-feedback-position').show();
@@ -322,7 +322,7 @@
                     name: name,
                     midName: midName,
                     dob: dob,
-                    account: loginName,
+                    // account: loginName,
                     role: position,
                     status: status,
                     firstName: firstName,
