@@ -40,7 +40,7 @@ $(document).ready(function () {
                 contentType: "application/json; charset=utf-8",
                 success: function(data) {
                     toastr.success("Đăng nhập thành công");
-                    signedValidate(true, data.fullName);
+                    signedValidate(true, data.email);
                     $('.modal').modal('hide');
                 },
                 error: function(error) {
@@ -55,18 +55,6 @@ $(document).ready(function () {
         e.preventDefault();
     }).validate({
         rules: {
-            register_full_name: {
-                required: true,
-                maxlength: 25
-            },
-            register_first_name: {
-                required: true,
-                maxlength: 25
-            },
-            register_account: {
-                required: true,
-                rangelength: [6, 25]
-            },
             register_phone: {
                 required: true,
                 phone: true
@@ -87,19 +75,6 @@ $(document).ready(function () {
             }
         },
         messages: {
-            register_full_name: {
-                required: "Vui lòng nhập đầy đủ tên!",
-                maxlength: "Tên có độ dài tối đa 25 ký tự!",
-
-            },
-            register_first_name: {
-                required: "Vui lòng nhập đầy đủ tên!",
-                maxlength: "Tên có độ dài tối đa 25 ký tự!",
-
-            },
-            register_account: {
-                required: "Vui lòng nhập tên tài khoản!",
-            },
             register_phone: {
                 required: "Vui lòng nhập số điện thoại!",
             },
@@ -120,20 +95,14 @@ $(document).ready(function () {
         },
 
         submitHandler: function () {
-            let fullName = $("#register_full_name").val();
-            let firstName = $("#register_first_name").val();
             let phone = $("#register_phone").val();
-            let account = $("#register_account").val();
             let email = $("#register_email").val();
             let password = $("#register_password").val();
 
             req = {
-                fullName: fullName,
                 email: email,
                 password: password,
                 phone: phone,
-                firstName: firstName,
-                loginName: account
             }
             var myJSON = JSON.stringify(req);
             $.ajax({
@@ -143,7 +112,7 @@ $(document).ready(function () {
                 contentType: "application/json; charset=utf-8",
                 success: function(data) {
                     toastr.success("Đăng ký thành công");
-                    signedValidate(true, data.fullName);
+                    signedValidate(true, data.email);
                     $('.modal').modal('hide');
                 },
                 error: function(error) {

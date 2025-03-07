@@ -137,14 +137,6 @@
                             </div>
                             <div class="form-group">
                                 <div>
-                                    <label class="required-label" for="login-name">Tên đăng nhập</label>
-                                    <span class="invalid-feedback"
-                                          id="invalid-feedback-login-name">Trường này không được phép để trống</span>
-                                </div>
-                                <input type="text" class="form-control" id="login-name">
-                            </div>
-                            <div class="form-group">
-                                <div>
                                     <label class="required-label" for="password">Mật khẩu</label>
                                     <span class="invalid-feedback"
                                           id="invalid-feedback-department">Trường này không được phép để trống</span>
@@ -260,7 +252,6 @@
             let name = $('#name').val();
             let midName = $('#midName').val();
             let dob = $('#dob').val();
-            let loginName = $('#login-name').val();
             let password = $('#password').val();
             let status = $('#trangThai').val();
             let gender = $('#gender').val();
@@ -285,11 +276,6 @@
 
             if (dob.length === 0) {
                 $('#invalid-feedback-dob').show();
-                isValid = false;
-            }
-
-            if (loginName.length === 0) {
-                $('#invalid-feedback-login-name').show();
                 isValid = false;
             }
 
@@ -320,7 +306,6 @@
                     fullName: name,
                     midName: midName,
                     dob: dob,
-                    account: loginName,
                     password: password,
                     status: status,
                     gender: gender,

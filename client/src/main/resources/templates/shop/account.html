@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="full-name item-row col-md-10">
-                                <div class="text required-label">Họ tên</div>
+                                <div class="text required-label">Tên đệm</div>
                                 <div>
                                     <input class="form-control" th:value="${khachhang.tenDem}" id="in-user-midName"/>
                                     <div class="invalid-feedback"></div>
@@ -64,7 +64,7 @@
                             </div>
                             <div class="email item-row col-md-10">
                                 <div class="text required-label">Email</div>
-                                <input class="form-control" disabled="disabled" th:value="${khachhang.email}"/>
+                                <input class="form-control" disabled="disabled" th:value="${khachhang.email}" id="in-user-email"/>
                             </div>
                             <div class="password item-row col-md-10">
                                 <div class="text required-label">Mật khẩu</div>
@@ -211,6 +211,7 @@
             let fullNameValue = $("#in-user-fullname").val();
             let addressValue = $('#in-user-address').val();
             let firstName = $('#in-user-firstName').val();
+            let email = $('#in-user-email').val();
             let midName = $('#in-user-midName').val();
             let isValid = true;
             let idKhachHang = [[${khachhang.id}]]
@@ -251,7 +252,7 @@
                     data: myJSON,
                     contentType: "application/json; charset=utf-8",
                     success: function(data) {
-                        signedValidate(true, fullNameValue);
+                        signedValidate(true, email);
                         toastr.success("Cập nhật profile thành công");
                     },
                     error: function(data) {

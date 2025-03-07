@@ -42,9 +42,6 @@ public class KhachHang {
   @Column(name = "sdt")
   private String sdt;
 
-  @Column(name = "tai_khoan")
-  private String taiKhoan;
-
   @Column(name = "ten")
   private String ten;
 

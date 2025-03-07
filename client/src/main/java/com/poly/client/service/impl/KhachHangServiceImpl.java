@@ -46,10 +46,6 @@ public class KhachHangServiceImpl implements KhachHangService {
         validateCustomer(request);
         KhachHang khachHang = new KhachHang();
         khachHang.setEmail(request.getEmail());
-        khachHang.setTaiKhoan(request.getLoginName());
-        khachHang.setHo(request.getFirstName());
-        khachHang.setEmail(request.getEmail());
-        khachHang.setTen(request.getFullName());
         khachHang.setSdt(request.getPhone());
         khachHang.setMatKhau(BCrypt.hashpw(request.getPassword(), BCrypt.gensalt(12)));
         khachHang.setTrangThai(1);
@@ -71,55 +67,6 @@ public class KhachHangServiceImpl implements KhachHangService {
         khachHang.setNgaySua(LocalDateTime.now());
         khachHangRepository.save(khachHang);
     }
-    @Override
-    public void deleteCustomer(Long id) {
-        khachHangRepository.deleteById(id);
-    }
-    @Override
-    public Page<KhachHang> adminListUserPages(String account, String fullName, String phone, String email, Integer page) {
-        page--;
-        if (page < 0) {
-            page = 0;
-        }
-        Pageable pageable = PageRequest.of(page, 10, Sort.by("ngay_tao").descending());
-        return khachHangRepository.adminListUserPages(account!=null? account.trim() : null, fullName!=null? fullName.trim():null, phone!=null ? phone.trim():null, email!=null?email.trim():null, pageable);
-    }
-    @Override
-    public void saveCustomer(CreateKhachHangRequest request) {
-        validateCustomer(request);
-        KhachHang khachHang = new KhachHang();
-        khachHang.setEmail(request.getEmail());
-        khachHang.setTen(request.getFullName());
-        khachHang.setTenDem(request.getMidName());
-        khachHang.setSdt(request.getPhone());
-        khachHang.setPassword(request.getPassword());
-        khachHang.setTrangThai(1);
-        khachHang.setGioiTinh(request.getGender());
-        khachHang.setNgayTao(LocalDateTime.now());
-        khachHang.setNgayTao(LocalDateTime.now());
-        khachHang.setTaiKhoan(request.getLoginName());
-        khachHang.setVaiTro(3);
-        khachHangRepository.save(khachHang);
-    }
-
-    @Override
-    public void updateCustomer(CreateKhachHangRequest request) {
-        validateCustomer(request);
-        KhachHang khachHang = new KhachHang();
-        khachHang.setId(request.getId());
-        khachHang.setEmail(request.getEmail());
-        khachHang.setTaiKhoan(request.getLoginName());
-        khachHang.setNgaySinh(request.getDob().toInstant());
-        khachHang.setSdt(request.getPhone());
-        khachHang.setTen(request.getFullName());
-        khachHang.setTenDem(request.getMidName());
-        khachHang.setTrangThai(request.getStatus());
-        // 3: KHACH HANG
-        khachHang.setVaiTro(3);
-        khachHang.setGioiTinh(request.getGender());
-        khachHang.setNgayTao(LocalDateTime.now());
-        khachHangRepository.save(khachHang);
-    }
     private void validateCustomer(CreateKhachHangRequest request) {
         if (request.getId() != null) {
             if (khachHangRepository.existsBySdtAndIdNot(request.getPhone(), request.getId()))
@@ -131,9 +78,6 @@ public class KhachHangServiceImpl implements KhachHangService {
             }
             if(khachHangRepository.existsBySdt(request.getPhone())){
                 throw new RuntimeException("Số điện thoại đã tồn tại!");
-            }
-            if(khachHangRepository.existsByTaiKhoan(request.getLoginName())){
-                throw new RuntimeException("Tài khoản đã tồn tại!");
             }
         }
     }

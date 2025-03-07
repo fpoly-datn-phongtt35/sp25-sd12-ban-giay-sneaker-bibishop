@@ -15,11 +15,8 @@ public interface KhachHangRepository extends JpaRepository<KhachHang, Long> {
           "AND (?4 is null or u.email LIKE CONCAT('%',?4,'%') ) ",nativeQuery = true)
   Page<KhachHang> adminListUserPages(String account, String fullName, String phone, String email, Pageable pageable);
   KhachHang findKhachHangByEmail(String email);
-  KhachHang findKhachHangByTaiKhoan(String account);
-  boolean existsByTaiKhoanAndIdIsNot(String taiKhoan, Long id);
   boolean existsByEmailAndIdNot(String email, Long id);
   boolean existsBySdtAndIdNot(String sdt, Long id);
-  boolean existsByTaiKhoan(String taiKhoan);
   boolean existsByEmail(String email);
   boolean existsBySdt(String email);
 

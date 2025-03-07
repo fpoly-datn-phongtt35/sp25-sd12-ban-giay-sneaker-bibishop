@@ -49,24 +49,19 @@
                 <thead>
                 <tr>
                     <th width="15%">ID</th>
-                    <th>Tải khoản</th>
                     <th>Email</th>
                     <th>Tên</th>
                     <th>Role</th>
                     <th>Số điện thoại</th>
-                    <th>Giới tính</th>
                     <th>Trạng thái</th>
                 </tr>
                 <tr>
                     <form method="GET" id="search-form">
                         <th></th>
-                        <th><input type="text" name="account" id="account" class="form-control search-input"></th>
                         <th><input type="text" name="email" id="email" class="form-control search-input"></th>
                         <th><input type="text" name="fullName" id="fullName" class="form-control search-input"></th>
                         <th></th>
-                        <th></th>
                         <th><input type="text" name="phone" id="phone" class="form-control search-input"></th>
-                        <th></th>
                         <th></th>
                         <!--                        <th></th>-->
                         <input type="hidden" name="page" id="page">
@@ -81,14 +76,10 @@
                             <a th:href="@{/admin/khachhang/{id}(id=${khachhang.id})}"
                                th:text="${start.index +1}" style="color: #0a0a0a"></a>
                         </td>
-                        <td th:text="${khachhang.taiKhoan}"></td>
                         <td th:text="${khachhang.email}"></td>
-                        <td th:text="${khachhang.ho + ' ' + khachhang.tenDem + ' ' + khachhang.ten}"></td>
-                        <td th:text="${khachhang.tenDem}"></td>
+                        <td th:text="${khachhang.ho==null?'' : khachhang.ho + ' ' + (khachhang.tenDem==null?'': khachhang.tenDem) + ' ' + (khachhang.ten==null? '' : khachhang.ten)}"></td>
                         <td th:text="${khachhang.vaiTro==3?'Khách Hàng': ''}">
                         <td th:text="${khachhang.sdt}">
-                        </td>
-                        <td th:text="${khachhang.gioiTinh}">
                         </td>
                         <td>
     <span th:text="${khachhang.trangThai == 1 ? 'Hoạt động' : 'Không hoạt động'}"
@@ -119,14 +110,12 @@
             fullName = vars["fullName"] || null
             email = vars["email"] || null
             phone = vars["phone"] || null
-            account = vars["account"] || null
             address = vars["address"] || null
             page = vars["page"] || "1"
 
             $('#fullName').val(fullName)
             $('#email').val(email)
             $('#phone').val(phone)
-            $('#account').val(account)
             $('#address').val(address)
             $('#page').val(page)
 

@@ -136,14 +136,6 @@
                             </div>
                             <div class="form-group">
                                 <div>
-                                    <label class="required-label" for="login-name">Tên đăng nhập</label>
-                                    <span class="invalid-feedback"
-                                          id="invalid-feedback-login-name">Trường này không được phép để trống</span>
-                                </div>
-                                <input type="text" class="form-control" id="login-name" th:value="${khachHang.taiKhoan}">
-                            </div>
-                            <div class="form-group">
-                                <div>
                                     <label class="required-label" for="trangThai">Trạng thái</label>
                                     <span class="invalid-feedback"
                                           id="invalid-feedback-trangThai">Trường này không được phép để trống</span>
@@ -253,7 +245,6 @@
             let name = $('#name').val();
             let midName = $('#midName').val();
             let dob = $('#dob').val();
-            let loginName = $('#login-name').val();
             let status = $('#trangThai').val();
             let gender = $('#gender').val();
             let firstName = $('#firstName').val();
@@ -280,11 +271,6 @@
                 isValid = false;
             }
 
-            if (loginName.length === 0) {
-                $('#invalid-feedback-login-name').show();
-                isValid = false;
-            }
-
             if(status.length === 0){
                 $('#invalid-feedback-trangThai').show();
                 isValid = false;
@@ -307,7 +293,6 @@
                     fullName: name,
                     midName: midName,
                     dob: dob,
-                    account: loginName,
                     status: status,
                     gender: gender,
                     firstName: firstName

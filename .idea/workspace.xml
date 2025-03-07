@@ -4,25 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="merge code function admin web">
+    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="add manage view to side bar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/NhanVienController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/NhanVienController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/NhanVien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/NhanVienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/NhanVienRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/NhanVienService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/NhanVienService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/NhanVienServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/NhanVienServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/Dot_giam_gia/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/Dot_giam_gia/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Chatlieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Chatlieu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Hinhanh.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Hinhanh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Kichco.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Kichco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Kieudang.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Kieudang.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Loaisp.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Loaisp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Mausac.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb/Mausac.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/ma-giam-gia/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/ma-giam-gia/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/nhan-vien/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/nhan-vien/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/nhan-vien/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/nhan-vien/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/nhan-vien/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/nhan-vien/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/KhachHangController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/KhachHangController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/admin/CreateKhachHangRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/admin/CreateKhachHangRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KhachHangRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/KhachHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/KhachHangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/KhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/KhachHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/KhachHangRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/KhachHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/KhachHangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/fragment/login_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/fragment/login_modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/layout/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/shop/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/shop/account.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +113,14 @@
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AdminApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.BibiShopApplication.executor&quot;: &quot;Run&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#1 on HoaDon__hoaDonChitiet&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging merge-code&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -166,6 +170,16 @@
           <option name="PATTERN" value="com.poly.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -232,9 +246,9 @@
       <option name="presentableId" value="Default" />
       <updated>1740763884970</updated>
       <workItem from="1740763886631" duration="4084000" />
-      <workItem from="1740879073359" duration="599000" />
-      <workItem from="1741017689332" duration="1878000" />
-      <workItem from="1741102616058" duration="3912000" />
+      <workItem from="1741149327237" duration="263000" />
+      <workItem from="1741178884506" duration="92000" />
+      <workItem from="1741186979111" duration="5495000" />
     </task>
     <task id="LOCAL-00002" summary="merge code function admin web">
       <option name="closed" value="true" />
@@ -244,13 +258,13 @@
       <option name="project" value="LOCAL" />
       <updated>1740819641391</updated>
     </task>
-    <task id="LOCAL-00003" summary="merge code function admin web">
+    <task id="LOCAL-00003" summary="add manage view to side bar">
       <option name="closed" value="true" />
-      <created>1740840733477</created>
+      <created>1741106825896</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1740840733477</updated>
+      <updated>1741106825896</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -273,7 +287,8 @@
     <MESSAGE value="set up project" />
     <MESSAGE value="dung refactor code" />
     <MESSAGE value="merge code function admin web" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge code function admin web" />
+    <MESSAGE value="add manage view to side bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add manage view to side bar" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
@@ -288,14 +303,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/UserController.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/KhachHangController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js</url>

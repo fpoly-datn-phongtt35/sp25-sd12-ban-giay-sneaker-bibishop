@@ -14,11 +14,7 @@ public interface KhachHangService {
 
     KhachHang getCustomerById(Long id);
 
-    void saveCustomer(CreateKhachHangRequest khachHang);
     KhachHang register(CreateKhachHangRequest khachHang);
     void updateProfile(CreateKhachHangRequest khachHang);
-    void updateCustomer(CreateKhachHangRequest khachHang);
     void changePassword(KhachHang user, ChangePasswordRequest changePasswordRequest);
-    void deleteCustomer(Long id);
-    Page<KhachHang> adminListUserPages(String account, String fullName, String phone, String email, Integer page);
 }

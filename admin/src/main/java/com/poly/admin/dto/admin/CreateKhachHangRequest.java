@@ -18,7 +18,7 @@ public class CreateKhachHangRequest {
     private String email;
     private String phone;
     private String fullName;
-    private String loginName;
+//    private String loginName;
     private String firstName;
     private String gender;
     @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
@@ -33,8 +33,8 @@ public class CreateKhachHangRequest {
 //    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
 //    @JsonProperty("dob")
 //    private Timestamp dob;
-//    private String sdt;
-    private String account;
+////    private String sdt;
+//    private String account;
 //    private String name;
     private String midName;
     private Integer status;
