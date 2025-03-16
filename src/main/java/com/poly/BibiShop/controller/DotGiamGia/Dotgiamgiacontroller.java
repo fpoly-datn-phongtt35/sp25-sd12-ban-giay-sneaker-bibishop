@@ -1,7 +1,6 @@
 package com.poly.BibiShop.controller.DotGiamGia;
 
 import com.poly.BibiShop.entity.DotGiamGia;
-import com.poly.BibiShop.repository.impl.hoadon.Server.DotGiamGiaRepository;
 import java.time.LocalDate;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +22,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequiredArgsConstructor
 public class Dotgiamgiacontroller {
 
-  private final DotGiamGiaRepository dotGiamGiaRepository;
+  private final com.poly.BibiShop.repositoryy.impl.hoadon.Server.DotGiamGiaRepository dotGiamGiaRepository;
 
   @GetMapping("dotgiamgia/list")
   public String listDotGiamGia(

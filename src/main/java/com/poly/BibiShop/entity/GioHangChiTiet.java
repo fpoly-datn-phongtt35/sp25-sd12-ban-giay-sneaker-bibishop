@@ -26,7 +26,7 @@ public class GioHangChiTiet {
   private GioHang gioHang;
 
   @Column(name = "id_sanpham", nullable = false)
-  private Integer idSanPham;
+  private Long idSanPham;
 
   @Column(name = "so_luong", nullable = false)
   private Integer soLuong;

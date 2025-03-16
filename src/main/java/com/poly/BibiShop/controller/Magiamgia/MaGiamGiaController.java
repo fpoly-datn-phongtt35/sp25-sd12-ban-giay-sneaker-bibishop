@@ -4,7 +4,7 @@ package com.poly.BibiShop.controller.Magiamgia;
 import com.poly.BibiShop.controller.Magiamgia.dto.CreatePercentageDiscountDTO;
 import com.poly.BibiShop.controller.Magiamgia.dto.CreateValueDiscountDTO;
 import com.poly.BibiShop.entity.MaGiamGia;
-import com.poly.BibiShop.repository.impl.hoadon.Server.MaGiamGiaRepository;
+import com.poly.BibiShop.repositoryy.impl.hoadon.Server.MaGiamGiaRepository;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Optional;

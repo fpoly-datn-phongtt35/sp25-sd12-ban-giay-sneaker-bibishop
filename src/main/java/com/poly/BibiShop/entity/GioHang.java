@@ -46,6 +46,3 @@ public class GioHang {
 }
 
 
-enum TrangThaiGioHang {
-  CHUA_THANH_TOAN, DA_THANH_TOAN, HUY
-}
