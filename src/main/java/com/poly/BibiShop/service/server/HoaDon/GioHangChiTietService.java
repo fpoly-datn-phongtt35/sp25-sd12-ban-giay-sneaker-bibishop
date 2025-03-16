@@ -2,8 +2,8 @@ package com.poly.BibiShop.service.server.HoaDon;
 
 import com.poly.BibiShop.entity.GiamGiaSanPham;
 import com.poly.BibiShop.entity.GioHangChiTiet;
-import com.poly.BibiShop.repositoryy.impl.hoadon.Client.GioHangChiTietRepository;
-import com.poly.BibiShop.repositoryy.impl.hoadon.Server.GiamGiaSanPhamRepository;
+import com.poly.BibiShop.repository.GiamGiaSanPhamRepository;
+import com.poly.BibiShop.repository.GioHangChiTietRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class GioHangChiTietService {
   private final GiamGiaSanPhamRepository giamGiaSanPhamRepository;
 
   public GioHangChiTiet apDunggiamGiaSanPham(Integer chiTietId, Long idGiamGia) {
-    GioHangChiTiet chiTiet = chiTietRepository.findById(chiTietId)
+    GioHangChiTiet chiTiet = chiTietRepository.findById(Long.valueOf(chiTietId))
         .orElseThrow(() -> new RuntimeException("Sản phẩm không tồn tại"));
 
     GiamGiaSanPham giamGia = giamGiaSanPhamRepository.findById(idGiamGia)

@@ -4,51 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="dung refactor code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/GioHang/GioHangController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDon/HoaDonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/TrangThaiGioHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/KhachHangRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GioHangChiTietRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GioHangRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/GioHang/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/export.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/view.html" afterDir="false" />
+    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="update hoadon_hoaDonChitiet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/BibiShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/BibiShopApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/DotGiamGia/Dotgiamgiacontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/DotGiamGia/Dotgiamgiacontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDon/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDon/HoaDonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/MaGiamGiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/MaGiamGiaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHangChiTiet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHangChiTiet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/KhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/KhachHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/ChatLieuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/ChatLieuRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/ChiTietSPRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/ChiTietSPRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/DanhMucRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/DanhMucRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/HinhAnhRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/HinhAnhRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/KhachHangRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/KichCoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/KichCoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/MauSacRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/MauSacRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/NhanVienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/NhanVienRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/SanPhamChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/SanPhamChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/SanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/SanPhamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Client/GioHangChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Client/GioHangChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Client/GioHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Client/GioHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/DotGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/DotGiamGiaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/GiamGiaSanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GiamGiaSanPhamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/HoaDonChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/HoaDonChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/HoaDonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/MaGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/MaGiamGiaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/impl/hoadon/Server/khachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/khachHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/KhachHangService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/GioHangChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangChiTietService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/GioHangService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDonChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonChiTietService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDonService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Client/GioHangChiTietRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Client/GioHangRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/DotGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/DotGiamGiaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GiamGiaSanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/GiamGiaSanPhamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GioHangChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/GioHangChiTietRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GioHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/GioHangRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/HoaDonChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/HoaDonChiTietRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/HoaDonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/MaGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/MaGiamGiaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/khachHangRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangChiTietService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonChiTietService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,38 +99,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Maven.Bibishop [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BibiShopApplication.executor": "Run",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "Giohang__hoaDon",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/DuAn_TN/sp25-sd12-ban-giay-sneaker-bibishop/src/main/resources/templates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven.Bibishop [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BibiShopApplication.executor&quot;: &quot;Run&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Giohang__hoaDon&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/DuAn_TN/sp25-sd12-ban-giay-sneaker-bibishop/src/main/resources/templates&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -224,6 +199,8 @@
       <updated>1740763884970</updated>
       <workItem from="1740763886631" duration="7541000" />
       <workItem from="1740813168478" duration="1033000" />
+      <workItem from="1742141585646" duration="280000" />
+      <workItem from="1742147275671" duration="2880000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

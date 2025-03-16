@@ -1,9 +1,6 @@
-package com.poly.BibiShop.repositoryy.impl.hoadon.Server;
+package com.poly.BibiShop.repository;
 
-import com.poly.BibiShop.entity.DotGiamGia;
 import com.poly.BibiShop.entity.MaGiamGia;
-import java.sql.Date;
-import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

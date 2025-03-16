@@ -2,7 +2,7 @@ package com.poly.BibiShop.service.server.HoaDon;
 
 import com.poly.BibiShop.entity.HoaDon;
 import com.poly.BibiShop.entity.HoaDonChiTiet;
-import com.poly.BibiShop.repositoryy.impl.hoadon.Server.HoaDonChiTietRepository;
+import com.poly.BibiShop.repository.HoaDonChiTietRepository;
 import java.util.List;
 import java.util.Optional;
 

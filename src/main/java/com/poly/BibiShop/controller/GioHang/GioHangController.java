@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.math.BigDecimal;
 
 @Controller
-@RequestMapping("/giohang")
+@RequestMapping("/client/")
 public class GioHangController {
 
   @Autowired
@@ -30,15 +30,15 @@ public class GioHangController {
 
   // Hiển thị giỏ hàng
   @GetMapping
-  public String viewCart(@RequestParam("idKhachHang") Integer idKhachHang, Model model) {
+  public String viewCart(@RequestParam("giohang/idKhachHang") Integer idKhachHang, Model model) {
     GioHang gioHang = gioHangService.getOrCreateGioHang(idKhachHang);
     model.addAttribute("gioHang", gioHang);
     model.addAttribute("total", gioHangService.calculateTotal(gioHang));
-    return "giohang/view";
+    return "admin/GioHang/view";
   }
 
   // Thêm sản phẩm vào giỏ hàng
-  @PostMapping("/add")
+  @PostMapping("giohang/add")
   public String addToCart(
       @RequestParam("idKhachHang") Integer idKhachHang,
       @RequestParam("idSanPhamChiTiet") Integer idSanPhamChiTiet,
@@ -50,7 +50,7 @@ public class GioHangController {
   }
 
   // Sửa số lượng sản phẩm
-  @PostMapping("/update")
+  @PostMapping("giohang/update")
   public String updateQuantity(
       @RequestParam("idGioHangChiTiet") Long idGioHangChiTiet,
       @RequestParam("soLuong") Integer soLuong,
@@ -62,7 +62,7 @@ public class GioHangController {
   }
 
   // Xóa sản phẩm khỏi giỏ hàng
-  @PostMapping("/remove")
+  @PostMapping("giohang/remove")
   public String removeFromCart(
       @RequestParam("idGioHangChiTiet") Long idGioHangChiTiet,
       @RequestParam("idKhachHang") Integer idKhachHang,
@@ -73,7 +73,7 @@ public class GioHangController {
   }
 
   // Áp dụng mã giảm giá
-  @PostMapping("/apply-discount")
+  @PostMapping("giohang/apply-discount")
   public String applyDiscount(
       @RequestParam("idKhachHang") Integer idKhachHang,
       @RequestParam("maGiamGia") String maGiamGia,
@@ -85,7 +85,7 @@ public class GioHangController {
   }
 
   // Thanh toán và tạo hóa đơn
-  @PostMapping("/checkout")
+  @PostMapping("giohang/checkout")
   public String checkout(
       @RequestParam("idKhachHang") Integer idKhachHang,
       @RequestParam("tenNguoiNhan") String tenNguoiNhan,

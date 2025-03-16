@@ -1,4 +1,4 @@
-package com.poly.BibiShop.repositoryy.impl.hoadon.Server;
+package com.poly.BibiShop.repository;
 
 import com.poly.BibiShop.entity.GiamGiaSanPham;
 import org.springframework.data.jpa.repository.JpaRepository;

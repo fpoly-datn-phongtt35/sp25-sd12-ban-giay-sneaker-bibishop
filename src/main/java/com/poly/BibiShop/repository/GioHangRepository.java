@@ -1,4 +1,4 @@
-package com.poly.BibiShop.repository.hoadon.Server;
+package com.poly.BibiShop.repository;
 
 import com.poly.BibiShop.entity.GioHang;
 import com.poly.BibiShop.entity.TrangThaiGioHang;

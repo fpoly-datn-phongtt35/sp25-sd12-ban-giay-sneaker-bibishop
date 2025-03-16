@@ -3,12 +3,14 @@ package com.poly.BibiShop.service.server.HoaDon;
 import com.poly.BibiShop.entity.*;
 import com.poly.BibiShop.repository.KhachHangRepository;
 import com.poly.BibiShop.repository.SanPhamChiTietRepository;
-import com.poly.BibiShop.repository.hoadon.Server.GioHangRepository;
-import com.poly.BibiShop.repositoryy.impl.hoadon.Server.HoaDonChiTietRepository;
-import com.poly.BibiShop.repositoryy.impl.hoadon.Server.HoaDonRepository;
+import com.poly.BibiShop.repository.GioHangRepository;
+import com.poly.BibiShop.repository.HoaDonChiTietRepository;
+import com.poly.BibiShop.repository.HoaDonRepository;
+import java.util.ArrayList;
 import java.util.Optional;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -42,8 +44,9 @@ public class HoaDonService {
   public Optional<HoaDon> findById(Long id) {
     return hoaDonRepository.findById(id);
   }
-  public List<HoaDon> findAll(PageRequest pageRequest) {
-    return hoaDonRepository.findAll();
+  // Phương thức findAll để lấy danh sách hóa đơn phân trang
+  public Page<HoaDon> findAll(Pageable pageRequest) {
+    return hoaDonRepository.findAll(pageRequest);
   }
   // Tạo hóa đơn từ giỏ hàng
   public HoaDon createHoaDon(GioHang gioHang, String tenNguoiNhan, String sdt, String diaChi) {

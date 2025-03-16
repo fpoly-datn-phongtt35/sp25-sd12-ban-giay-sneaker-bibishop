@@ -2,10 +2,10 @@ package com.poly.BibiShop.service.server.HoaDon;import com.poly.BibiShop.entity.
 
 
 import com.poly.BibiShop.repository.SanPhamChiTietRepository;
-import com.poly.BibiShop.repositoryy.impl.hoadon.Server.DotGiamGiaRepository;
-import com.poly.BibiShop.repository.hoadon.Server.GioHangChiTietRepository;
-import com.poly.BibiShop.repository.hoadon.Server.GioHangRepository;
-import com.poly.BibiShop.repositoryy.impl.hoadon.Server.MaGiamGiaRepository;
+import com.poly.BibiShop.repository.DotGiamGiaRepository;
+import com.poly.BibiShop.repository.GioHangChiTietRepository;
+import com.poly.BibiShop.repository.GioHangRepository;
+import com.poly.BibiShop.repository.MaGiamGiaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
