@@ -21,26 +21,14 @@ public class DotGiamGia {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
 
-  @Column(name = "don_toi_thieu", precision = 38, scale = 2)
-  private BigDecimal donToiThieu;
-
-  @Column(name = "gia_tri_giam", precision = 38, scale = 2)
-  private BigDecimal giaTriGiam;
-
-  @Column(name = "giam_toi_da", precision = 38, scale = 2)
-  private BigDecimal giamToiDa;
-
-  @Column(name = "loai_voucher")
-  private Integer loaiVoucher;
+  @Column(name = "ten", length = 255)
+  private String ten;
 
   @Column(name = "ma", length = 255)
   private String ma;
 
-  @Column(name = "so_luong")
-  private Integer soLuong;
-
-  @Column(name = "so_lan_su_dung")
-  private Integer soLanSuDung;
+  @Column(name = "gia_tri_giam", precision = 38, scale = 2)
+  private BigDecimal giaTriGiam;
 
   @Column(name = "ngay_bat_dau")
   private Date ngayBatDau;
@@ -48,20 +36,15 @@ public class DotGiamGia {
   @Column(name = "ngay_ket_thuc")
   private Date ngayKetThuc;
 
-  @Column(name = "ngay_sua")
-  private LocalDateTime ngaySua;
-
   @Column(name = "ngay_tao")
   private LocalDateTime ngayTao;
 
-  @Column(name = "ten", length = 255)
-  private String ten;
+  @Column(name = "ngay_sua")
+  private LocalDateTime ngaySua;
 
   @Column(name = "trang_thai")
   private Integer trangThai;
 
-  @Column(name = "hinh_thuc_giam_gia_id")
-  private Integer hinhThucGiamGiaId;
-
-  // Getters and Setters
+  @Column(name = "loai_voucher")
+  private Integer loaiVoucher;
 }

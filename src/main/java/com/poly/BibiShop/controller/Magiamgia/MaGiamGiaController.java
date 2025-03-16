@@ -36,12 +36,14 @@ public class MaGiamGiaController {
       @RequestParam(name = "page", defaultValue = "1") int page,
       @RequestParam(name = "size", defaultValue = "5") int size) {
 
-    Page<MaGiamGia> maGiamGiaPage = maGiamGiaRepository.findAllMaGiamGia(PageRequest.of(page - 1, size));
+    Page<MaGiamGia> maGiamGiaPage = maGiamGiaRepository.findAllMaGiamGia(
+        PageRequest.of(page - 1, size));
 
     // Check and update status based on expiration date
     LocalDate currentDate = LocalDate.now();
     for (MaGiamGia voucher : maGiamGiaPage.getContent()) {
-      if (voucher.getNgayKetThuc() != null && currentDate.isAfter(voucher.getNgayKetThuc().toLocalDate())) {
+      if (voucher.getNgayKetThuc() != null && currentDate.isAfter(
+          voucher.getNgayKetThuc().toLocalDate())) {
         if (voucher.getTrangThai() != 0) { // Only update if not already inactive
           voucher.setTrangThai(0);
           maGiamGiaRepository.save(voucher); // Persist the change
@@ -60,6 +62,7 @@ public class MaGiamGiaController {
     model.addAttribute("valueDiscount", new CreateValueDiscountDTO());
     return "admin/MaGiamGia/add";
   }
+
   @PostMapping("MaGiamGia/add/percentage")
   public String addPercentageDiscount(
       @ModelAttribute("percentageDiscount") CreatePercentageDiscountDTO dto,
@@ -72,7 +75,8 @@ public class MaGiamGiaController {
     try {
       MaGiamGia newMaGiamGia = new MaGiamGia();
       newMaGiamGia.setTen(dto.getTen());
-      newMaGiamGia.setMa(dto.getMa() != null && !dto.getMa().isEmpty() ? dto.getMa() : generateRandomCode());
+      newMaGiamGia.setMa(
+          dto.getMa() != null && !dto.getMa().isEmpty() ? dto.getMa() : generateRandomCode());
       newMaGiamGia.setGiaTriGiam(dto.getPhanTramGiam());
       newMaGiamGia.setGiamToiDa(dto.getGiamToiDa());
       newMaGiamGia.setSoLuong(dto.getSoLuong());
@@ -83,7 +87,8 @@ public class MaGiamGiaController {
       newMaGiamGia.setTrangThai(1);
 
       maGiamGiaRepository.save(newMaGiamGia);
-      redirectAttributes.addFlashAttribute("message", "Thêm mã giảm giá theo phần trăm thành công!");
+      redirectAttributes.addFlashAttribute("message",
+          "Thêm mã giảm giá theo phần trăm thành công!");
       redirectAttributes.addFlashAttribute("messageType", "success");
       return "redirect:/admin/MaGiamGia/list";
     } catch (Exception e) {
@@ -143,15 +148,16 @@ public class MaGiamGiaController {
     }
     return code.toString();
   }
+
   @PostMapping("MaGiamGia/delete/{id}")
   public String delete(@PathVariable int id) {
     try {
       Optional<MaGiamGia> newMgiamgia = maGiamGiaRepository.findById((long) id);
       MaGiamGia magiamGia = newMgiamgia.get();
-      if (magiamGia.getTrangThai() == 1){
+      if (magiamGia.getTrangThai() == 1) {
         magiamGia.setTrangThai(0);
         maGiamGiaRepository.save(magiamGia);
-      }else {
+      } else {
         magiamGia.setTrangThai(1);
         maGiamGiaRepository.save(magiamGia);
       }
@@ -161,6 +167,49 @@ public class MaGiamGiaController {
     return "redirect:/admin/MaGiamGia/list";
   }
 
+  // Xem chi tiết mã giảm giá
+  @GetMapping("MaGiamGia/view/{id}")
+  public String viewAndUpdateMaGiamGia(@PathVariable int id, Model model) {
+    maGiamGiaRepository.findById((long) id).ifPresentOrElse(
+        maGiamGia -> model.addAttribute("updateMagiamgia", maGiamGia),
+        () -> {
+          throw new RuntimeException("Không tìm thấy mã giảm giá với ID: " + id);
+        }
+    );
+    return "admin/MaGiamGia/viewAndUpdate";
+  }
 
+  // Cập nhật mã giảm giá
+  @PostMapping("MaGiamGia/update/{id}")
+  public String updateMaGiamGia(
+      @PathVariable int id,
+      @ModelAttribute("updateMagiamgia") MaGiamGia maGiamGia,
+      BindingResult bindingResult,
+      RedirectAttributes redirectAttributes) {
+    // Kiểm tra lỗi cơ bản từ BindingResult
+    if (bindingResult.hasErrors()) {
+      redirectAttributes.addFlashAttribute("message", "Có lỗi khi nhập thông tin. Vui lòng kiểm tra lại dữ liệu!");
+      redirectAttributes.addFlashAttribute("messageType", "error");
+      return "redirect:/admin/MaGiamGia/view/" + id;
+    }
 
+    try {
+      // Đảm bảo ID khớp với bản ghi cần cập nhật
+      maGiamGia.setId(id);
+      // Giữ ngày tạo gốc
+      MaGiamGia existingMaGiamGia = maGiamGiaRepository.findById((long) id).orElseThrow(
+          () -> new RuntimeException("Không tìm thấy mã giảm giá với ID: " + id)
+      );
+      maGiamGia.setNgayTao(existingMaGiamGia.getNgayTao());
+      // Lưu bản ghi cập nhật
+      maGiamGiaRepository.save(maGiamGia);
+      redirectAttributes.addFlashAttribute("message", "Cập nhật mã giảm giá thành công!");
+      redirectAttributes.addFlashAttribute("messageType", "success");
+    } catch (Exception e) {
+      redirectAttributes.addFlashAttribute("message", "Lỗi khi cập nhật mã giảm giá: " + e.getMessage());
+      redirectAttributes.addFlashAttribute("messageType", "error");
+      return "redirect:/admin/MaGiamGia/view/" + id;
+    }
+    return "redirect:/admin/MaGiamGia/list";
+  }
 }
