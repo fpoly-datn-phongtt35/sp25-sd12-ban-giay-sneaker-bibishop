@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="dung refactor code">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_12_2025_8_34_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_12_2025_8_34_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/MaGiamGiaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/dto/CreatePercentageDiscountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/dto/CreateValueDiscountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/MaGiamGia/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Chatlieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Chatlieu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Danhmuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Danhmuc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Kieudang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Kieudang.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Mausac.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminWeb/Mausac.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/sidebar_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/sidebar_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Ma_giam_gia/Ma_giam_gia_controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Ma_giam_gia/dto/CreatMaGiamGia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/dto/admin/CreatMaGiamGia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/MaGiamGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/MaGiamGia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/ma-giam-gia/createMagiamgia.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/ma-giam-gia/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/MaGiamGia/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/ma-giam-gia/viewAndUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/MaGiamGia/viewAndUpdate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="HoaDon_hoaDonChitiet" />
+        <entry key="$PROJECT_DIR$" value="merge-code" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +105,7 @@
     "git-widget-placeholder": "#1 on HoaDon__hoaDonChitiet",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/DuAn_TN/DATN_3/DATN",
+    "last_opened_file_path": "E:/DuAn_TN/sp25-sd12-ban-giay-sneaker-bibishop/src/main/resources/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -120,11 +128,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\resources\templates" />
       <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\resources\templates\admin\adminWeb" />
       <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop\dto" />
       <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop\service" />
       <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop" />
-      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.poly.BibiShop.dto.admin" />
@@ -152,6 +160,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BibiShopApplication" />
+      <item itemvalue="Spring Boot.DatnApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -205,5 +217,16 @@
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/MaGiamGiaController.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
