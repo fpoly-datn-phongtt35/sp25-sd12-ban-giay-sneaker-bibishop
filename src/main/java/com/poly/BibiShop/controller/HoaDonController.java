@@ -31,12 +31,7 @@ public class HoaDonController {
 
   private final HoaDonService hoaDonService;
 
-  @GetMapping
-  public String danhSachHoaDon(Model model) {
-    List<HoaDon> danhSach = hoaDonService.layTatCa();
-    model.addAttribute("danhSachHoaDon", danhSach);
-    return "admin/hoadon/danh-sach";
-  }
+
 
   @GetMapping("/them")
   public String formThemHoaDon(Model model) {
