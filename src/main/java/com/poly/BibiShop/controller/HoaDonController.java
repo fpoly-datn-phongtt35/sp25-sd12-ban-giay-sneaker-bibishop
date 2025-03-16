@@ -31,7 +31,12 @@ public class HoaDonController {
 
   private final HoaDonService hoaDonService;
 
-
+  @GetMapping
+  public String danhSachHoaDon(Model model) {
+    List<HoaDon> danhSach = hoaDonService.layTatCa();
+    model.addAttribute("danhSachHoaDon", danhSach);
+    return "admin/hoadon/danh-sach";
+  }
 
   @GetMapping("/them")
   public String formThemHoaDon(Model model) {
@@ -73,26 +78,4 @@ public class HoaDonController {
     return "redirect:/admin/hoadon";
   }
 
-  @GetMapping("/xoa/{id}")
-  public String xoaHoaDon(@PathVariable Long id) {
-    hoaDonService.xoaHoaDon(id);
-    return "redirect:/admin/hoadon";
-  }
-
-
-  @GetMapping("/chitiet/{id}")
-  public String getHoaDonById(@PathVariable("id") Long id, Model model) throws Exception {
-    Optional<HoaDon> hoaDon = hoaDonService.findById(id);
-    if (hoaDon.isEmpty()) {  // Dùng isEmpty() thay vì so sánh null
-      return "/admin/hoadon/404";  // Trang lỗi nếu không tìm thấy hóa đơn
-    }
-    model.addAttribute("hoaDon", hoaDon.get()); // Lấy đối tượng HoaDon thực tế
-    List<HoaDonChiTiet> hoaDonChiTiet =
-        hoaDonService.getChiTietHoaDonById(Long.parseLong(id.toString()));
-    if (hoaDonChiTiet.isEmpty()) {
-      return "/admin/hoadon/404"; // Trang lỗi nếu không tìm thấy hóa đơn
-    }
-//    model.addAttribute("hoaDonChiTiet", hoaDonChiTiet);
-    return "/admin/hoadon/chi-tiet";
-  }
 }
