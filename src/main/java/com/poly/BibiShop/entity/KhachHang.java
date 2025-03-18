@@ -16,11 +16,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name = "KHACH_HANG")
-public class KhachHang {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+public class KhachHang extends SuperEntity {
 
   @Column(name = "ngay_sua")
   private LocalDateTime ngaySua;

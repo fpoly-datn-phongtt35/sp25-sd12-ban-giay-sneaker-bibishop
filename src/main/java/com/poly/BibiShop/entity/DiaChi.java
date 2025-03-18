@@ -15,10 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "dia_chi")
-public class DiaChi {
-
-  @Id
-  private Long id;
+public class DiaChi extends SuperEntity {
 
   @Column(name = "dia_chi", length = 255)
   private String diaChi;

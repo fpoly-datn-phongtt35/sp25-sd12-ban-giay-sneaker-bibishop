@@ -45,7 +45,7 @@ public class GioHangService {
       return gioHangOpt.get();
     } else {
       GioHang gioHang = new GioHang();
-      gioHang.setIdKhachHang(idKhachHang);
+      gioHang.setIdKhachHang(Long.valueOf(idKhachHang));
       gioHang.setTrangThai(TrangThaiGioHang.CHO_XU_LY);
       gioHang.setNgayTao(LocalDateTime.now());
       return gioHangRepository.save(gioHang);

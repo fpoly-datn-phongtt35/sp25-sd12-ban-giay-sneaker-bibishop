@@ -6,24 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="update hoadon_hoaDonChitiet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/DotGiamGia/Dotgiamgiacontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/DotGiamGia/Dotgiamgiacontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDon/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/HoaDon/HoaDonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/MaGiamGiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/controller/Magiamgia/MaGiamGiaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Client/GioHangChiTietRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Client/GioHangRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/DotGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/DotGiamGiaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GiamGiaSanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/GiamGiaSanPhamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GioHangChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/GioHangChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/GioHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/GioHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/HoaDonChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/HoaDonChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/HoaDonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/MaGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/MaGiamGiaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/repository/hoadon/Server/khachHangRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangChiTietService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/DiaChi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/DiaChi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/DotGiamGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/DotGiamGia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GiamGiaSanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GiamGiaSanPham.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHangChiTiet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/GioHangChiTiet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/HoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/HoaDon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/HoaDonChiTiet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/HoaDonChiTiet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/KhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/KhachHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/MaGiamGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/MaGiamGia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/NhanVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/SuperEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/entity/SuperEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/GioHangService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonChiTietService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/BibiShop/service/server/HoaDon/HoaDonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/hoadon/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +197,7 @@
       <workItem from="1740813168478" duration="1033000" />
       <workItem from="1742141585646" duration="280000" />
       <workItem from="1742147275671" duration="2880000" />
+      <workItem from="1742259961111" duration="3346000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

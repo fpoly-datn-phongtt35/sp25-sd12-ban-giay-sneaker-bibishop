@@ -16,11 +16,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class GiamGiaSanPham {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+public class GiamGiaSanPham extends SuperEntity {
 
   @Column(name = "id_sanpham", nullable = false)
   private Integer idSanPham;

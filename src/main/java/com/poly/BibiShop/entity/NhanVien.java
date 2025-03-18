@@ -13,11 +13,7 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "NHAN_VIEN")
-public class NhanVien {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+public class NhanVien extends SuperEntity {
 
   @Column(name = "ngay_sua")
   private LocalDateTime ngaySua;

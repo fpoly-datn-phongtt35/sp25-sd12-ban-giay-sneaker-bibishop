@@ -22,7 +22,7 @@ public class GioHang {
   private Long id;
 
   @Column(name = "id_khachhang", nullable = false)
-  private Integer idKhachHang;
+  private Long idKhachHang;
 
   @Column(name = "ngay_tao", nullable = false)
   private LocalDateTime ngayTao = LocalDateTime.now();

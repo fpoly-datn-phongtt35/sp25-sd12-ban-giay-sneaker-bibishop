@@ -15,11 +15,7 @@ import java.sql.Date;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MaGiamGia {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+public class MaGiamGia extends SuperEntity {
 
   @Column(name = "don_toi_thieu", precision = 38, scale = 2)
   private BigDecimal donToiThieu; // Minimum order value (for value-based)

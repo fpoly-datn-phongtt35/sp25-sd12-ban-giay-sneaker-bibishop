@@ -14,11 +14,7 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class HoaDonChiTiet {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+public class HoaDonChiTiet extends SuperEntity {
 
   @ManyToOne
   @JoinColumn(name = "id_hoadon", nullable = false)

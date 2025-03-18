@@ -15,11 +15,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Table(name = "dot_giam_gia")
-public class DotGiamGia {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+public class DotGiamGia extends SuperEntity {
 
   @Column(name = "ten", length = 255)
   private String ten;

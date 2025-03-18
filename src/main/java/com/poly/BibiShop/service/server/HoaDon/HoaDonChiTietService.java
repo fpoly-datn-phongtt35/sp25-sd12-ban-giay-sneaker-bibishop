@@ -30,7 +30,8 @@ public class HoaDonChiTietService {
   public HoaDonChiTiet saveHoaDonChiTiet(HoaDonChiTiet hoaDonChiTiet) {
     // If HoaDon is not null, set it (assuming it is not already set)
     if (hoaDonChiTiet.getHoaDon() != null) {
-      HoaDon hoaDon = hoaDonChiTietRepository.findById(hoaDonChiTiet.getHoaDon().getId())
+      HoaDon hoaDon = hoaDonChiTietRepository.findById(
+              Long.valueOf(hoaDonChiTiet.getHoaDon().getId()))
           .orElseThrow(() -> new RuntimeException("HoaDon not found")).getHoaDon();
       hoaDonChiTiet.setHoaDon(hoaDon);
     }

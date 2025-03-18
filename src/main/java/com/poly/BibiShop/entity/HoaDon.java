@@ -16,11 +16,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class HoaDon {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+public class HoaDon extends SuperEntity {
 
   @Column(name = "ma_hoa_don", nullable = false)
   private String maHoaDon;
