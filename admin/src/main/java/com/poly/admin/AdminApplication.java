@@ -20,24 +20,24 @@ public class AdminApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdminApplication.class, args);
     }
-    @PostConstruct
-    public void inti(){
-        String password = "2342342";
-        String decrypt = passwordEncoder.encode(password);
-        System.out.println(decrypt);
-    }
-
-        @PostConstruct
-    public void createUser(){
-        if(userRepo.existsByEmail("vinhtq26@gmail.com")) return;
-        String hash = passwordEncoder.encode("123123");
-        NhanVien createUserRequest = new NhanVien();
-        createUserRequest.setTen("vinh");
-        createUserRequest.setEmail("vinhtq26@gmail.com");
-        createUserRequest.setSdt("0866965002");
-        createUserRequest.setMatKhau(hash);
-        userRepo.save(createUserRequest);
-        System.out.println(hash);
-
-    }
+//    @PostConstruct
+//    public void inti(){
+//        String password = "2342342";
+//        String decrypt = passwordEncoder.encode(password);
+//        System.out.println(decrypt);
+//    }
+//
+//        @PostConstruct
+//    public void createUser(){
+//        if(userRepo.existsByEmail("vinhtq26@gmail.com")) return;
+//        String hash = passwordEncoder.encode("123123");
+//        NhanVien createUserRequest = new NhanVien();
+//        createUserRequest.setTen("vinh");
+//        createUserRequest.setEmail("vinhtq26@gmail.com");
+//        createUserRequest.setSdt("0866965002");
+//        createUserRequest.setMatKhau(hash);
+//        userRepo.save(createUserRequest);
+//        System.out.println(hash);
+//
+//    }
 }

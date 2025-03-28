@@ -4,29 +4,99 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="add manage view to side bar">
+    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="change login using email instate of account">
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/RevenueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/DashboardData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/Metric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/RevenueData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/RevenueDataReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/CompanyRevenue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/EmployeeInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/OrderCollectionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/OrderReceived.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/ProductCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DashboardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/IStatisticService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DashboardServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/StatisticServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/css/sb-admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/css/sb-admin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/js/sb-admin-charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/js/sb-admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/js/sb-admin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/css/font-awesome.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/css/font-awesome.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/dashboard/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/thong-ke/revenue.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/KhachHangController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/KhachHangController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/admin/CreateKhachHangRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/admin/CreateKhachHangRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KhachHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/KhachHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/KhachHangService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/khach-hang/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/AdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery-easing/jquery.easing.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery-easing/jquery.easing.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/KhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/KhachHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/KhachHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/KhachHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/KhachHangService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/fragment/login_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/fragment/login_modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/layout/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/shop/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/shop/account.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +194,7 @@
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/quangvinh/Java Skills/Java/dev/v2/admin/src/main/resources/templates/admin/adminWeb&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/quangvinh/Java Skills/Java/dev/v2/admin/src/main/resources/static/js&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -148,15 +218,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/admin/src/main/resources/templates/admin/adminWeb" />
-      <recent name="$PROJECT_DIR$/admin/src/main/resources/templates/admin" />
-      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop\dto" />
-      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop\service" />
-      <recent name="E:\DuAn_TN\sp25-sd12-ban-giay-sneaker-bibishop\src\main\java\com\poly\BibiShop" />
+      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js" />
+      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/vendor" />
+      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.poly.BibiShop.dto.admin" />
-      <recent name="com.poly.BibiShop.controller" />
+      <recent name="com.poly.admin.dto.test" />
+      <recent name="com.poly.admin.service.impl" />
+      <recent name="com.poly.admin.service" />
+      <recent name="com.poly.admin.controller.dashboard" />
+      <recent name="com.poly.admin.dto.dashboard" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AdminApplication">
@@ -248,7 +321,16 @@
       <workItem from="1740763886631" duration="4084000" />
       <workItem from="1741149327237" duration="263000" />
       <workItem from="1741178884506" duration="92000" />
-      <workItem from="1741186979111" duration="5495000" />
+      <workItem from="1741186979111" duration="8227000" />
+      <workItem from="1741738794149" duration="1415000" />
+      <workItem from="1741885938092" duration="45000" />
+      <workItem from="1741973926562" duration="1535000" />
+      <workItem from="1742130382423" duration="5142000" />
+      <workItem from="1742692158394" duration="9481000" />
+      <workItem from="1742749486382" duration="14319000" />
+      <workItem from="1742908373466" duration="2060000" />
+      <workItem from="1743043250071" duration="736000" />
+      <workItem from="1743135938476" duration="3234000" />
     </task>
     <task id="LOCAL-00002" summary="merge code function admin web">
       <option name="closed" value="true" />
@@ -266,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741106825896</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change login using email instate of account">
+      <option name="closed" value="true" />
+      <created>1741353012931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741353012931</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +378,8 @@
     <MESSAGE value="dung refactor code" />
     <MESSAGE value="merge code function admin web" />
     <MESSAGE value="add manage view to side bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add manage view to side bar" />
+    <MESSAGE value="change login using email instate of account" />
+    <option name="LAST_COMMIT_MESSAGE" value="change login using email instate of account" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
@@ -301,11 +392,6 @@
           <url>file://$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java</url>
           <line>116</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/KhachHangController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js</url>
