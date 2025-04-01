@@ -70,7 +70,7 @@ public class DashboardServiceImpl implements DashboardService {
         int totalShippedOrders = hoaDonRepository.countDeliveryOrder("DANG_GIAO_HANG");
         int totalReturnInitiatedOrders = hoaDonRepository.countDeliveryOrder("TRA_HANG");
 
-        Locale locale = new Locale("en", "US");
+        Locale locale = new Locale("vi", "VN");
         NumberFormat CurrencyFormatter = NumberFormat.getCurrencyInstance(locale);
 
         orderStatusMap.put("totalNewOrders", totalNewOrders);
