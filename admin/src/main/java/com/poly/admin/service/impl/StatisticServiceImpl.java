@@ -1,6 +1,6 @@
 package com.poly.admin.service.impl;
 
-import com.poly.admin.repository.impl.hoadon.Server.HoaDonRepository;
+import com.poly.admin.repository.hoadon.Server.HoaDonRepository;
 import com.poly.admin.service.IStatisticService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

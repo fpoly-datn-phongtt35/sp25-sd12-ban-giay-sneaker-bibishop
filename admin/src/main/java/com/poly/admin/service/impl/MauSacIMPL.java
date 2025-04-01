@@ -3,7 +3,7 @@ package com.poly.admin.service.impl;
 
 import com.poly.admin.dto.MauSacDTO;
 import com.poly.admin.entity.MauSacEntity;
-import com.poly.admin.repository.impl.MauSacRepository;
+import com.poly.admin.repository.MauSacRepository;
 import com.poly.admin.service.MauSacService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

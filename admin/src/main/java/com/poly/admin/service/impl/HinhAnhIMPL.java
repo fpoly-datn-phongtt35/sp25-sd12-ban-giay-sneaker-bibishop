@@ -3,7 +3,7 @@ package com.poly.admin.service.impl;
 
 import com.poly.admin.dto.HinhAnhDTO;
 import com.poly.admin.entity.HinhAnhEntity;
-import com.poly.admin.repository.impl.HinhAnhRepository;
+import com.poly.admin.repository.HinhAnhRepository;
 import com.poly.admin.service.HinhAnhService;
 import javax.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;

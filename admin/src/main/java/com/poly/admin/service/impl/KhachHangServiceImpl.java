@@ -3,22 +3,17 @@ package com.poly.admin.service.impl;
 import com.poly.admin.constant.Constant;
 import com.poly.admin.dto.admin.CreateKhachHangRequest;
 import com.poly.admin.entity.KhachHang;
-import com.poly.admin.entity.NhanVien;
-import com.poly.admin.repository.impl.KhachHangRepository;
+import com.poly.admin.repository.KhachHangRepository;
 import com.poly.admin.service.KhachHangService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.stereotype.Service;
-import com.poly.admin.entity.KhachHang;
-import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class KhachHangServiceImpl implements KhachHangService {

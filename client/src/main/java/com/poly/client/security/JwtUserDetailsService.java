@@ -1,7 +1,7 @@
 package com.poly.client.security;
 
 import com.poly.client.entity.KhachHang;
-import com.poly.client.repository.impl.KhachHangRepository;
+import com.poly.client.repository.KhachHangRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

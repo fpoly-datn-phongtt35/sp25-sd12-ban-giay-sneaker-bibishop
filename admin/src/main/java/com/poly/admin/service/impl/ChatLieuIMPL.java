@@ -3,7 +3,7 @@ package com.poly.admin.service.impl;
 
 import com.poly.admin.dto.ChatLieuDTO;
 import com.poly.admin.entity.ChatLieuEntity;
-import com.poly.admin.repository.impl.ChatLieuRepository;
+import com.poly.admin.repository.ChatLieuRepository;
 import com.poly.admin.service.ChatLieuService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

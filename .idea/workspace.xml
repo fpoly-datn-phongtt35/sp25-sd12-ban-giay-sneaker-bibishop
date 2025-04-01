@@ -4,99 +4,101 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="change login using email instate of account">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/RevenueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/DashboardData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/Metric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/RevenueData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/dashboard/RevenueDataReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/CompanyRevenue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/EmployeeInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/OrderCollectionStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/OrderReceived.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/test/ProductCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DashboardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/IStatisticService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DashboardServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/StatisticServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/css/sb-admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/css/sb-admin.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/js/sb-admin-charts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/js/sb-admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/js/sb-admin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/css/font-awesome.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/css/font-awesome.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/dashboard/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/thong-ke/revenue.html" afterDir="false" />
+    <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="thống kê">
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/hoadonchitiet/HDCTSearchRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/hoadonchitiet/HDCTSearchResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/custom/HoadonRepoCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/custom/impl/HoadonRepoCustomImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/HoaDonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/utils/DataUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/OrderHistoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonChiTietDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/SanPhamDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadonchitiet/HDCTSearchRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadonchitiet/HDCTSearchResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/ChatLieuEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/DanhMucEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/DiaChi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/DotGiamGia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GiamGiaSanPham.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GioHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GioHangChiTiet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HinhAnhEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HoaDon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HoaDonChiTiet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/KichCoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/MaGiamGia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/MauSacEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/PhuongThucThanhToan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SanPhamChiTietEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SanPhamChiTietPK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SanPhamEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SuperEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/HoaDonChiTietRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/HoaDonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/custom/HoadonRepoCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/custom/impl/HoadonRepoCustomImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/rest/OrderHistoryV2Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/HoadonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/HoaDonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/utils/DataUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/chart.js/Chart.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery-easing/jquery.easing.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery-easing/jquery.easing.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/static/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/constant/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Dot_giam_gia/Dot_giam_gia_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Dot_giam_gia/Dot_giam_gia_controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/HoaDonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Ma_giam_gia/Ma_giam_gia_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Ma_giam_gia/Ma_giam_gia_controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/RevenueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/RevenueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/NhanVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/ChatLieuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChatLieuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/ChiTietSPRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChiTietSPRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/DanhMucRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/DanhMucRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/HinhAnhRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/HinhAnhRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/KhachHangRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KichCoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/KichCoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/MauSacRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/MauSacRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/NhanVienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/NhanVienRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/SanPhamChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamChiTietRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/SanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Client/GioHangChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Client/GioHangChiTietRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Client/GioHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Client/GioHangRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/DotGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/DotGiamGiaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/GiamGiaSanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/GiamGiaSanPhamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/HoaDonChiTietRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/MaGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/MaGiamGiaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/security/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/security/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/ChatLieuIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/ChatLieuIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DanhMucIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DanhMucIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DashboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/HinhAnhIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/HinhAnhIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KichCoIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KichCoIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/MauSacIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/MauSacIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/NhanVienServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/NhanVienServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamChiTietIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamChiTietIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/StatisticServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/StatisticServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangChiTietService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonChiTietService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/thong-ke/revenue.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/thong-ke/revenue.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/config/Contant.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/config/Contant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/KhachHangRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/NhanVienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/NhanVienRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/shop/order_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/shop/order_history.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,8 +109,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,7 +120,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="HoaDon_hoaDonChitiet" />
+        <entry key="$PROJECT_DIR$" value="d05197a24ad32b91f334670c44359a15f639e286" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,6 +140,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="merge-code" />
+                    <option name="lastUsedInstant" value="1743140958" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="HoaDon_hoaDonChitiet" />
                     <option name="lastUsedInstant" value="1739796507" />
@@ -194,7 +200,7 @@
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/quangvinh/Java Skills/Java/dev/v2/admin/src/main/resources/static/js&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/quangvinh/Java Skills/Java/dev/v2/client/src/main/java/com/poly/client/entity&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -218,21 +224,26 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity" />
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto" />
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository" />
       <recent name="$PROJECT_DIR$/admin/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/admin/src/main/resources/static/vendor/bootstrap/js" />
-      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/vendor" />
-      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/css" />
-      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/vendor/fontawesome-free" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.poly.client.repository" />
+      <recent name="com.poly.client.entity" />
+      <recent name="com.poly.client.utils" />
+      <recent name="com.poly.admin.dto.hoadonchitiet" />
       <recent name="com.poly.admin.dto.test" />
-      <recent name="com.poly.admin.service.impl" />
-      <recent name="com.poly.admin.service" />
-      <recent name="com.poly.admin.controller.dashboard" />
-      <recent name="com.poly.admin.dto.dashboard" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminApplication">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ClientApplication">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -291,6 +302,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AdminApplication" />
+        <item itemvalue="Spring Boot.AdminApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -331,6 +343,9 @@
       <workItem from="1742908373466" duration="2060000" />
       <workItem from="1743043250071" duration="736000" />
       <workItem from="1743135938476" duration="3234000" />
+      <workItem from="1743286372919" duration="14560000" />
+      <workItem from="1743343528983" duration="473000" />
+      <workItem from="1743344066251" duration="15214000" />
     </task>
     <task id="LOCAL-00002" summary="merge code function admin web">
       <option name="closed" value="true" />
@@ -390,8 +405,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java</url>
-          <line>116</line>
+          <line>111</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/OrderHistoryController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js</url>

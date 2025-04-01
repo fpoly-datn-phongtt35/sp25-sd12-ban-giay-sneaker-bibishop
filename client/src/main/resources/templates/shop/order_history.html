@@ -27,12 +27,79 @@
                     white-space: nowrap;
                 }
             }
+
+            /* Thêm style cho modal */
+            .modal-content {
+                border-radius: 10px;
+            }
+            .order-detail-item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+            }
+            .order-detail-label {
+                font-weight: bold;
+            }
+            .product-img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
         </style>
         <link rel="stylesheet" th:href="@{/shop/css/custom.css}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Thêm CSS cho modal -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </th:block>
 </head>
 <body>
 <main id="main-content" class="container">
+    <!-- Thêm modal popup -->
+    <div class="modal fade" id="orderDetailModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chi tiết đơn hàng: <span id="modalOrderCode"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Thông tin chung -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <p><strong>Ngày đặt:</strong> <span id="modalOrderDate"></span></p>
+                            <p><strong>Tổng tiền:</strong> <span id="modalOrderTotal"></span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Trạng thái:</strong> <span id="modalOrderStatus"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- Danh sách sản phẩm -->
+                    <h6>Sản phẩm đã mua</h6>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                        </thead>
+                        <tbody id="modalOrderDetails">
+                        <!-- Sẽ được điền bằng JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="row">
         <div class="col-lg-3">
             <div class="left-sidebar">
@@ -55,122 +122,134 @@
             <div class="main-content">
                 <div class="nav-tab">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                        <li class="nav-item"><div class="nav-link active order-status" data-status="1">Chờ lấy hàng</div></li>
-                        <li class="nav-item"><div class="nav-link order-status" data-status="2">&Dstrok;ang giao h&agrave;ng</div></li>
-                        <li class="nav-item"><div class="nav-link order-status" data-status="3">&Dstrok;&atilde; giao h&agrave;ng</div></li>
-                        <li class="nav-item"><div class="nav-link order-status" data-status="4">&Dstrok;ơn hàng đã trả lại</div></li>
-                        <li class="nav-item"><div class="nav-link order-status" data-status="5">Đơn hàng đã hủy</div></li>
+                        <li class="nav-item"><div class="nav-link active order-status" data-status="1">Tất cả</div></li>
+<!--                        <li class="nav-item"><div class="nav-link order-status" data-status="2">&Dstrok;ang giao h&agrave;ng</div></li>-->
+<!--                        <li class="nav-item"><div class="nav-link order-status" data-status="3">&Dstrok;&atilde; giao h&agrave;ng</div></li>-->
+<!--                        <li class="nav-item"><div class="nav-link order-status" data-status="4">&Dstrok;ơn hàng đã trả lại</div></li>-->
+<!--                        <li class="nav-item"><div class="nav-link order-status" data-status="5">Đơn hàng đã hủy</div></li>li-->
                     </ul>
                 </div>
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="list-order" role="tabpanel" aria-labelledby="pending-tab">
-                        <th:block th:each="item : ${orderList}">
-                            <!-- Item -->
-                            <div class="item">
-                                <div class="header-item">
-                                    <div class="order-number-wrapper">
-                                        Mã đơn <a class="order-number" th:href="@{/tai-khoan/lich-su-giao-dich/{id}(id=${item.id})}" th:text="'#'+${item.id}"></a>
-                                    </div>
-                                    <a class="full-details" th:href="@{/tai-khoan/lich-su-giao-dich/{id}(id=${item.id})}">Xem chi tiết</a>
-                                </div>
-                                <div class="item-info-wrapper">
-                                    <div class="product-info-wrapper">
-                                        <div class="thumbnails"><img class="img-fluid" th:src="@{${item.productImg}}" th:alt="${item.productName}"/></div>
-                                        <div class="product-info"><span class="name" th:text="${item.productName}"></span>
-                                            <div class="size"><span th:text="${item.sizeUs}"></span>US | <span th:text="${item.sizeVn}"></span>VN | <span th:text="${item.sizeCm}"></span>CM</div>
-                                        </div>
-                                    </div>
-                                    <div class="price bid-price"><span class="text-price" th:text="${item.totalPrice}"></span> &#x20AB;</div>
-                                </div>
-                            </div>
-                            <!-- Item Small-->
-                            <div class="item-small">
-                                <div class="order-number-wrapper">
-                                    Mã đơn <a class="order-number" th:href="@{/tai-khoan/lich-su-giao-dich/{id}(id=${item.id})}" th:text="'#'+${item.id}"></a>
-                                </div>
-                                <div class="item-info-wrapper">
-                                    <div class="product-info-wrapper">
-                                        <div class="product-info">
-                                            <a class="name" th:href="@{/tai-khoan/lich-su-giao-dich/{id}(id=${item.id})}" th:text="${item.productName}"></a>
-                                            <div class="size">
-                                                <span th:text="${item.sizeUs}"></span>US | <span th:text="${item.sizeVn}"></span>VN | <span th:text="${item.sizeCm}"></span>CM
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="price bid-price"><span class="text-price" th:text="${item.totalPrice}"></span> &#x20AB;</div>
-                                </div>
-                            </div>
-                        </th:block>
+                        <div class="table-responsive">
+                            <form method="GET" id="search-form">
+                                <input type="hidden" name="page" id="page">
+                            </form>
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã đơn </th>
+                                    <th>Ngày đặt hàng</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Trạng thái</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="emp, start: ${orderList}">
+                                    <td th:text="${start.index+1}"></td>
+                                    <td th:text="${emp.maHoaDon}"></td>
+                                    <td th:text="${#temporals.format(emp.ngayTao, 'dd/MM/yyyy')}"></td>
+                                    <td th:text="${#numbers.formatDecimal(emp.tongTien, 0, 'COMMA', 2, 'POINT')}"></td>
+                                    <td th:text="${emp.trangThai}"></td>
+                                    <td><button class="btn btn-sm btn-info btn-detail"
+                                            th:data-order-id="${emp.id}"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#orderDetailModal">
+                                        Xem chi tiết
+                                    </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
+                    </div>
             </div>
+            <br>
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="pagination">
+                </ul>
+            </nav>
         </div>
     </div>
 </main>
 
 <th:block id="js-resources">
-    <script>
-        formatMoney();
-        $('.order-status').click(function() {
-            let status = $(this).data('status');
+    <script type="text/javascript" th:src="@{/adminlte/pagination/jquery.simplePagination.js}"></script>
+    <script type="text/javascript" th:src="@{/adminlte/js/table.js}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script th:inline="javascript">
+        let name, color, size, page;
+        $(function () {
+            let vars = parseUrl();
+            name = vars["name"] || ""
+            color = vars["color"] || ""
+            size = vars["size"] || ""
+            page = vars["page"] || "1"
+
+            $('#name').val(name)
+            $('#color').val(color)
+            $('#size').val(size)
+            $('#page').val(page)
+
+            pagination([[${totalPages}]], [[${currentPage}]]);
+        });
+
+        $('.btn-detail').click(function() {
+            const orderId = $(this).data('order-id');
+
+            // Hiển thị loading nếu cần
+            $('#modalOrderDetails').html('<tr><td colspan="4" class="text-center">Đang tải dữ liệu...</td></tr>');
+
+            // Gọi API để lấy chi tiết đơn hàng
             $.ajax({
-                url: '/api/get-order-list?status='+status,
+                url: `/api/v2/orders/${orderId}`,
                 type: 'GET',
-                contentType: "application/json; charset=utf-8",
-                success: function(data) {
-                    $('.nav-link.active').toggleClass("active");
-                    $('.order-status[data-status='+status+']').toggleClass("active");
-                    showListOrder(data);
-                    formatMoney();
+                success: function(response) {
+                    debugger
+                    console.log(response)
+                    // Hiển thị thông tin cơ bản
+                    $('#orderIdHeader').text(orderId);
+                    $('#modalOrderCode').text(response.maHoaDon || 'N/A');
+                    $('#modalOrderDate').text(response.ngayTao ? new Date(response.ngayTao).toLocaleDateString('vi-VN') : 'N/A');
+                    $('#modalOrderTotal').text(response.tongTien ? response.tongTien.toLocaleString('vi-VN') + '₫' : '0₫');
+                    $('#modalOrderStatus').text(response.trangThai || 'N/A');
+
+                    // Hiển thị danh sách sản phẩm
+                    if (response.chiTietHoaDon && response.chiTietHoaDon.length > 0) {
+                        let html = '';
+                        response.chiTietHoaDon.forEach((item, index) => {
+                            html += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>
+                                ${item.sanPham?.tenSanPham || 'Sản phẩm không tồn tại'}
+                                ${item.sanPham?.maSanPham ? `(Mã: ${item.sanPham.maSanPham})` : ''}
+                            </td>
+                            <td>${item.soLuong || 0}</td>
+                            <td>${item.gia ? item.gia.toLocaleString('vi-VN') + '₫' : '0₫'}</td>
+                            <td>${item.thanhTien ? item.thanhTien.toLocaleString('vi-VN') + '₫' : '0₫'}</td>
+                        </tr>
+                    `;
+                        });
+                        $('#modalOrderDetails').html(html);
+                    } else {
+                        $('#modalOrderDetails').html('<tr><td colspan="4" class="text-center">Không có sản phẩm nào</td></tr>');
+                    }
                 },
-                error: function(data) {
-                    toastr.warning(data.responseJSON.message);
+                error: function(xhr, status, error) {
+                    console.error('Lỗi khi lấy chi tiết đơn hàng:', error);
+                    $('#modalOrderDetails').html('<tr><td colspan="4" class="text-center text-danger">Lỗi khi tải dữ liệu</td></tr>');
                 }
             });
-        })
-
-        function showListOrder(orders) {
-            let html = '';
-            for (order of orders) {
-                html += `
-                            <div class="item">
-                                <div class="header-item">
-                                    <div class="order-number-wrapper">
-                                        Mã đơn <a class="order-number" href="/tai-khoan/lich-su-giao-dich/${order.id}">#${order.id}</a>
-                                    </div>
-                                    <a class="full-details" href="/tai-khoan/lich-su-giao-dich/${order.id}">Xem chi tiết</a>
-                                </div>
-                                <div class="item-info-wrapper">
-                                    <div class="product-info-wrapper">
-                                        <div class="thumbnails"><img class="img-fluid" src="${order.productImg}" alt="${order.productName}"/></div>
-                                        <div class="product-info"><span class="name">${order.productName}</span>
-                                            <div class="size"><span>${order.sizeUs}</span>US | <span>${order.sizeVn}</span>VN | <span>${order.sizeCm}</span>CM</div>
-                                        </div>
-                                    </div>
-                                    <div class="price bid-price"><span class="text-price">${order.totalPrice}</span> &#x20AB;</div>
-                                </div>
-                            </div>
-                            <div class="item-small">
-                                <div class="order-number-wrapper">
-                                    Mã đơn <a class="order-number" href="/tai-khoan/lich-su-giao-dich/${order.id}">#${order.id}</a>
-                                </div>
-                                <div class="item-info-wrapper">
-                                    <div class="product-info-wrapper">
-                                        <div class="product-info">
-                                            <a class="name" href="/tai-khoan/lich-su-giao-dich/${order.id}">${order.productName}</a>
-                                            <div class="size">
-                                                <span>${order.sizeUs}</span>US | <span>${order.sizeVn}</span>VN | <span>${order.sizeCm}</span>CM
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="price bid-price"><span class="text-price">${order.totalPrice}</span> &#x20AB;</div>
-                                </div>
-                            </div>
-        `
-            }
-            $('#list-order').html(html);
-        }
+        });
     </script>
+
 </th:block>
 </body>
 </html>

@@ -3,7 +3,7 @@ package com.poly.admin.service.impl;
 
 import com.poly.admin.dto.KichCoDTO;
 import com.poly.admin.entity.KichCoEntity;
-import com.poly.admin.repository.impl.KichCoRepository;
+import com.poly.admin.repository.KichCoRepository;
 import com.poly.admin.service.KichCoService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

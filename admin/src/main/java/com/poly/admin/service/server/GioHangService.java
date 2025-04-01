@@ -2,8 +2,8 @@ package com.poly.admin.service.server;
 
 import com.poly.admin.entity.GioHang;
 import com.poly.admin.entity.MaGiamGia;
-import com.poly.admin.repository.impl.hoadon.Client.GioHangRepository;
-import com.poly.admin.repository.impl.hoadon.Server.MaGiamGiaRepository;
+import com.poly.admin.repository.hoadon.Client.GioHangRepository;
+import com.poly.admin.repository.hoadon.Server.MaGiamGiaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,16 +1,26 @@
 package com.poly.admin.service.impl;
 
+import com.poly.admin.dto.hoadonchitiet.HDCTSearchRequest;
+import com.poly.admin.dto.hoadonchitiet.HDCTSearchResponse;
 import com.poly.admin.dto.test.*;
+import com.poly.admin.repository.hoadon.Server.HoaDonChiTietRepository;
+import com.poly.admin.repository.hoadon.Server.HoaDonRepository;
 import com.poly.admin.service.DashboardService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.text.NumberFormat;
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
+@RequiredArgsConstructor
 public class DashboardServiceImpl implements DashboardService {
+    private final HoaDonRepository hoaDonRepository;
+    private final HoaDonChiTietRepository hoaDonChiTietRepository;
 
 
 
@@ -18,36 +28,34 @@ public class DashboardServiceImpl implements DashboardService {
     @Override
     public HashMap<String, Object> getTodayRevenueDash() {
         HashMap<String, Object> companyRevenueMap = new HashMap<>();
-        Locale locale = new Locale("en", "US");
-        NumberFormat CurrencyFormatter = NumberFormat.getCurrencyInstance(locale);
-        CompanyRevenue companyRevenue = new CompanyRevenue();
-        companyRevenue.setRevenue(80000000);
-        companyRevenue.setExpense(3000000);
-        companyRevenue.setMargins(234324);
-        companyRevenue.setMonth("[Jan, Feb, Mar, Apr, May, Jun]");
-
-        companyRevenueMap.put("crLabels", companyRevenue.getMonth());
-        companyRevenueMap.put("crRevenue", "[75000.0, 80000.0, 85000.0, 84000.0, 80000.0, 90000.0]");
-        companyRevenueMap.put("totalExpense", CurrencyFormatter.format(companyRevenue.getExpense()));
-        companyRevenueMap.put("totalMargin", CurrencyFormatter.format(companyRevenue.getMargins()));
-        companyRevenueMap.put("totalRevenue", CurrencyFormatter.format(companyRevenue.getRevenue()));
+        Map<String, String> revenueInYear = hoaDonRepository.revenueStatisticInYear();
+        companyRevenueMap.put("crLabels", revenueInYear.get("crLabels"));
+        companyRevenueMap.put("crRevenue", revenueInYear.get("crRevenue"));
 
         return companyRevenueMap;
     }
 
+//    @Override
+//    public HashMap<String, Object> getBestCategory() {
+//        HashMap<String, Object> bestProductMap = new HashMap<>();
+//        bestProductMap.put("bcLabels", "[Electronics, Phone/Ipad, Purses, Jwellery]");
+//        bestProductMap.put("bcPercents", "[30, 40, 20, 10]");
+//        return bestProductMap;
+//    }
     @Override
     public HashMap<String, Object> getBestCategory() {
         HashMap<String, Object> bestProductMap = new HashMap<>();
-        bestProductMap.put("bcLabels", "[Electronics, Phone/Ipad, Purses, Jwellery]");
-        bestProductMap.put("bcPercents", "[30, 40, 20, 10]");
+        Map<String, String> bestCategory = hoaDonRepository.bestCategory();
+        bestProductMap.put("bcLabels", bestCategory.get("bcZLabels"));
+        bestProductMap.put("bcPercents", bestCategory.get("bcPercents"));
         return bestProductMap;
     }
-
     @Override
     public HashMap<String, Object> getAllOrderReceived() {
         HashMap<String, Object> orderReceivedMap = new HashMap<>();
-        orderReceivedMap.put("orLabels", "[Mar 1, Mar 2, Mar 3, Mar 4, Mar 5, Mar 6, Mar 7, Mar 8, Mar 9, Mar 10, Mar 11, Mar 12, Mar 13, Mar 14, Mar 15]");
-        orderReceivedMap.put("orOrders", "[100, 125, 180, 170, 160, 175, 400, 195, 190, 210, 120, 110, 100, 140, 170]");
+        Map<String, String> ordersByMonth = hoaDonRepository.ordersByMonth();
+        orderReceivedMap.put("orLabels", ordersByMonth.get("thang"));
+        orderReceivedMap.put("orOrders", ordersByMonth.get("so_luong_order"));
         return orderReceivedMap;
     }
 
@@ -55,10 +63,10 @@ public class DashboardServiceImpl implements DashboardService {
     public HashMap<String, Object> getOrderCollection() {
         HashMap<String, Object> orderStatusMap = new HashMap<>();
 
-        int totalNewOrders = 21;
-        double totalRevenue = 8000;
-        int totalShippedOrders = 21;
-        int totalReturnInitiatedOrders = 44;
+        int totalNewOrders = hoaDonRepository.countByNgayTaoBetween(LocalDateTime.now().minusMonths(1),LocalDateTime.now());
+        double totalRevenue = hoaDonRepository.totalRevenueByMonth();
+        int totalShippedOrders = hoaDonRepository.countDeliveryOrder("DANG_GIAO_HANG");
+        int totalReturnInitiatedOrders = hoaDonRepository.countDeliveryOrder("TRA_HANG");
 
         Locale locale = new Locale("en", "US");
         NumberFormat CurrencyFormatter = NumberFormat.getCurrencyInstance(locale);
@@ -81,5 +89,15 @@ public class DashboardServiceImpl implements DashboardService {
                 .startDate(new Date())
                 .build();
         return Arrays.asList(employeeInformation);
+    }
+
+    @Override
+    public Page<HDCTSearchResponse> hdctSerchResponse(HDCTSearchRequest request, Pageable pageable) {
+        long count = hoaDonChiTietRepository.countSearch(request);
+        List<HDCTSearchResponse> content = new ArrayList<>();
+        if (count > 0) {
+            content = hoaDonChiTietRepository.search(request, pageable);
+        }
+        return new PageImpl<>(content, pageable, count);
     }
 }

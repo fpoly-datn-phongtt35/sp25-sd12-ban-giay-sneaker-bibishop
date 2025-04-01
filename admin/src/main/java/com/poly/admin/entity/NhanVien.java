@@ -18,7 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Getter
 @Setter
 @Entity
-@Table(name = "NHAN_VIEN")
+@Table(name = "nhan_vien")
 public class NhanVien{
 
   @Id

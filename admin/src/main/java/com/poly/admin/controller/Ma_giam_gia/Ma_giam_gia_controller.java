@@ -3,7 +3,7 @@ package com.poly.admin.controller.Ma_giam_gia;
 
 import com.poly.admin.controller.Ma_giam_gia.dto.CreatMaGiamGia;
 import com.poly.admin.entity.MaGiamGia;
-import com.poly.admin.repository.impl.hoadon.Server.MaGiamGiaRepository;
+import com.poly.admin.repository.hoadon.Server.MaGiamGiaRepository;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Optional;

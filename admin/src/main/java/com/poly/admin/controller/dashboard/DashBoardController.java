@@ -4,8 +4,10 @@ import com.poly.admin.dto.dashboard.DashboardData;
 import com.poly.admin.dto.dashboard.Metric;
 import com.poly.admin.dto.dashboard.RevenueData;
 import com.poly.admin.dto.dashboard.RevenueDataReq;
+import com.poly.admin.dto.hoadonchitiet.HDCTSearchRequest;
 import com.poly.admin.service.DashboardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("admin/dashboard")
@@ -31,8 +34,7 @@ public class DashBoardController {
         /**
          * Populate Employee info
          */
-        model.addAttribute("ei", dashboardService.getAllEmployee());
-
+        model.addAttribute("ei", dashboardService.hdctSerchResponse(new HDCTSearchRequest(null, null, null),  Pageable.ofSize(5)).getContent().stream().limit(5).collect(Collectors.toList()));
         /**
          * Populate Product Category data
          */

@@ -2,7 +2,7 @@ package com.poly.admin.service.impl;
 
 import com.poly.admin.dto.DanhMucDTO;
 import com.poly.admin.entity.DanhMucEntity;
-import com.poly.admin.repository.impl.DanhMucRepository;
+import com.poly.admin.repository.DanhMucRepository;
 import com.poly.admin.service.DanhMucService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

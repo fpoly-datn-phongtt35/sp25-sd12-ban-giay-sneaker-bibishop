@@ -1,7 +1,7 @@
 package com.poly.admin.config;
 
 import com.poly.admin.entity.NhanVien;
-import com.poly.admin.repository.impl.NhanVienRepository;
+import com.poly.admin.repository.NhanVienRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

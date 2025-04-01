@@ -1,0 +1,8 @@
+package com.poly.admin.repository.hoadon.Server;
+
+import com.poly.admin.entity.GiamGiaSanPham;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface GiamGiaSanPhamRepository extends JpaRepository<GiamGiaSanPham, Long> {}

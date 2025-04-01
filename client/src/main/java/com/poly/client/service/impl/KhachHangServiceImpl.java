@@ -3,24 +3,15 @@ package com.poly.client.service.impl;
 import com.poly.client.dto.ChangePasswordRequest;
 import com.poly.client.dto.admin.CreateKhachHangRequest;
 import com.poly.client.entity.KhachHang;
-import com.poly.client.entity.NhanVien;
 import com.poly.client.exception.BadRequestException;
-import com.poly.client.repository.impl.KhachHangRepository;
+import com.poly.client.repository.KhachHangRepository;
 import com.poly.client.service.KhachHangService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
-import com.poly.client.entity.KhachHang;
-import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class KhachHangServiceImpl implements KhachHangService {

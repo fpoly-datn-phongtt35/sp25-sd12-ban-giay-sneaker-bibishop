@@ -3,9 +3,8 @@ package com.poly.admin.controller;
 
 import com.poly.admin.entity.HoaDon;
 import com.poly.admin.entity.HoaDonChiTiet;
-import com.poly.admin.repository.impl.hoadon.Server.HoaDonChiTietRepository;
 import com.poly.admin.service.server.HoaDonService;
-import java.util.ArrayList;
+
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

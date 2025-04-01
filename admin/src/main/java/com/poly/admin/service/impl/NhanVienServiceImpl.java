@@ -1,27 +1,20 @@
 package com.poly.admin.service.impl;
 
 import com.poly.admin.constant.Constant;
-import com.poly.admin.dto.admin.CreateKhachHangRequest;
 import com.poly.admin.dto.admin.CreateNhanVienRequest;
-import com.poly.admin.repository.impl.NhanVienRepository;
+import com.poly.admin.repository.NhanVienRepository;
 import com.poly.admin.service.NhanVienService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.poly.admin.entity.NhanVien;
 import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 //import org.springframework.security.crypto.password.PasswordEncoder;

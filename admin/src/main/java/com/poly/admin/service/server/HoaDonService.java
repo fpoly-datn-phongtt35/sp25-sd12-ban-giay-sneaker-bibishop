@@ -2,8 +2,8 @@ package com.poly.admin.service.server;
 
 import com.poly.admin.entity.HoaDon;
 import com.poly.admin.entity.HoaDonChiTiet;
-import com.poly.admin.repository.impl.hoadon.Server.HoaDonChiTietRepository;
-import com.poly.admin.repository.impl.hoadon.Server.HoaDonRepository;
+import com.poly.admin.repository.hoadon.Server.HoaDonChiTietRepository;
+import com.poly.admin.repository.hoadon.Server.HoaDonRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -3,7 +3,7 @@ package com.poly.admin.service.impl;
 import com.poly.admin.dto.SanPhamDTO;
 import com.poly.admin.dto.SanPhamFiterDTO;
 import com.poly.admin.entity.SanPhamEntity;
-import com.poly.admin.repository.impl.SanPhamRepository;
+import com.poly.admin.repository.SanPhamRepository;
 import com.poly.admin.service.SanPhamService;
 import javax.persistence.EntityNotFoundException;
 import lombok.Builder;
