@@ -13,7 +13,7 @@ import java.util.List;
 public class HoaDonDTO {
     private Long id;
     private String maHoaDon;
-//    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime ngayTao;
     private BigDecimal tongTien;
     private String trangThai;

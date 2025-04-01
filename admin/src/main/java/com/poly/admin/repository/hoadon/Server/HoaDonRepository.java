@@ -23,7 +23,7 @@ where h.trangThai =:status
 """)
    int countDeliveryOrder(String status);
    @Query(value = """
-SELECT SUM(tong_tien) AS doanh_thu_thang_nay
+SELECT COALESCE(SUM(tong_tien), 0) AS doanh_thu_thang_nay
 FROM hoa_don
 WHERE MONTH(ngay_tao) = MONTH(CURRENT_DATE())
 AND YEAR(ngay_tao) = YEAR(CURRENT_DATE())
@@ -51,13 +51,13 @@ FROM (
         m.month_name,
         SUM(hd.tong_tien) AS monthly_revenue
     FROM (
-        SELECT 1 AS month_num, 'Jan' AS month_name UNION ALL
-        SELECT 2, 'Feb' UNION ALL SELECT 3, 'Mar' UNION ALL
-        SELECT 4, 'Apr' UNION ALL SELECT 5, 'May' UNION ALL
-        SELECT 6, 'Jun' UNION ALL SELECT 7, 'Jul' UNION ALL
-        SELECT 8, 'Aug' UNION ALL SELECT 9, 'Sep' UNION ALL
-        SELECT 10, 'Oct' UNION ALL SELECT 11, 'Nov' UNION ALL
-        SELECT 12, 'Dec'
+        SELECT 1 AS month_num, 'Tháng 1' AS month_name UNION ALL
+        SELECT 2, 'Tháng 2' UNION ALL SELECT 3, 'Tháng 3' UNION ALL
+        SELECT 4, 'Tháng 4' UNION ALL SELECT 5, 'Tháng 5' UNION ALL
+        SELECT 6, 'Tháng 6' UNION ALL SELECT 7, 'Tháng 7' UNION ALL
+        SELECT 8, 'Tháng 8' UNION ALL SELECT 9, 'Tháng 9' UNION ALL
+        SELECT 10, 'Tháng 10' UNION ALL SELECT 11, 'Tháng 11' UNION ALL
+        SELECT 12, 'Tháng 12'
     ) m
     LEFT JOIN hoa_don hd ON MONTH(hd.ngay_tao) = m.month_num
                       AND YEAR(hd.ngay_tao) = YEAR(CURRENT_DATE())

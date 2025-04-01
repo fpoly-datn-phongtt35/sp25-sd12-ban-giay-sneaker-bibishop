@@ -5,99 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="thống kê">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/hoadonchitiet/HDCTSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/hoadonchitiet/HDCTSearchResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/custom/HoadonRepoCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/custom/impl/HoadonRepoCustomImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/HoaDonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/utils/DataUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/OrderHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonChiTietDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/SanPhamDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadonchitiet/HDCTSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadonchitiet/HDCTSearchResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/ChatLieuEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/DanhMucEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/DiaChi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/DotGiamGia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GiamGiaSanPham.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GioHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GioHangChiTiet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HinhAnhEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HoaDon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HoaDonChiTiet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/KichCoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/MaGiamGia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/MauSacEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/PhuongThucThanhToan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SanPhamChiTietEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SanPhamChiTietPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SanPhamEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SuperEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/HoaDonChiTietRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/HoaDonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/custom/HoadonRepoCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/custom/impl/HoadonRepoCustomImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/rest/OrderHistoryV2Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/HoadonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/HoaDonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/utils/DataUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/config/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/constant/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Dot_giam_gia/Dot_giam_gia_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Dot_giam_gia/Dot_giam_gia_controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/HoaDonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/HoaDonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Ma_giam_gia/Ma_giam_gia_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Ma_giam_gia/Ma_giam_gia_controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/RevenueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/RevenueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/NhanVien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/ChatLieuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChatLieuRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/ChiTietSPRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChiTietSPRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/DanhMucRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/DanhMucRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/HinhAnhRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/HinhAnhRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/KhachHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/KichCoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/KichCoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/MauSacRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/MauSacRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/NhanVienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/NhanVienRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/SanPhamChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/SanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Client/GioHangChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Client/GioHangChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Client/GioHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Client/GioHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/DotGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/DotGiamGiaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/GiamGiaSanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/GiamGiaSanPhamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/HoaDonChiTietRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/HoaDonRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/impl/hoadon/Server/MaGiamGiaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/MaGiamGiaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/security/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/security/JwtUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DashboardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/ChatLieuIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/ChatLieuIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DanhMucIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DanhMucIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/hoadon/Server/HoaDonRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/DashboardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/HinhAnhIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/HinhAnhIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KichCoIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KichCoIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/MauSacIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/MauSacIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/NhanVienServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/NhanVienServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamChiTietIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamChiTietIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/StatisticServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/StatisticServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangChiTietService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/GioHangService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonChiTietService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/server/HoaDonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/dashboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/thong-ke/revenue.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/thong-ke/revenue.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/config/Contant.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/config/Contant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/KhachHangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/KhachHangRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/impl/NhanVienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/NhanVienRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/security/JwtUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/KhachHangServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/shop/order_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/shop/order_history.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +154,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ClientApplication">
+  <component name="RunManager" selected="Spring Boot.AdminApplication">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -345,7 +256,7 @@
       <workItem from="1743135938476" duration="3234000" />
       <workItem from="1743286372919" duration="14560000" />
       <workItem from="1743343528983" duration="473000" />
-      <workItem from="1743344066251" duration="15214000" />
+      <workItem from="1743344066251" duration="17346000" />
     </task>
     <task id="LOCAL-00002" summary="merge code function admin web">
       <option name="closed" value="true" />
@@ -371,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741353012931</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="thống kê">
+      <option name="closed" value="true" />
+      <created>1743468703484</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743468703485</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +313,8 @@
     <MESSAGE value="merge code function admin web" />
     <MESSAGE value="add manage view to side bar" />
     <MESSAGE value="change login using email instate of account" />
-    <option name="LAST_COMMIT_MESSAGE" value="change login using email instate of account" />
+    <MESSAGE value="thống kê" />
+    <option name="LAST_COMMIT_MESSAGE" value="thống kê" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
@@ -407,16 +327,6 @@
           <url>file://$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/KhachHangServiceImpl.java</url>
           <line>111</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/dashboard/DashBoardController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/OrderHistoryController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/main/resources/static/shop/js/user.js</url>

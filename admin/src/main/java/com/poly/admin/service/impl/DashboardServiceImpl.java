@@ -29,7 +29,8 @@ public class DashboardServiceImpl implements DashboardService {
     public HashMap<String, Object> getTodayRevenueDash() {
         HashMap<String, Object> companyRevenueMap = new HashMap<>();
         Map<String, String> revenueInYear = hoaDonRepository.revenueStatisticInYear();
-        companyRevenueMap.put("crLabels", revenueInYear.get("crLabels"));
+        String labelValues = revenueInYear.get("crLabels").replace("\"","");
+        companyRevenueMap.put("crLabels", labelValues);
         companyRevenueMap.put("crRevenue", revenueInYear.get("crRevenue"));
 
         return companyRevenueMap;
@@ -46,7 +47,7 @@ public class DashboardServiceImpl implements DashboardService {
     public HashMap<String, Object> getBestCategory() {
         HashMap<String, Object> bestProductMap = new HashMap<>();
         Map<String, String> bestCategory = hoaDonRepository.bestCategory();
-        bestProductMap.put("bcLabels", bestCategory.get("bcZLabels"));
+        bestProductMap.put("bcLabels", bestCategory.get("bcLabels"));
         bestProductMap.put("bcPercents", bestCategory.get("bcPercents"));
         return bestProductMap;
     }
@@ -54,7 +55,8 @@ public class DashboardServiceImpl implements DashboardService {
     public HashMap<String, Object> getAllOrderReceived() {
         HashMap<String, Object> orderReceivedMap = new HashMap<>();
         Map<String, String> ordersByMonth = hoaDonRepository.ordersByMonth();
-        orderReceivedMap.put("orLabels", ordersByMonth.get("thang"));
+        String orLabelValues = ordersByMonth.get("thang").replace("\"", "");
+        orderReceivedMap.put("orLabels", orLabelValues);
         orderReceivedMap.put("orOrders", ordersByMonth.get("so_luong_order"));
         return orderReceivedMap;
     }
