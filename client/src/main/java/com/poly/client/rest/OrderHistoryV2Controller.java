@@ -20,7 +20,7 @@ public class OrderHistoryV2Controller {
 
     @GetMapping("/orders/{id}")
     @ResponseBody // Đảm bảo rõ ràng
-    public HoaDonDTO getOrderDetails(@PathVariable long id) {
+    public HoaDonDTO getOrderDetails(@PathVariable Integer id) {
         return hoadonService.findById(id);
     }
 }

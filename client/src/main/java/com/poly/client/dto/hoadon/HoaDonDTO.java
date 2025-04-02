@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 public class HoaDonDTO {
-    private Long id;
+    private Integer id;
     private String maHoaDon;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime ngayTao;

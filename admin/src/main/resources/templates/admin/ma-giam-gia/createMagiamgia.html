@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout_admin :: main-fragment(
+                                                ~{:: title},
+                                                'header',
+                                                'sidebar',
+                                                ~{:: #css-resources},
+                                                ~{:: #js-resources},
+                                                ~{:: #main-content}
+                                               )}">
 <head>
   <meta charset="UTF-8">
   <title>Thêm Mã Giảm Giá</title>
@@ -8,7 +16,7 @@
         rel="stylesheet">
 </head>
 <body>
-<div class="container mt-5">
+<section role="main" class="content-body" id="main-content">
   <h2 class="text-center mb-4">Thêm Mã Giảm Giá</h2>
   <div class="card">
     <br>
@@ -92,7 +100,7 @@
       </form>
     </div>
   </div>
-</div>
+</section>
 <script>// Hàm validateField
 function validateField(event) {
   const field = event.target;

@@ -44,8 +44,3 @@ public class GioHang {
   @OneToMany(mappedBy = "gioHang", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<GioHangChiTiet> chiTietGioHang;
 }
-
-
-enum TrangThaiGioHang {
-  CHUA_THANH_TOAN, DA_THANH_TOAN, HUY
-}

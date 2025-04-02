@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout :: main-fragment(
+                                                                     ~{:: title},
+                                                                    'header',
+                                                                    'footer',
+                                                                     ~{:: #css-resources},
+                                                                     ~{:: #js-resources},
+                                                                     ~{:: #main-content}
+                                                                    )}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block id="css-resources">
+        <link rel="stylesheet" type="text/css" th:href="@{/shop/css/product.css}">
+    </th:block>
+</head>
+<body>
+<div id="main-content" class="container">
+
+    <!-- Product -->
+    <div class="bg0 m-t-23 p-b-140">
+        <div class="container">
+            <div class="flex-w flex-sb-m">
+
+                <input id="searchInput" type="text" placeholder="Tìm kiếm sản phẩm theo tên..." style="padding: 8px; border-radius: 8px; border: 1px solid #D1D5DB; flex-grow: 1;">
+            </div>
+
+            <div class="filter-section" style="background-color: #F3F4F6; padding: 12px; border-radius: 8px; margin-top: 8px; display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-weight: bold;">Giá sản phẩm:</span>
+                    <select id="priceFilter" style="padding: 6px 12px; border-radius: 8px; border: 1px solid #D1D5DB;">
+                        <option value="all">Tất cả</option>
+                        <option value="low">Dưới 1 triệu</option>
+                        <option value="medium">1 - 5 triệu</option>
+                        <option value="high">Trên 5 triệu</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-weight: bold;">Giới tính:</span>
+                    <select id="genderFilter" style="padding: 6px 12px; border-radius: 8px; border: 1px solid #D1D5DB;">
+                        <option value="all">Tất cả</option>
+                        <option value=1>Nam</option>
+                        <option value=2>Nữ</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-weight: bold;">Danh mục:</span>
+                    <select id="categoryFilter" style="padding: 6px 12px; border-radius: 8px; border: 1px solid #D1D5DB;">
+                        <option value="all">Tất cả</option>
+                        <option th:each="dm : ${danhMuc}" th:value="${dm.getId()}" th:text="${dm.tenDanhMuc}"></option>
+                    </select>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-weight: bold;">Màu sắc:</span>
+                    <select id="colorFilter" style="padding: 6px 12px; border-radius: 8px; border: 1px solid #D1D5DB;">
+                        <option value="all">Tất cả</option>
+                        <option th:each="ms : ${mauSac}" th:value="${ms.getId()}" th:text="${ms.ten}"></option>
+                    </select>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-weight: bold;">Chất liệu:</span>
+                    <select id="materialFilter" style="padding: 6px 12px; border-radius: 8px; border: 1px solid #D1D5DB;">
+                        <option value="all">Tất cả</option>
+                        <option th:each="cl : ${chatLieu}" th:value="${cl.getId()}" th:text="${cl.ten}"></option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Product Grid -->
+            <div id="productList" class="row isotope-grid">
+
+            </div>
+
+            <div id="pagination" style="text-align: center; margin-top: 20px;"></div>
+            <style>
+                #pagination button {
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    padding: 8px 12px;
+                    margin: 4px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                #pagination button:hover {
+                    background-color: #0056b3;
+                }
+
+                #pagination button.active {
+                    background-color: #0056b3;
+                    font-weight: bold;
+                }
+            </style>
+        </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="zmdi zmdi-chevron-up"></i>
+        </span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" th:inline="javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" th:inline="javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script th:inline="javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const filters = ["genderFilter", "categoryFilter", "colorFilter", "materialFilter", "priceFilter"];
+            filters.forEach(filter => {
+                document.getElementById(filter).addEventListener("change", updateProductList);
+            });
+            document.getElementById("searchInput").addEventListener("input", updateProductList);
+        });
+
+        let currentPage = 0;
+        const itemsPerPage = 10;
+
+        const getFilterValue = (id) => {
+            const value = document.getElementById(id).value;
+            return value === "all" || value === "" ? "" : value; // Trả về chuỗi rỗng thay vì null
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const filters = ["genderFilter", "categoryFilter", "colorFilter", "materialFilter", "priceFilter"];
+            filters.forEach(filter => {
+                document.getElementById(filter).addEventListener("change", updateProductList);
+            });
+            document.getElementById("searchInput").addEventListener("input", updateProductList);
+        });
+
+        async function updateProductList(page) {
+            let npage = 0; // Mặc định là trang 1
+
+            // Kiểm tra nếu `event` là số, nghĩa là được gọi từ phân trang
+            if (typeof event === "number") {
+                npage = event;
+            } else if (event && event.target) {
+                // Nếu là sự kiện từ bộ lọc hoặc ô tìm kiếm, giữ nguyên page hiện tại
+                npage = currentPage;
+            }
+            currentPage = npage;
+
+            const params = new URLSearchParams();
+
+            const gender = getFilterValue("genderFilter");
+            const category = getFilterValue("categoryFilter");
+            const color = getFilterValue("colorFilter");
+            const material = getFilterValue("materialFilter");
+            const price = getFilterValue("priceFilter");
+            const searchQuery = getFilterValue("searchInput");
+
+            if (gender) params.append("gender", gender);
+            if (category) params.append("category", category);
+            if (color) params.append("color", color);
+            if (material) params.append("material", material);
+            if (price === "low") {
+                params.append("minPrice", 0);
+                params.append("maxPrice", 999999);
+            } else if (price === "medium") {
+                params.append("minPrice", 1000000);
+                params.append("maxPrice", 5000000);
+            } else if (price === "high") {
+                params.append("minPrice", 5000001);
+                params.append("maxPrice", 100000000);
+            } else {
+            }
+            if (searchQuery) params.append("search", searchQuery);
+            console.log(currentPage);
+            params.append("page", currentPage);
+            params.append("size", itemsPerPage);
+
+            const apiUrl = `/api/products?${params.toString()}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                debugger
+                const products = await response.json();
+                renderProducts(products);``
+                renderPagination(products.totalPages);
+            } catch (error) {
+                console.error("Lỗi khi tải danh sách sản phẩm:", error);
+            }
+        }
+
+        function renderProducts(products) {
+            debugger
+            console.log(products);
+            const productList = document.getElementById("productList");
+            productList.innerHTML = products.content.map(product => `
+            <div class="col-sm-6 col-md-3 col-lg-2 p-b-35 isotope-item">
+                <div class="block2" >
+                    <div class="block2-pic hov-img0" style="height: 250px">
+                        <img src="https://down-vn.img.susercontent.com/file/c7db377b177fc8e2ff75a769022dcc23" alt="IMG-PRODUCT">
+                        <a href="/product-detail/${product.id}" data-product-id="${product.id} data-brand="${product.brand}">
+                            Chi tiết
+                        </a>
+                    </div>
+                    <div class="block2-txt">
+                        <div class="block2-txt-child1 flex-col-l">
+                            <a href="/product-detail/${product.id}">
+                                ${product.tenSanPham}
+                            </a>
+                            <span class="stext-105 cl3">
+                                ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(product.productDetailDtos[0].giaSanPham)}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `).join("");
+        }
+
+        function renderPagination(totalPages) {
+            const pagination = document.getElementById("pagination");
+            pagination.innerHTML = "";
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement("button");
+                button.textContent = i;
+                button.addEventListener("click", function () {
+                    updateProductList(i - 1);
+                });
+                pagination.appendChild(button);
+            }
+        }
+
+
+        updateProductList(0);
+    </script>
+</div>
+</body>
+</html>

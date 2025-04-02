@@ -11,5 +11,5 @@ import org.springframework.data.domain.Pageable;
 public interface HoadonService {
     Page<HDCTSearchResponse> hdctSerchResponse(HDCTSearchRequest request, Pageable pageable);
     Page<HoaDon> orderByCustomer(KhachHang request, Pageable pageable);
-    HoaDonDTO findById(Long orderId);
+    HoaDonDTO findById(Integer orderId);
 }

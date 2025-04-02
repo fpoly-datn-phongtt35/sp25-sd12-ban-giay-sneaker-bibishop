@@ -1,0 +1,202 @@
+.slick-slider {
+    max-width: 400px;
+    margin-left: 0;
+}
+
+.slick-slider img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Khoảng cách giữa các hàng */
+}
+
+.product-info p,
+.product-info label,
+.product-info input,
+.product-info button {
+    margin-bottom: 10px;
+}
+
+.option-container, .quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.option-container button {
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option-container button:hover, .option-container button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.quantity-container button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+}
+
+.info-row label {
+    width: 100px; /* Độ rộng cố định cho label */
+    font-weight: bold;
+}
+
+.info-row strong,
+.info-row .option-container,
+.info-row .quantity-container {
+    flex: 1;
+}
+/* Slider container */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    max-width: 400px;
+    margin-left: 0;
+}
+
+/* Slider track */
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slider slides */
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Individual slide */
+.item-slick3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Slide images */
+.item-slick3 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation arrows */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.slick-prev {
+    left: 15px;
+}
+
+.slick-next {
+    right: 15px;
+}
+
+/* Dots navigation */
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+    background: #007bff;
+}
+
+/* Thumbnail navigation */
+.slick-thumbnails {
+    margin-top: 15px;
+}
+
+.slick-thumbnails .item-slick3 {
+    height: 80px;
+    width: 80px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.slick-thumbnails .item-slick3.slick-active {
+    opacity: 1;
+    border-color: #007bff;
+}

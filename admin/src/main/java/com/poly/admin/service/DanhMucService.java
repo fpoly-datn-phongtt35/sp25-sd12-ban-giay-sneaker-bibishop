@@ -1,6 +1,8 @@
 package com.poly.admin.service;
 
 import com.poly.admin.dto.DanhMucDTO;
+import com.poly.admin.entity.DanhMucEntity;
+
 import java.util.List;
 
 public interface DanhMucService {

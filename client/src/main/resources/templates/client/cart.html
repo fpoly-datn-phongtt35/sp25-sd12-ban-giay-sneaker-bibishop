@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout :: main-fragment(
+                                                                     ~{:: title},
+                                                                    'header',
+                                                                    'footer',
+                                                                     ~{:: #css-resources},
+                                                                     ~{:: #js-resources},
+                                                                     ~{:: #main-content}
+                                                                    )}">
+<head>
+    <title>Giỏ hàng</title>
+    <th:block id="css-resources">
+        <link rel="stylesheet" type="text/css" th:href="@{/shop/css/cart.css}">
+    </th:block>
+</head>
+<body>
+<div id="main-content" class="container">
+    <h1>Giỏ hàng của bạn</h1>
+
+    <table id="cart-table">
+        <thead>
+        <tr>
+            <th>Hình ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá thành</th>
+            <th>Thành tiền</th>
+            <th>Hành động</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item, iterStat : ${cart}" th:data-index="${iterStat.index}">
+            <td><img th:src="${item['image']}" alt="Product Image" class="product-image"></td>
+            <td>
+                <div><strong th:text="${item['name']}"></strong></div>
+                <div th:text="${item['category']}" style="font-size: 0.9em; color: gray;"></div>
+                <div th:text="${item['color']}" style="font-size: 0.9em; color: gray;"></div>
+                <div th:text="${item['size']}" style="font-size: 0.9em; color: gray;"></div>
+            </td>
+            <td>
+                <div class="quantity-container">
+                    <button class="quantity-btn" th:onclick="updateQuantity([[${iterStat.index}]], -1)">-</button>
+                    <input type="number" th:value="${item['quantity']}" min="1" class="quantity-input" readonly>
+                    <button class="quantity-btn" th:onclick="updateQuantity([[${iterStat.index}]], 1)">+</button>
+                </div>
+            </td>
+            <td th:text="${#numbers.formatDecimal(item['price'], 0, 'COMMA', 0, 'POINT') + ' VNĐ'}"></td>
+            <td th:text="${#numbers.formatDecimal(item['quantity'] * item['price'], 0, 'COMMA', 0, 'POINT') + ' VNĐ'}"></td>
+            <td>
+                <button class="remove-btn" th:onclick="removeFromCart([[${iterStat.index}]])">Xóa</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 class="cart-total" th:with="total=${#aggregates.sum(cart.![quantity * price])}">
+        Tổng tiền: <span th:text="${#numbers.formatDecimal((total == null ? 0 : total), 0, 'COMMA', 0, 'POINT') + ' VNĐ'}"></span>
+    </h3>
+
+    <div class="cart-actions">
+        <button onclick="checkout()">Thanh toán</button>
+        <br>
+        <a href="/product">Quay lại mua sắm</a>
+    </div>
+</div>
+<th:block id="js-resources">
+    <script th:inline="javascript">
+        function checkout(invoice) {
+            if (invoice.size == 0) {
+                showErrToast("Lỗi", "Vui lòng chọn hóa đơn có sản phẩm")
+            }
+            $offcv = $('#offcanvas-check-out');
+            $offcv.find('.is-valid,.is-invalid').removeClass('is-invalid').removeClass('is-valid');
+            $offcv.offcanvas('show');
+            let tongSoSanPham = 0;
+            let tongTien = 0;
+            let imeiRow = ''
+            let tenHoaDon = $(`#nav-invoice [invoice-id='${_selectedInvoice}']`).parent().text();
+            invoice.forEach((element) => {
+                let listGroup = ''
+                for (let i = 0; i < element.soLuong; i++) {
+                    listGroup += `
+            <li class="list-group-item">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-text">IMEI ${i + 1}</span>
+                    <input type="text" spct-id="${element.sanPhamChiTietId}" class="form-control" required>
+                     <div class="invalid-feedback">
+                        IMEI Không hợp lệ !
+                      </div>
+            </div>
+            </li>
+            `
+                }
+                imeiRow += `
+           <div class="card mx-0 px-0">
+              <div class="card-header">
+                IMEI ${element.sanPhamTen}
+              </div>
+              <ul class="list-group list-group-flush">
+                ${listGroup}
+              </ul>
+        </div>
+
+        `
+                tongSoSanPham += element.soLuong;
+                tongTien += element.soLuong * element.giaBan;
+            })
+
+            $offcv.find('.offcanvas-title').text(tenHoaDon)
+            $('#hd-giam-gia').text('')
+            $('#hd-tong-so-luong').text(tongSoSanPham);
+            $('#tbl-imei').html(imeiRow);
+            $('#hd-tong-so-tien').text(toCurrency(tongTien));
+            $('#hd-khach-tra').text(toCurrency(tongTien));
+            updateBillStep2(tongTien);
+
+            $('#hd-voucher').val([]).trigger('change');
+
+            $offcv.find('input[spct-id]').on('focus', function ()  {
+                $(this)[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            })
+            $offcv.find('input[spct-id]').on('blur', function () {
+                let $input=$(this);
+                if($input.val()==''){
+                    $input.addClass('is-invalid').removeClass('is-valid');
+                    showErrToast("Lỗi","IMEI Không được để trống")
+                    return;
+                }
+                $input.parent().find('.fa-plus').parent().remove();
+                let spctId = $(this).attr('spct-id');
+                let imei = $(this).val();
+
+                if(!checkDuplicate($('#tbl-imei'),'input[spct-id]')){
+                    showErrToast("Lỗi","IMEI là duy nhất");
+                    return;
+                }
+                $.get(`/api/v1/sale/check-imei?imei=${imei}&spctid=${spctId}`,
+                    function (data,message,jqXhr) {
+                        switch (jqXhr.status) {
+                            case 200:{
+                                $input.addClass('is-valid').removeClass('is-invalid');
+                                break;
+                            }
+                            case 201:{
+                                $input.addClass('is-invalid');
+
+                                showSuccessToast("Thêm mới ?","IMEI Chưa tồn tại bạn muốn thêm nhanh cho sản phẩm này");
+                                let $btnAdd=$(`
+                        <span class="input-group-text"><i
+                            class="fa fa-plus"
+                            aria-hidden="true"></span>
+                    `)
+                                $input.after($btnAdd);
+                                $btnAdd.on('click',function (){
+                                    $btnAdd.html(`
+                            <div class="spinner-border" role="status">
+                              <span class="visually-hidden"></span>
+                            </div>
+                        `)
+                                    if(imei.length>15){
+                                        $btnAdd.remove();
+                                        showErrToast("Thêm mới thất bại",'Độ dài tối đa của imei là 15 ký tự');
+                                        return;
+                                    }
+                                    // addNewImei();
+                                    $.get(`/api/v1/sale/new-imei?imei=${imei}&spctid=${spctId}`).then(()=>{
+                                        console.log('Dữ liệu đã được gửi thành công:', spctId);
+                                        showSuccessToast("Thêm mới thành công",'Thêm mới IMEI: '+imei);
+                                        $input.addClass('is-valid').removeClass('is-invalid');
+                                        $btnAdd.remove();
+                                    }).fail(()=>{
+                                        $btnAdd.remove();
+                                        showErrToast("Thêm mới thất bại",'');
+                                    })
+                                })
+
+                                break;
+                            }
+                            case 202:{
+                                $input.addClass('is-invalid');
+                                showErrToast("Lỗi",data)
+                                break;
+                            }
+                            default:{
+                                $input.addClass('is-invalid');
+                                break;
+                            }
+                        }
+
+                    })
+
+            })
+
+            $('#hd-voucher').on('select2:select select2:unselect', function () {
+                if($(this).val().length==0){
+                    applyVoucher(undefined);
+                    return;
+                }
+                $.get('/api/v1/sale/promotion/' + $(this).val())
+                    .then((response) => {
+                        applyVoucher(response);
+                    })
+            })
+
+
+
+
+            function applyVoucher(response) {
+
+                if(!response){
+                    $('#hd-giam-gia').text(toCurrency(0))
+                    $('#hd-khach-tra').text(toCurrency(tongTien));
+                    updateBillStep2(tongTien);
+                    return;
+                }
+
+                let voucher = {
+                    "id": 3,
+                    "code": "ABCD-1234567890",
+                    "phanTramGiam": 0,
+                    "giamToiDa": 0,
+                    "giaTriToiThieu": 0.00,
+                    "soLuong": 1,
+                    "thoiGianKetThuc": "2024-06-26T00:00:00Z",
+                    "thoiGianBatDau": "2024-06-04T00:00:00Z",
+                    "createAt": "2024-06-09T22:52:43.486Z",
+                    "updateAt": "2024-06-09T22:54:21.164Z",
+                    "lastModifiedBy": "",
+                    "deleted": false
+                }
+                voucher = response;
+                if (voucher.thoiGianBatDau > new Date()) {
+                    showErrToast("Lỗi", "Chưa tới thời gian bắt đầu");
+                    $('#hd-voucher').val([]).trigger('change')
+                    return;
+                }
+                if (voucher.thoiGianKetThuc < new Date()) {
+                    showErrToast("Lỗi", "Mã giảm giá đã kết thúc");
+                    $('#hd-voucher').val([]).trigger('change')
+                    return;
+                }
+                if (voucher.soLuong < 1) {
+                    showErrToast("Lỗi", "Đã hết mã");
+                    $('#hd-voucher').val([]).trigger('change')
+                    return;
+                }
+                if (voucher.deleted == true) {
+                    showErrToast("Lỗi", "Chương trình đã dừng triển khai");
+                    $('#hd-voucher').val([]).trigger('change')
+                    return;
+                }
+                if (voucher.giaTriToiThieu > tongTien) {
+                    showErrToast("Lỗi", "Chưa đạt giá trị tối thiểu");
+                    $('#hd-voucher').val([]).trigger('change')
+                    return;
+                }
+
+                function getGiaTriGiam(tongTien) {
+                    return tongTien * voucher.phanTramGiam / 100 > voucher.giamToiDa ? voucher.giamToiDa : tongTien * voucher.phanTramGiam /100
+                }
+
+                $('#hd-giam-gia').text(toCurrency(getGiaTriGiam(tongTien)))
+                $('#hd-khach-tra').text(toCurrency(tongTien - getGiaTriGiam(tongTien)));
+                updateBillStep2(tongTien - getGiaTriGiam(tongTien));
+            }
+        }
+        function updateQuantity(index, change) {
+            fetch('/cart/update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ index: index, change: change })
+            }).then(() => location.reload());
+        }
+
+        function removeFromCart(index) {
+            fetch('/cart/remove', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ index: index })
+            }).then(() => location.reload());
+        }
+    </script>
+</th:block>
+</body>
+</html>

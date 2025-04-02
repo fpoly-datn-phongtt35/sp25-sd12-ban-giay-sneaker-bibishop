@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout :: main-fragment(
+                                                                     ~{:: title},
+                                                                    'header',
+                                                                    'footer',
+                                                                     ~{:: #css-resources},
+                                                                     ~{:: #js-resources},
+                                                                     ~{:: #main-content}
+                                                                    )}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Slick slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- jQuery and Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <th:block id="css-resources">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+        <link rel="stylesheet" type="text/css" th:href="@{/shop/css/product-detail.css}">
+    </th:block>
+</head>
+<body>
+<div id="main-content" class="container">
+    <div class="container" style="padding-top: 10px">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="slick-slider">
+                    <div class="item-slick3" data-thumb="https://down-vn.img.susercontent.com/file/c7db377b177fc8e2ff75a769022dcc23">
+                        <img src="https://down-vn.img.susercontent.com/file/c7db377b177fc8e2ff75a769022dcc23" alt="IMG-PRODUCT"/>
+                    </div>
+                    <div class="item-slick3" data-thumb="https://down-vn.img.susercontent.com/file/c7db377b177fc8e2ff75a769022dcc23">
+                        <img src="https://down-vn.img.susercontent.com/file/c7db377b177fc8e2ff75a769022dcc23" alt="IMG-PRODUCT"/>
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnail navigation -->
+            <div class="slick-thumbnails">
+                <div class="item-slick3">
+                    <img src="https://down-vn.img.susercontent.com/file/c7db377b177fc8e2ff75a769022dcc23" alt="Thumbnail 1"/>
+                </div>
+                <div class="item-slick3">
+                    <img src="https://down-vn.img.susercontent.com/file/c7db377b177fc8e2ff75a769022dcc23" alt="Thumbnail 2"/>
+                </div>
+                <!-- Add more thumbnails as needed -->
+            </div>
+            <div class="col-md-8" style="padding-top: 5px;">
+                <div class="product-info">
+                    <h2 th:text="${product.tenSanPham}"></h2>
+
+                    <div class="info-row">
+                        <label>Giá:</label>
+                        <strong id="price-display">Chọn màu và kích cỡ</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <label>Chất liệu:</label>
+                        <strong th:text="${product.sanPhamChiTiets[0].chatLieu.ten}"></strong>
+                    </div>
+
+                    <div class="info-row">
+                        <label>Danh mục:</label>
+                        <strong th:text="${product.sanPhamChiTiets[0].danhMuc.tenDanhMuc}"></strong>
+                    </div>
+
+                    <div class="info-row">
+                        <label>Màu sắc:</label>
+                        <div class="option-container">
+                            <th:block th:each="entry, iterStat : ${priceMap}">
+                                <button class="color-option" th:data-value="${entry.key}" th:text="${entry.key}"
+                                        th:classappend="${iterStat.first} ? 'active' : ''"></button>
+                            </th:block>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <label>Kích cỡ:</label>
+                        <div class="option-container" id="size-options"></div>
+                    </div>
+
+                    <div class="info-row">
+                        <label>Số lượng:</label>
+                        <div class="quantity-container">
+                            <button type="button" id="decrease">-</button>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1" class="form-control" style="width: 80px; text-align: center;">
+                            <button type="button" id="increase">+</button>
+                        </div>
+                    </div>
+
+                    <button id="add-to-cart" class="btn btn-primary" style="margin-top: 10px; width: 50%;">Thêm vào giỏ hàng</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script th:inline="javascript">
+        $(document).ready(function(){
+            // Initialize main slider
+            $('.slick-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                asNavFor: '.slick-thumbnails',
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+            });
+
+            // Initialize thumbnail slider
+            $('.slick-thumbnails').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.slick-slider',
+                dots: false,
+                centerMode: false,
+                focusOnSelect: true,
+                arrows: false
+            });
+        });
+
+        document.querySelectorAll('.color-option').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.size-option').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        let lastProductDetailId = 0;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let selectedColor = null;
+            let selectedSize = null;
+            const priceMap = /*<![CDATA[*/ [[${priceMap}]] /*]]>*/;
+
+            // Lấy màu đầu tiên trong priceMap
+            const firstColor = Object.keys(priceMap)[0];
+            if (firstColor) {
+                selectedColor = firstColor;
+            }
+
+            function updateSizeOptions() {
+                const sizeContainer = document.getElementById("size-options");
+                sizeContainer.innerHTML = '';
+
+                if (selectedColor && priceMap[selectedColor]) {
+                    priceMap[selectedColor].forEach((pair, index) => {
+                        const button = document.createElement("button");
+                        button.classList.add("size-option");
+                        button.setAttribute("data-value", pair.first);
+                        button.textContent = pair.first;
+
+                        // Mặc định chọn kích cỡ đầu tiên
+                        if (index === 0) {
+                            button.classList.add("active");
+                            selectedSize = pair.first;
+                        }
+
+                        button.addEventListener("click", function () {
+                            document.querySelectorAll(".size-option").forEach(btn => btn.classList.remove("active"));
+                            this.classList.add("active");
+                            selectedSize = pair.first;
+                            updatePrice();
+                        });
+
+                        sizeContainer.appendChild(button);
+                    });
+                }
+            }
+
+            function updatePrice() {
+                if (selectedColor && selectedSize && priceMap[selectedColor]) {
+                    const priceInfo = priceMap[selectedColor].find(pair => pair.first === selectedSize);
+                    lastProductDetailId = priceInfo.second.first;
+                    console.log(lastProductDetailId);
+                    document.getElementById("price-display").textContent = priceInfo ? priceInfo.second.second + " VNĐ" : "Không có giá";
+                } else {
+                    document.getElementById("price-display").textContent = "Chọn màu và kích cỡ";
+                }
+            }
+
+            // Mặc định chọn màu đầu tiên trên giao diện
+            document.querySelectorAll(".color-option").forEach(button => {
+                if (button.getAttribute("data-value") === selectedColor) {
+                    button.classList.add("active");
+                }
+
+                button.addEventListener("click", function () {
+                    document.querySelectorAll(".color-option").forEach(btn => btn.classList.remove("active"));
+                    this.classList.add("active");
+                    selectedColor = this.getAttribute("data-value");
+
+                    updateSizeOptions();
+                    updatePrice();
+                });
+            });
+
+            // Xử lý tăng/giảm số lượng
+            document.getElementById('decrease').addEventListener('click', function () {
+                let quantity = document.getElementById('quantity');
+                if (quantity.value > 1) {
+                    quantity.value = parseInt(quantity.value) - 1;
+                }
+            });
+
+            document.getElementById('increase').addEventListener('click', function () {
+                let quantity = document.getElementById('quantity');
+                quantity.value = parseInt(quantity.value) + 1;
+            });
+
+            updateSizeOptions();
+            updatePrice();
+        });
+
+        document.getElementById("add-to-cart").addEventListener("click", function () {
+            const selectedColor = document.querySelector(".color-option.active")?.getAttribute("data-value");
+            const selectedSize = document.querySelector(".size-option.active")?.getAttribute("data-value");
+            const quantity = document.getElementById("quantity").value;
+            const productName = document.querySelector("h2").textContent;
+            const priceText = document.getElementById("price-display").textContent;
+            const imageUrl = document.querySelector(".slick-slider img").src;
+
+            if (!selectedColor || !selectedSize) {
+                alert("Vui lòng chọn màu sắc và kích cỡ!");
+                return;
+            }
+
+            const price = priceText.includes("VNĐ") ? parseInt(priceText.replace(" VNĐ", "").replace(/\D/g, "")) : 0;
+
+            const data = {
+                productDetailId: lastProductDetailId,
+                quantity: parseInt(quantity),
+            };
+
+            fetch("/cart/add", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(message => {
+                    debugger
+                    Toastify({
+                        text: "✅ Sản phẩm đã được thêm vào giỏ hàng!",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top", // hiển thị trên cùng
+                        position: "right", // căn phải
+                        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                        stopOnFocus: true // Dừng khi hover
+                    }).showToast();
+
+                    // Cập nhật số sản phẩm trong giỏ hàng trên icon
+                    updateCartCount();
+                })
+                .catch(error => console.error("Lỗi khi thêm vào giỏ hàng:", error));
+        });
+
+        function updateCartCount() {
+            fetch('/cart/count')
+                .then(response => response.json())
+                .then(count => {
+                    document.querySelector('.js-show-cart').setAttribute('data-notify', count);
+                })
+                .catch(error => console.error('Lỗi khi lấy số lượng giỏ hàng:', error));
+        }
+    </script>
+</div>
+</body>
+</html>

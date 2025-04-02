@@ -46,7 +46,7 @@ public class HoaDonServiceImpl implements HoadonService {
     }
 
     @Override
-    public HoaDonDTO findById(Long orderId) {
+    public HoaDonDTO findById(Integer orderId) {
         HoaDon hoaDon = hoaDonRepository.findById(orderId)
                 .orElseThrow(() -> new RuntimeException("Hóa đơn không tồn tại với id: " + orderId));
         HoaDonDTO dto = new HoaDonDTO();
