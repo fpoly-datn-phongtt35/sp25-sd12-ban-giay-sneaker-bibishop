@@ -1,8 +1,5 @@
 package com.poly.admin.dto;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.deser.std.UUIDDeserializer;
-import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @SuperBuilder
 public class SuperDTO {
-    private UUID id;
+    private Integer id;
     private LocalDate createDate;
     private LocalDate modifyDate;
 

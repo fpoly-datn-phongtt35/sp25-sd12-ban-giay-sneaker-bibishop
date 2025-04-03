@@ -1,5 +1,6 @@
 package com.poly.admin.service.impl;
 
+import com.poly.admin.dto.SanPhamCounterDTO;
 import com.poly.admin.dto.SanPhamDTO;
 import com.poly.admin.dto.SanPhamFiterDTO;
 import com.poly.admin.entity.SanPhamEntity;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -103,5 +105,13 @@ public class SanPhamIMPL implements SanPhamService {
             throw new EntityNotFoundException("Không tìm thấy sản phẩm với id: " + sanPhamDTO.getId());
         }
     }
-
+    @Override
+    public List<SanPhamCounterDTO> searchSanPham(String tenSanPham) {
+        List<SanPhamCounterDTO> sanPhamDTOList = new ArrayList<>();
+        List<SanPhamEntity> sanPhamEntities = sanPhamRepository.filterByTenSanPham(tenSanPham);
+        for (SanPhamEntity sanPhamEntity : sanPhamEntities) {
+            sanPhamDTOList.add(SanPhamCounterDTO.toDTO(sanPhamEntity));
+        }
+        return sanPhamDTOList;
+    }
 }

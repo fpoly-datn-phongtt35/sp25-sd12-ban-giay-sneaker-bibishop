@@ -15,15 +15,16 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 @Repository
-public interface SanPhamRepository extends JpaRepository<SanPhamEntity, UUID>, JpaSpecificationExecutor<SanPhamEntity> {
+public interface SanPhamRepository extends JpaRepository<SanPhamEntity, Integer>, JpaSpecificationExecutor<SanPhamEntity> {
 
     boolean existsByTenSanPham(String tenSanPham);
     Optional<SanPhamEntity> findByTenSanPham(String tenSanPham);
-
+    @Query("SELECT sp FROM SanPhamEntity sp WHERE sp.tenSanPham LIKE %:tenSanPham% AND sp.trangThai = 1")
+    List<SanPhamEntity> filterByTenSanPham(String tenSanPham);
     @Query("SELECT sp FROM SanPhamEntity sp WHERE sp.trangThai = :trangThai")
     List<SanPhamEntity> findByTrangThai(@Param("trangThai") String trangThai, Pageable pageable);
 //    @Query("SELECT hd.trangThaiHD.ten FROM HoaDonEntity hd WHERE hd.id = :hoaDonId")
-//    Integer findTrangThaiById(@PathVariable("hoaDonId") UUID hoaDonId);
+//    Integer findTrangThaiById(@PathVariable("hoaDonId") Integer hoaDonId);
 //
 //    @Query(value = "WITH Months AS (\n" +
 //            "    SELECT 1 AS MonthNumber, N'Tháng1' AS MonthName\n" +

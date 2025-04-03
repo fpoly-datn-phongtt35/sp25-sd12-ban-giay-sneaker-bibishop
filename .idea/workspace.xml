@@ -5,235 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d7b0ae-de94-4eb6-b5d4-3aee4021d993" name="Changes" comment="merge code t3">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/DotGiamGia/DotGiamGiaRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/DotGiamGia/Dotgiamgiacontroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Magiamgia/MaGiamGiaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Magiamgia/dto/CreatePercentageDiscountDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Magiamgia/dto/CreateValueDiscountDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DotGiamGiaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/DotGiamGia/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/DotGiamGia/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/DotGiamGia/viewAndUpdate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/MaGiamGia/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/MaGiamGia/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/MaGiamGia/viewAndUpdate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/GioHang/GioHangController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/controller/rest/ProductRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/BaoHanhDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/ChatLieuDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/DanhMucDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/DataTableResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/HinhAnhDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/HoaDonChiTietDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/HoaDonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/KichCoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/MailInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/MauSacDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/SanPhamChiTietCrud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/SanPhamChiTietDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/SanPhamChiTietFiterDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/SanPhamCtFiterDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/SanPhamDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/SanPhamFiterDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/Select2Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/SuperDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/TrangThaiGioHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/ChatLieuRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/ChiTietSPRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/DanhMucRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/DotGiamGiaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/GiamGiaSanPhamRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/GioHangChiTietRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/GioHangRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/HinhAnhRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/KichCoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/MaGiamGiaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/MauSacRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/SanPhamChiTietRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/SanPhamRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/ChatLieuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/DanhMucService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/DotGiamGiaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/GioHangChiTietService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/GioHangService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/HinhAnhService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/HoaDonChiTietService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/KichCoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/MauSacService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/NhanVienService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/SanPhamChiTietService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/SanPhamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/admin/uploads/1698936450798_xanh_navy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/admin/uploads/1698936450802_trang_18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/admin/uploads/1698936450803_denn3-(2)_copys_62.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/admin/uploads/1699092284476_xanh_navy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/admin/uploads/1699092284480_trang_18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/admin/uploads/1699092284481_denn3-(2)_copys_62.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/ElegantIcons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/ElegantIcons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/ElegantIcons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/ElegantIcons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/Montserrat-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Montserrat/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/PlayfairDisplay/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/Poppins/Poppins-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/linearicons-v1.0.0/icon-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman 2 bold italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman 2 bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman 2 italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman 2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman Bold Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/SVN-Times New Roman.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/Times New Roman 400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/font-times-new-roman.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/times new roman bold italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/times new roman bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/times new roman italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/times new roman.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/times-new-roman-14.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/fonts/time-new-roman/times.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-close2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-heart-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-heart-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-pay-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-pay-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-pay-03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-pay-04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-pay-05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/icon-prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/logo-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/logo-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/images/icons/pin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/js/ban-hang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/shop/css/cart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/shop/css/product-detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/static/shop/css/product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/templates/client/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/templates/client/layout-user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/templates/client/product-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/templates/client/shop-product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/templates/client/shoping-cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/BuyAtTheCounter/BuyAtTheCounterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/product/ProductRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/SanPhamCounterDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/img/avatar7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/static/img/logo2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/BuyAtTheCounter/buy-at-the-counter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Dot_giam_gia/Dot_giam_gia_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Dot_giam_gia/Dot_giam_gia_controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Ma_giam_gia/Ma_giam_gia_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Ma_giam_gia/Ma_giam_gia_controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DanhMucService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/DanhMucService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/Dot_giam_gia/ViewAndUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/Dot_giam_gia/ViewAndUpdate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/Dot_giam_gia/createDotGiamGia.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/Dot_giam_gia/createDotGiamGia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/ma-giam-gia/createMagiamgia.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/admin/ma-giam-gia/createMagiamgia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/dto/hoadon/HoaDonDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GioHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/GioHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/HoaDon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SuperEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/entity/SuperEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/HoaDonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/repository/HoaDonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/rest/OrderHistoryV2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/rest/OrderHistoryV2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/HoadonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/HoadonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/HoaDonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/poly/client/service/impl/HoaDonServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Dot_giam_gia/Dot_giam_gia_controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/SanPhamChiTietCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/SanPhamChiTietCrud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/SanPhamChiTietDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/SanPhamChiTietDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/SuperDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/dto/SuperDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/SuperEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/entity/SuperEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChatLieuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChatLieuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChiTietSPRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/ChiTietSPRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/DanhMucRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/DanhMucRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/HinhAnhRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/HinhAnhRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/KichCoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/KichCoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/MauSacRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/MauSacRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamChiTietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamChiTietRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/repository/SanPhamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/restcontroller/SanPhamChiTietRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/restcontroller/SanPhamChiTietRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/SanPhamChiTietService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/SanPhamChiTietService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/SanPhamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/SanPhamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamChiTietIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamChiTietIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/service/impl/SanPhamIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/header_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/header_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/fragment/sidebar_admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +139,7 @@
     "go.import.settings.migrated": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/quangvinh/Java Skills/Java/dev/v2/client/src/main/resources/static/js",
+    "last_opened_file_path": "/Users/quangvinh/Java Skills/Java/dev/v2/admin/src/main/resources/static/img",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -365,18 +164,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/main/resources/static/js" />
-      <recent name="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller" />
+      <recent name="$PROJECT_DIR$/admin/src/main/resources/static/img" />
       <recent name="$PROJECT_DIR$/admin/src/main/resources/templates/admin" />
+      <recent name="$PROJECT_DIR$/admin/src/main/java/com/poly/admin/controller" />
+      <recent name="$PROJECT_DIR$/client/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/client/src/main/java/com/poly/client/controller" />
-      <recent name="$PROJECT_DIR$/client/src/main/resources/static/css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.poly.admin.dto" />
+      <recent name="com.poly.client.dto" />
+      <recent name="com.poly.admin.controller.product" />
       <recent name="com.poly.admin.service" />
       <recent name="com.poly.client.controller.rest" />
-      <recent name="com.poly.client.entity" />
-      <recent name="com.poly.client.service.impl" />
-      <recent name="com.poly.client.controller" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -384,7 +183,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ClientApplication">
+  <component name="RunManager" selected="Spring Boot.AdminApplication">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -488,7 +287,7 @@
       <workItem from="1743286372919" duration="14560000" />
       <workItem from="1743343528983" duration="473000" />
       <workItem from="1743344066251" duration="19745000" />
-      <workItem from="1743508683657" duration="27672000" />
+      <workItem from="1743508683657" duration="32424000" />
     </task>
     <task id="LOCAL-00002" summary="merge code function admin web">
       <option name="closed" value="true" />
@@ -554,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743616901165</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="merge code t3">
+      <option name="closed" value="true" />
+      <created>1743617189641</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743617189641</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

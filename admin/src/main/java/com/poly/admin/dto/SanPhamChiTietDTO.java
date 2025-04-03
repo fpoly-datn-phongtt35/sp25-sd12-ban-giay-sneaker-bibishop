@@ -1,5 +1,6 @@
 package com.poly.admin.dto;
 
+import com.poly.admin.entity.SanPhamChiTietEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,38 +19,33 @@ public class SanPhamChiTietDTO extends SuperDTO {
 
     private BigDecimal giaSanPham;
 
-    private int soLuong;
+    private Integer soLuong;
 
     private String trongLuong;
 
-    private int gioiTinh;
+    private Integer gioiTinh;
 
     private String moTa;
 
+    private String mauSac;
+    private String kichCo;
 
-    private SanPhamDTO sanPham;
+    private String chatLieu;
 
-    private MauSacDTO mauSac;
+    private String hinhAnh;
 
-    public SanPhamChiTietDTO(SuperDTOBuilder<?, ?> b, BigDecimal giaSanPham, SanPhamDTO sanPham, MauSacDTO mauSac, KichCoDTO kichCo) {
-        super(b);
-        this.giaSanPham = giaSanPham;
-        this.sanPham = sanPham;
-        this.mauSac = mauSac;
-        this.kichCo = kichCo;
-    }
+    private String danhMuc;
 
-    private KichCoDTO kichCo;
-
-
-    private ChatLieuDTO chatLieu;
-
-    private HinhAnhDTO hinhAnh;
-
-    private DanhMucDTO danhMuc;
-
-    private BaoHanhDTO baoHanh;
     private int trangThai;
-
+    public static SanPhamChiTietDTO toDTO(SanPhamChiTietEntity sanPhamChiTietEntity) {
+        SanPhamChiTietDTO dto = new SanPhamChiTietDTO();
+        dto.setId(sanPhamChiTietEntity.getId());
+//        dto.setHinhAnh(sanPhamChiTietEntity.getHinhAnh().getDuongDan());
+        dto.setMauSac(sanPhamChiTietEntity.getMauSac().getTen());
+        dto.setGiaSanPham(sanPhamChiTietEntity.getGiaSanPham());
+        dto.setKichCo(sanPhamChiTietEntity.getKichCo().getTenKichCo());
+        dto.setSoLuong(sanPhamChiTietEntity.getSoLuong());
+        return dto;
+    }
 
 }

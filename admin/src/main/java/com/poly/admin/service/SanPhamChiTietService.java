@@ -12,26 +12,25 @@ import org.springframework.data.domain.Pageable;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 public interface SanPhamChiTietService {
     Page<SanPhamChiTietDTO> getAllSanPhamChiTiet(Integer totalPage, Integer totalItem, SanPhamChiTietFiterDTO form);
-    Page<SanPhamChiTietDTO> getAllSanPhamChiTietBYidSP(UUID idSP, Integer totalPage, Integer totalItem, SanPhamCtFiterDTO fiterDTO);
+    Page<SanPhamChiTietDTO> getAllSanPhamChiTietBYidSP(Integer idSP, Integer totalPage, Integer totalItem, SanPhamCtFiterDTO fiterDTO);
     SanPhamChiTietCrud addSanPhamChiTiet(SanPhamChiTietCrud sanPhamChiTietCrud);
     SanPhamChiTietCrud upDateSanPhamChiTiet(SanPhamChiTietCrud sanPhamChiTietCrud);
-    SanPhamChiTietDTO findById(UUID id);
+    SanPhamChiTietDTO findById(Integer id);
     List<SanPhamChiTietDTO> GetForSP(Pageable pageable);
-    List<SanPhamChiTietDTO> AllSanPhamChiTietByidSP(UUID idSP);
+    List<SanPhamChiTietDTO> AllSanPhamChiTietByidSP(Integer idSP);
 
 
     Optional<SanPhamChiTietEntity> checkExistingSanPhamCT(
             BigDecimal giaSanPham,
-            UUID sanPhamId,
+            Integer sanPhamId,
             int gioiTinh,
             String trongLuong,
-            UUID danhMucId,
-            UUID hinhAnhId,
-            UUID kichCoId,
-            UUID mauSacId,
-            UUID chatLieuId);
+            Integer danhMucId,
+            Integer hinhAnhId,
+            Integer kichCoId,
+            Integer mauSacId,
+            Integer chatLieuId);
 }

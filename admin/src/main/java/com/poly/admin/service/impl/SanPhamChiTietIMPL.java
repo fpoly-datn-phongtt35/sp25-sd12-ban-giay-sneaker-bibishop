@@ -76,7 +76,7 @@ public class SanPhamChiTietIMPL implements SanPhamChiTietService {
     }
 
     @Override
-    public Page<SanPhamChiTietDTO> getAllSanPhamChiTietBYidSP(UUID idSP, Integer totalPage,
+    public Page<SanPhamChiTietDTO> getAllSanPhamChiTietBYidSP(Integer idSP, Integer totalPage,
                                                               Integer totalItem, SanPhamCtFiterDTO fiterDTO) {
         // Tạo Specification để lọc theo idSP
         Specification<SanPhamChiTietEntity> specByIdSP = (root, query, criteriaBuilder) ->
@@ -136,12 +136,12 @@ public class SanPhamChiTietIMPL implements SanPhamChiTietService {
     @Override
     public SanPhamChiTietCrud addSanPhamChiTiet(SanPhamChiTietCrud dto) {
         // Lấy các id từ DTO
-        UUID danhMucId = dto.getDanhMuc();
-        UUID chatLieuId = dto.getChatLieu();
-        UUID hinhAnhId = dto.getHinhAnh();
-        UUID kichCoId = dto.getKichCo();
-        UUID mauSacId = dto.getMauSac();
-        UUID sanPhamId = dto.getSanPham();
+        Integer danhMucId = dto.getDanhMuc();
+        Integer chatLieuId = dto.getChatLieu();
+        Integer hinhAnhId = dto.getHinhAnh();
+        Integer kichCoId = dto.getKichCo();
+        Integer mauSacId = dto.getMauSac();
+        Integer sanPhamId = dto.getSanPham();
 
         // Debug: in ra các giá trị id
         System.out.println("DanhMucId: " + danhMucId);
@@ -318,7 +318,7 @@ public class SanPhamChiTietIMPL implements SanPhamChiTietService {
 //
 
     @Override
-    public SanPhamChiTietDTO findById(UUID id) {
+    public SanPhamChiTietDTO findById(Integer id) {
         SanPhamChiTietEntity sanPhamChiTietEntity = sanPhamChiTietRepository.findById(id).orElseThrow();
 
         return modelMapper.map(sanPhamChiTietEntity, SanPhamChiTietDTO.class);
@@ -334,7 +334,7 @@ public class SanPhamChiTietIMPL implements SanPhamChiTietService {
     }
 
     @Override
-    public List<SanPhamChiTietDTO> AllSanPhamChiTietByidSP(UUID idSP) {
+    public List<SanPhamChiTietDTO> AllSanPhamChiTietByidSP(Integer idSP) {
         List<SanPhamChiTietEntity> entities = sanPhamChiTietRepository.findByIdSP(idSP);
         return entities.stream()
                 .map(entity -> modelMapper.map(entity, SanPhamChiTietDTO.class))
@@ -345,7 +345,7 @@ public class SanPhamChiTietIMPL implements SanPhamChiTietService {
 
 
     @Override
-    public Optional<SanPhamChiTietEntity> checkExistingSanPhamCT(BigDecimal giaSanPham, UUID sanPhamId, int gioiTinh, String trongLuong, UUID danhMucId, UUID hinhAnhId, UUID kichCoId, UUID mauSacId, UUID chatLieuId) {
+    public Optional<SanPhamChiTietEntity> checkExistingSanPhamCT(BigDecimal giaSanPham, Integer sanPhamId, int gioiTinh, String trongLuong, Integer danhMucId, Integer hinhAnhId, Integer kichCoId, Integer mauSacId, Integer chatLieuId) {
         return sanPhamChiTietRepository.findExistingProductDetail(
                 giaSanPham,
                 sanPhamId,

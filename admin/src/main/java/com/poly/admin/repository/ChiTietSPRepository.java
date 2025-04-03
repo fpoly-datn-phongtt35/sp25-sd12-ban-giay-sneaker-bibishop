@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.*;
 
 @Repository
-public interface ChiTietSPRepository extends JpaRepository<SanPhamChiTietEntity, UUID> {
+public interface ChiTietSPRepository extends JpaRepository<SanPhamChiTietEntity, Integer> {
 //    Optional<UserEntity> findById(SanPhamChiTietPK sanPhamChiTietPK);
 //    @Query(
 //            value = """
@@ -26,5 +26,5 @@ public interface ChiTietSPRepository extends JpaRepository<SanPhamChiTietEntity,
             "JOIN MauSacEntity m ON s.mauSac.id = m.id " +
             "JOIN KichCoEntity k ON s.kichCo.id = k.id " +
             "WHERE s.id = :sanPhamChiTietId")
-    Map<String, Object> findByNameSP(@PathVariable("sanPhamId") UUID sanPhamChiTietId);
+    Map<String, Object> findByNameSP(@PathVariable("sanPhamId") Integer sanPhamChiTietId);
 }

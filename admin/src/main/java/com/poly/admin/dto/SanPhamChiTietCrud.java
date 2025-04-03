@@ -25,20 +25,20 @@ public class SanPhamChiTietCrud extends SuperDTO {
     private String moTa;
 
     @JsonProperty("sanPhamId")
-    private UUID sanPham;
+    private Integer sanPham;
     @JsonProperty("mauSacId")
-    private UUID mauSac;
+    private Integer mauSac;
     @JsonProperty("kichCoId")
-    private UUID kichCo;
+    private Integer kichCo;
     @JsonProperty("nsxId")
-    private UUID nsx;
+    private Integer nsx;
     @JsonProperty("chatLieuId")
-    private UUID chatLieu;
+    private Integer chatLieu;
     @JsonProperty("hinhAnhId")
-    private UUID hinhAnh;
+    private Integer hinhAnh;
     @JsonProperty("danhMucId")
-    private UUID danhMuc;
+    private Integer danhMuc;
     @JsonProperty("baoHanhId")
-    private UUID baoHanh;
+    private Integer baoHanh;
     private int trangThai;
 }

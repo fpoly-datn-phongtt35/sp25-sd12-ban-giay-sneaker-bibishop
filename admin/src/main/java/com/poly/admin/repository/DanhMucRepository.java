@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface DanhMucRepository extends JpaRepository<DanhMucEntity, UUID> {
+public interface DanhMucRepository extends JpaRepository<DanhMucEntity, Integer> {
 }

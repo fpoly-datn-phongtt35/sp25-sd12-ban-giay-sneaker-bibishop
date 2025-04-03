@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface HinhAnhRepository extends JpaRepository<HinhAnhEntity,UUID> {
+public interface HinhAnhRepository extends JpaRepository<HinhAnhEntity,Integer> {
 }

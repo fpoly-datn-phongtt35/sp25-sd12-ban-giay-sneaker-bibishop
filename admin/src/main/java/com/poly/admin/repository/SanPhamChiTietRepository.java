@@ -17,10 +17,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface SanPhamChiTietRepository extends JpaRepository<SanPhamChiTietEntity, UUID>, JpaSpecificationExecutor<SanPhamChiTietEntity> {
+public interface SanPhamChiTietRepository extends JpaRepository<SanPhamChiTietEntity, Integer>, JpaSpecificationExecutor<SanPhamChiTietEntity> {
 
     @Query("SELECT s FROM SanPhamChiTietEntity s WHERE s.sanPham.id = :idSP")
-    List<SanPhamChiTietEntity> findByIdSP(@Param("idSP") UUID idSP);
+    List<SanPhamChiTietEntity> findByIdSP(@Param("idSP") Integer idSP);
     @Query("SELECT spct FROM SanPhamChiTietEntity spct " +
             "WHERE spct.giaSanPham = :giaSanPham " +
             "AND spct.sanPham.id = :sanPhamId " +
@@ -33,14 +33,14 @@ public interface SanPhamChiTietRepository extends JpaRepository<SanPhamChiTietEn
             "AND spct.chatLieu.id = :chatLieuId")
     Optional<SanPhamChiTietEntity> findExistingProductDetail(
             @Param("giaSanPham") BigDecimal giaSanPham,
-            @Param("sanPhamId") UUID sanPhamId,
+            @Param("sanPhamId") Integer sanPhamId,
             @Param("gioiTinh") int gioiTinh,
             @Param("trongLuong") String trongLuong,
-            @Param("danhMucId") UUID danhMucId,
-            @Param("hinhAnhId") UUID hinhAnhId,
-            @Param("kichCoId") UUID kichCoId,
-            @Param("mauSacId") UUID mauSacId,
-            @Param("chatLieuId") UUID chatLieuId);
+            @Param("danhMucId") Integer danhMucId,
+            @Param("hinhAnhId") Integer hinhAnhId,
+            @Param("kichCoId") Integer kichCoId,
+            @Param("mauSacId") Integer mauSacId,
+            @Param("chatLieuId") Integer chatLieuId);
 }
 //    @Query("SELECT spct FROM SanPhamChiTietEntity spct LEFT JOIN spct.sanPham sp WHERE sp.tenSanPham LIKE %:nameProduct% OR :nameProduct IS NULL")
 //    Page<SanPhamChiTietEntity> findByProductName(@Param("nameProduct") String nameProduct, Pageable pageable);
@@ -48,13 +48,13 @@ public interface SanPhamChiTietRepository extends JpaRepository<SanPhamChiTietEn
 //    @Query("SELECT s FROM SanPhamChiTietEntity s ORDER BY function('RAND')")
 //    List<SanPhamChiTietEntity> findTop4SanPhamChiTiet(Pageable pageable);
 //
-//List<Object[]> findByTenSanPhamAndNotIdWithSoLuong(@Param("tenSanPham") String tenSanPham, @Param("idSanPham") UUID idSanPham);
+//List<Object[]> findByTenSanPhamAndNotIdWithSoLuong(@Param("tenSanPham") String tenSanPham, @Param("idSanPham") Integer idSanPham);
 
 
 //    @Modifying
 //    @Transactional
 //    @Query("UPDATE SanPhamChiTietEntity sp SET sp.soLuong = sp.soLuong - :soLuong WHERE sp.id = :id")
-//    void updateSoLuong(UUID id, int soLuong);
+//    void updateSoLuong(Integer id, int soLuong);
 //    @Modifying
 //    @Transactional
 //    @Query("UPDATE SanPhamChiTietEntity sp SET sp.soLuong = sp.soLuong + :soLuong WHERE sp.id = :id")

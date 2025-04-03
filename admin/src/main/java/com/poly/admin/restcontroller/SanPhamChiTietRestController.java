@@ -28,7 +28,7 @@ public class SanPhamChiTietRestController {
     public Page<SanPhamChiTietDTO> getAllProductsByidSP (
             @RequestParam(value = "pageNo", defaultValue = Appcontants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(value = "pageSize", defaultValue = Appcontants.DEFAULT_TOTAL_NUMBER, required = false) int pageSize,
-            @Valid UUID idSP,
+            @Valid Integer idSP,
             @Valid SanPhamCtFiterDTO filterForm) {
 
         return sanPhamChiTietService.getAllSanPhamChiTietBYidSP(idSP, pageNo, pageSize, filterForm);
@@ -56,7 +56,7 @@ public class SanPhamChiTietRestController {
         return sanPhamChiTietService.getAllSanPhamChiTiet(pageNo, pageSize,filterForm);
     }
     @GetMapping("/Detail/{id}")
-    public  SanPhamChiTietDTO getById(@PathVariable UUID id){
+    public  SanPhamChiTietDTO getById(@PathVariable Integer id){
 
         return sanPhamChiTietService.findById(id);
     }
@@ -67,7 +67,7 @@ public class SanPhamChiTietRestController {
         return sanPhamChiTietService.GetForSP(topFour);
     }
     @GetMapping("/by-idsp/{idSP}")
-    public ResponseEntity<List<SanPhamChiTietDTO>> getSanPhamChiTietByIdSP(@PathVariable UUID idSP) {
+    public ResponseEntity<List<SanPhamChiTietDTO>> getSanPhamChiTietByIdSP(@PathVariable Integer idSP) {
         // Gọi phương thức từ service để lấy dữ liệu
         List<SanPhamChiTietDTO> dtos = sanPhamChiTietService.AllSanPhamChiTietByidSP(idSP);
 
@@ -79,14 +79,14 @@ public class SanPhamChiTietRestController {
     @GetMapping("/check")
     public ResponseEntity<?> checkSanPhamCT(
             @RequestParam("giaSanPham") BigDecimal giaSanPham,
-            @RequestParam("sanPhamId") UUID sanPhamId,
+            @RequestParam("sanPhamId") Integer sanPhamId,
             @RequestParam("gioiTinh") int gioiTinh,
             @RequestParam("trongLuong") String trongLuong,
-            @RequestParam("danhMucId") UUID danhMucId,
-            @RequestParam("hinhAnhId") UUID hinhAnhId,
-            @RequestParam("kichCoId") UUID kichCoId,
-            @RequestParam("mauSacId") UUID mauSacId,
-            @RequestParam("chatLieuId") UUID chatLieuId) {
+            @RequestParam("danhMucId") Integer danhMucId,
+            @RequestParam("hinhAnhId") Integer hinhAnhId,
+            @RequestParam("kichCoId") Integer kichCoId,
+            @RequestParam("mauSacId") Integer mauSacId,
+            @RequestParam("chatLieuId") Integer chatLieuId) {
 
         Optional<SanPhamChiTietEntity> existingDetail = sanPhamChiTietService.checkExistingSanPhamCT(
                 giaSanPham,
