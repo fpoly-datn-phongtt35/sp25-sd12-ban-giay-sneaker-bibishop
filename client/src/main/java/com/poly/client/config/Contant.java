@@ -49,5 +49,5 @@ public class Contant {
     //Loại khuyến mại
     public static final int DISCOUNT_PERCENT = 1;
     public static final int DISCOUNT_AMOUNT = 2;
-    public static final int LIMIT_SIZE = 1;
+    public static final int LIMIT_SIZE = 10;
 }
